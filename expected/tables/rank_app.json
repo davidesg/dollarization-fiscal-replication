@@ -53,6 +53,86 @@
    "GY.pre BXE.pre GAP.pre 4 0 0 -case 2 -lrtest -bootstrap 499"
   ]
  },
+ "gdpd_rank2": {
+  "path": "build/drvec/gdpd_rank2/gdpd_rank2.out",
+  "series": [
+   "GY",
+   "GAPGDPD"
+  ],
+  "deterministic": "case 2 -- E[nabla Y2] = 0, E[W] free",
+  "logL": null,
+  "npar": null,
+  "rank": [
+   {
+    "r": 0,
+    "lr": 8.7566
+   }
+  ],
+  "boot": [
+   {
+    "r": 0,
+    "lr": 8.7566,
+    "c10": 10.55,
+    "c5": 13.17,
+    "c1": 17.2,
+    "p": 0.188,
+    "reps": 999
+   }
+  ],
+  "params": {},
+  "drives": {},
+  "alpha": null,
+  "beta": null,
+  "beta_fixed": false,
+  "weakex_wald": {},
+  "lr_restr": null,
+  "Q": null,
+  "JB": null,
+  "args": [
+   "VECM_GDPD_G",
+   "GY.pre GAPGDPD.pre 2 0 0 -case 2 -lrtest -bootstrap 999"
+  ]
+ },
+ "gdpd_rank3": {
+  "path": "build/drvec/gdpd_rank3/gdpd_rank3.out",
+  "series": [
+   "GY",
+   "GAPGDPD"
+  ],
+  "deterministic": "case 2 -- E[nabla Y2] = 0, E[W] free",
+  "logL": null,
+  "npar": null,
+  "rank": [
+   {
+    "r": 0,
+    "lr": 4.5128
+   }
+  ],
+  "boot": [
+   {
+    "r": 0,
+    "lr": 4.5128,
+    "c10": 11.09,
+    "c5": 13.83,
+    "c1": 19.59,
+    "p": 0.507,
+    "reps": 999
+   }
+  ],
+  "params": {},
+  "drives": {},
+  "alpha": null,
+  "beta": null,
+  "beta_fixed": false,
+  "weakex_wald": {},
+  "lr_restr": null,
+  "Q": null,
+  "JB": null,
+  "args": [
+   "VECM_GDPD_G",
+   "GY.pre GAPGDPD.pre 3 0 0 -case 2 -lrtest -bootstrap 999"
+  ]
+ },
  "wti_rank": {
   "path": "build/drvec/wti_rank/wti_rank.out",
   "series": [

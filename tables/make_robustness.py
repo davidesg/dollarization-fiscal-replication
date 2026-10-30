@@ -163,39 +163,43 @@ SUB = [("2003Q1--2019Q4", "biv_wx", "biv_free"),
 
 
 def tab_sub() -> str:
+    # conditional on the adopted specification: nothing is re-specified per sub-sample
     rows = []
     for lab, wx, free in SUB:
-        W, G = fit(wx), fit(free)
-        x, df, pv = lr(G, W)
-        rows.append(" & ".join([lab, est(W["theta"]), est(W["a_gap"]), f(x), f(pv, 3),
-                                est(G["theta"]), f"{W['Q'][2]:.2f}"]) + r" \\")
-    head = [r"Sample & \multicolumn{2}{c}{$G/Y$ weakly exogenous} & \multicolumn{2}{c}{LR $\alpha_{G/Y}=0$} & $\alpha$ free & $Q$ \\",
-            r" & $\hat\theta$ & $\hat\alpha_{\text{GAP}}$ & stat. & $p$ & $\hat\theta$ & $p$ \\"]
-    notes = (r"bivariate $(G/Y\mid\text{GAP})$, $p=4$, case 2, rank 1, on the same univariate "
-             r"models; the sample of the system starts at the date shown. LR: weak exogeneity "
-             r"of $G/Y$ (1 df). $Q$: Hosking's portmanteau of the adopted model.")
-    return table("tab:subsample", r"The estimate of $\theta$ across sub-samples", "lcccccc",
+        W = fit(wx)
+        rows.append(" & ".join([lab, est(W["theta"]), est(W["a_gap"]), f"{W['Q'][2]:.2f}"]) + r" \\")
+    head = [r"Sample & $\hat\theta$ & $\hat\alpha_{\text{GAP}}$ & $Q$ \\",
+            r" & & & $p$ \\"]
+    notes = (r"the adopted model (bivariate $(G/Y\mid\text{GAP})$, $p=4$, case 2, rank 1, $G/Y$ weakly "
+             r"exogenous) re-estimated on each sub-sample, which starts at the date shown. "
+             r"$Q$: Hosking's portmanteau.")
+    return table("tab:subsample", r"The estimate of $\theta$ across sub-samples", "lccc",
                  head, rows, notes)
 
 
 # ── alternative price measures ───────────────────────────────────────────────
 
 PRICES = [("CPI (baseline)", 4, "biv_rank", "biv_wx", "biv_free"),
-          ("PCE deflator", 2, "pce:boot999_p2_c2", "pce:fit_p2_c2_r1_wx", "pce:fit_p2_c2_r1"),
-          ("GDP deflator", 2, "gdpdg:boot999_p2_c2", None, None),
-          ("GDP deflator", 3, "gdpdg:boot999_p3_c2", None, None)]
+          ("PCE deflator", 2, "pce:boot999_p2_c2", "pce:fit_p2_c2_r1_wx", "pce:fit_p2_c2_r1")]
+# the GDP deflator gap does not cointegrate with G/Y: it is in tab:rank_app, not here
 
 
 def tab_prices() -> str:
     """robustness of theta: price measures (Panel A) and sub-samples (Panel B)."""
-    def block(lab, p, rank, wx, free):
+    def block(lab, p, rank, wx, free, conditional=False):
         top, bot = [rf"\quad {lab}", str(p)], ["", ""]
         if rank:
             b_ = parse(out_path(rank))["boot"][0]
             top.append(f(b_["lr"]) + _st(b_["p"])); bot.append(f"[{f(b_['p'], 3)}]")
         else:
             top.append("--"); bot.append("")
-        if wx:
+        if wx and conditional:
+            # the adopted specification re-estimated, nothing re-specified
+            W = fit(wx)
+            t, ts = _ev(W["theta"]); a_, as_ = _ev(W["a_gap"])
+            top += [t, a_, "", "", f(W["Q"][1])]
+            bot += [ts, as_, "", "", f"[{f(W['Q'][2], 3)}]"]
+        elif wx:
             W, G = fit(wx), fit(free)
             x, _, pv = lr(G, W)
             t, ts = _ev(W["theta"]); a_, as_ = _ev(W["a_gap"]); tf, tfs = _ev(G["theta"])
@@ -210,12 +214,13 @@ def tab_prices() -> str:
         rows += block(lab, p, rank, wx, free)
     rows.append(r"\multicolumn{8}{@{}l}{Panel B. Sub-samples ending in 2019Q4, CPI} \\ \hline")
     for lab, wx, free in SUB[1:]:
-        rows += block("from " + lab.split("--")[0], 4, None, wx, free)
+        rows += block("from " + lab.split("--")[0], 4, None, wx, free, conditional=True)
     head = [r" & & Rank & & & $G/Y$ weakly & $\alpha$ free & \\",
             r"Specification & $p$ & LR, $r=0$ & $\hat\theta$ & $\hat\alpha_{\text{GAP}}$ & exogenous & $\hat\theta$ & $Q_H$ \\",
             r" & & [$p$] & (s.e.) & (s.e.) & [$p$] & (s.e.) & [$p$] \\"]
     notes = (r"Bivariate, rank 1, Case~2; first row: baseline. Rank: LR for $r=0$, bootstrap [$p$]. "
-             r"Weakly exogenous: LR of $\alpha_{G/Y}=0$. $^{*}$, $^{**}$: rejection at 10\,\%, 5\,\%.")
+             r"Weakly exogenous: LR of $\alpha_{G/Y}=0$. Panel B: the baseline model, $G/Y$ weakly exogenous, "
+             r"re-estimated on each sub-sample. $^{*}$, $^{**}$: rejection at 10\,\%, 5\,\%.")
     return _table_std(r"tab:prices}\label{tab:subsample",
                       r"Robustness of $\theta$: price measures and sub-samples",
                       "@{}lccccccc@{}", head, rows, notes)

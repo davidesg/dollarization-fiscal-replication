@@ -41,6 +41,9 @@ RUNS = {
     "pce4_A": ("VECM_PCE", "GY.pre PCEUSA.pre PCEEC.pre 2 0 1 -case pre -trend -weakex 2"),
     "pce4_B": ("VECM_PCE", "GY.pre PCEUSA.pre PCEEC.pre 2 0 1 -case pre -trend -fixb2row 2 -1"),
     "pce4_C": ("VECM_PCE", "GY.pre PCEUSA.pre PCEEC.pre 2 0 1 -case pre -trend -fixb2row 2 -1 -weakex 2"),
+    # GDP deflator gap and G/Y, p = 2 and 3, case 2 (no cointegration)
+    "gdpd_rank2": ("VECM_GDPD_G", "GY.pre GAPGDPD.pre 2 0 0 -case 2 -lrtest -bootstrap 999"),
+    "gdpd_rank3": ("VECM_GDPD_G", "GY.pre GAPGDPD.pre 3 0 0 -case 2 -lrtest -bootstrap 999"),
     # WTI and G/Y, p = 2, case 2
     "wti_rank": ("VECM_WTI", "WTI.pre GY.pre 2 0 0 -case 2 -lrtest -bootstrap 499"),
     # fiscal (REV without the oil step | G), p = 2, drifts free
@@ -66,6 +69,8 @@ RANK = {
         ("Central: $(\\ln G_t/Y_t \\mid \\ln PE_t/PU_t)$", "biv_rank", 4, "2", 1),
         ("Augmented: $(\\ln G_t/Y_t \\mid BXE_t, \\ln PE_t/PU_t)$", "aug_rank", 4, "2", 2),
         ("Trivariate: $(\\ln G_t/Y_t, \\ln PU_t \\mid \\ln PE_t)$", "tri_rank", 2, "free", 1),
+        ("GDP deflator: $(\\ln G_t/Y_t \\mid \\ln PGE_t/PGU_t)$", "gdpd_rank2", 2, "2", 0),
+        ("GDP deflator: $(\\ln G_t/Y_t \\mid \\ln PGE_t/PGU_t)$", "gdpd_rank3", 3, "2", 0),
         ("Oil: $(\\ln WTI_t \\mid \\ln G_t/Y_t)$", "wti_rank", 2, "2", 0),
         ("Fiscal: $(re_t \\mid g_t)$", "fisc_rank", 2, "free", 1),
         ("Trade: $(i_t \\mid x_t)$", "tb_rank", 2, "free", 1),
@@ -120,7 +125,7 @@ VALID = {
 # Body: the systems that are central, justify a decision or can falsify the
 # model (central, trivariate, oil, fiscal); appendix: the support
 # systems (augmented with BXE, balance of payments).
-_APP_RANK = ("aug_rank", "wti_rank", "tb_rank", "ca_rank", "rt_rank")
+_APP_RANK = ("aug_rank", "gdpd_rank2", "gdpd_rank3", "wti_rank", "tb_rank", "ca_rank", "rt_rank")
 _APP_VECM = ("aug_r2", "tb_b1", "ca_b1")
 RANK_APP = dict(RANK, label="tab:rank_app",
                 caption="Cointegration rank of the other systems",
