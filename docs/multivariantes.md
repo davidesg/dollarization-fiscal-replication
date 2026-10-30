@@ -176,14 +176,14 @@ Corridas regeneradas por `make_tables.py` (en `tables/build/drvec/`):
 
 | corrida | argumentos | resultado |
 |---|---|---|
-| `pce_r1` | `GY.pre PCEUSA.pre PCEEC.pre 2 0 1 -case pre -fdhess` | — |
-| `pce_A` | `GY.pre PCEUSA.pre PCEEC.pre 2 0 1 -case pre -weakex 2` | — |
-| `pce_B` | `GY.pre PCEUSA.pre PCEEC.pre 2 0 1 -case pre -fixb2row 2 -1` | — |
-| `pce_C` | `GY.pre PCEUSA.pre PCEEC.pre 2 0 1 -case pre -fixb2row 2 -1 -weakex 2` | — |
-| `pce4_r1` | `GY.pre PCEUSA.pre PCEEC.pre 2 0 1 -case pre -trend -fdhess` | — |
-| `pce4_A` | `GY.pre PCEUSA.pre PCEEC.pre 2 0 1 -case pre -trend -weakex 2` | — |
-| `pce4_B` | `GY.pre PCEUSA.pre PCEEC.pre 2 0 1 -case pre -trend -fixb2row 2 -1` | — |
-| `pce4_C` | `GY.pre PCEUSA.pre PCEEC.pre 2 0 1 -case pre -trend -fixb2row 2 -1 -weakex 2` | — |
+| `pce_r1` | `GY.pre PCEUSA.pre PCEEC.pre 2 0 1 -case pre -fdhess` | β GY -0.436, PCEUSA -1.480, PCEEC 1.000; α GY 0.448 (0.282), PCEUSA 0.035 (0.012), PCEEC 0.007 (0.056); logL -318.707 |
+| `pce_A` | `GY.pre PCEUSA.pre PCEEC.pre 2 0 1 -case pre -weakex 2` | β GY -0.355, PCEUSA -1.381, PCEEC 1.000; α GY 0.382 (0.379), PCEUSA -0.000, PCEEC -0.140 (0.066); logL -323.022 |
+| `pce_B` | `GY.pre PCEUSA.pre PCEEC.pre 2 0 1 -case pre -fixb2row 2 -1` | β GY -0.718, PCEUSA -1.000, PCEEC 1.000; α GY 0.368 (0.200), PCEUSA 0.023 (0.008), PCEEC 0.011 (0.042); logL -320.550 |
+| `pce_C` | `GY.pre PCEUSA.pre PCEEC.pre 2 0 1 -case pre -fixb2row 2 -1 -weakex 2` | β GY -0.536, PCEUSA -1.000, PCEEC 1.000; α GY 0.250 (0.325), PCEUSA -0.000, PCEEC -0.103 (0.044); logL -323.802 |
+| `pce4_r1` | `GY.pre PCEUSA.pre PCEEC.pre 2 0 1 -case pre -trend -fdhess` | β GY -0.526, PCEUSA -0.725, PCEEC 1.000; α GY 0.519 (0.269), PCEUSA 0.031 (0.010), PCEEC 0.018 (0.043); logL -318.222 |
+| `pce4_A` | `GY.pre PCEUSA.pre PCEEC.pre 2 0 1 -case pre -trend -weakex 2` | β GY -0.450, PCEUSA -0.690, PCEEC 1.000; α GY 0.604 (0.349), PCEUSA -0.000, PCEEC -0.096 (0.091); logL -322.748 |
+| `pce4_B` | `GY.pre PCEUSA.pre PCEEC.pre 2 0 1 -case pre -trend -fixb2row 2 -1` | β GY -0.483, PCEUSA -1.000, PCEEC 1.000; α GY 0.511 (0.273), PCEUSA 0.033 (0.010), PCEEC 0.014 (0.048); logL -318.274 |
+| `pce4_C` | `GY.pre PCEUSA.pre PCEEC.pre 2 0 1 -case pre -trend -fixb2row 2 -1 -weakex 2` | β GY -0.401, PCEUSA -1.000, PCEEC 1.000; α GY 0.544 (0.351), PCEUSA -0.000, PCEEC -0.118 (0.059); logL -322.798 |
 
 ### Robustez: deflactor del PIB (autónomo) — `VECM_GDPD/`
 
