@@ -1,0 +1,623 @@
+{
+  "series": "GAPGDPD",
+  "analyst": "",
+  "created": "2026-10-09",
+  "carril": "guiado",
+  "entries": [
+    {
+      "version": 1,
+      "name": "lambda",
+      "inp_path": "",
+      "timestamp": "2026-10-09T12:45:06",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "lambda = 0",
+      "rationale": "Autónomo: λ=0 por dominio (ln GDPD_EC − ln GDPD_USA), como GAP y GAPPCE.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "lambda",
+        "decidido": "0",
+        "evidencia": "",
+        "alternativas": ""
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "",
+      "coincide": null,
+      "parent": null,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "lambda",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 2,
+      "name": "dominio",
+      "inp_path": "",
+      "timestamp": "2026-10-09T12:45:06",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "dominio = ratio",
+      "rationale": "declarado por el analista",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "dominio",
+        "decidido": "ratio",
+        "evidencia": "",
+        "alternativas": "",
+        "expectativas": "Brecha ln(GDPD_EC/GDPD_USA): λ=0 por dominio (log de razón de índices, como GAP y GAPPCE). I(1), sin estacionalidad, ciclo del crudo 2008 heredado de Ecuador."
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 1,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "dominio",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 3,
+      "name": "d",
+      "inp_path": "",
+      "timestamp": "2026-10-09T12:45:06",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "d = 1",
+      "rationale": "Autónomo: d=1, ADF y KPSS coinciden.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "d",
+        "decidido": "1",
+        "evidencia": "d=0: ADF p=0.108, KPSS p=0.010; d=1: ADF p=0.000, KPSS p=0.058",
+        "alternativas": "",
+        "propuesta_valor": 1
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "1",
+      "coincide": true,
+      "parent": 2,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "d",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 4,
+      "name": "estacionalidad",
+      "inp_path": "",
+      "timestamp": "2026-10-09T12:45:15",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "estacionalidad = D=0 (sin estacionalidad)",
+      "rationale": "se toma la propuesta de la herramienta",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "estacionalidad",
+        "decidido": "D=0 (sin estacionalidad)",
+        "evidencia": "F-HAC=1.27, p=0.2920",
+        "alternativas": "",
+        "propuesta_valor": "A"
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "sin estacionalidad (D=0)",
+      "coincide": true,
+      "parent": 3,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "estacionalidad",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 5,
+      "name": "m00",
+      "inp_path": "models/DEFL/GAPGDPD/GAPGDPD_m00.inp",
+      "timestamp": "2026-10-09T12:45:34",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.500202,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": []
+      },
+      "stats": {
+        "loglik": -160.6911408007931,
+        "aic": 323.3822816015862,
+        "bic": 325.5869742209772,
+        "sigma_a": 2.66295578391758,
+        "q_pass": true,
+        "jb_pass": false,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 23,
+            "date": "Q4/2008",
+            "z": -4.583564194178038
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.10594466328200014,
+          0.08914947997966571,
+          0.19720381258701625,
+          0.2781225934882827
+        ],
+        "jb_pvalue": 3.6991658783361525e-20,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + a_t",
+      "decision": "Autónomo: D=0 (HAC p 0.29). Base ∇ln con μ",
+      "rationale": "",
+      "problems_found": "[diagnosis] el Jarque-Bera rechaza la normalidad (p=0.0000); anómalos por encima del umbral calibrado (3.17): Q4/2008 (z=-4.58)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GAPGDPD_v5__1cb94152b8ac.png",
+      "out_path": "models/DEFL/GAPGDPD/GAPGDPD_m00.out",
+      "hist_path": "figs/GAPGDPD_v5_hist__8e46f2b6288b.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 4,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "inferido",
+      "nodo": "estacionalidad",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "52d0acf051f17461600be08f24facc983e498912a3469e4f460e0cedb7632f63",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 6,
+      "name": "m01_s0802x5",
+      "inp_path": "models/DEFL/GAPGDPD/GAPGDPD_m01_s0802x5.inp",
+      "timestamp": "2026-10-09T12:45:40",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.5804836843208084,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q2/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -138.5577246143761,
+        "aic": 289.1154492287522,
+        "bic": 302.343604945098,
+        "sigma_a": 1.9137931354988778,
+        "q_pass": false,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.07202514766624135,
+          0.040969305223832575,
+          0.009733346057046899,
+          0.01469822164345469
+        ],
+        "jb_pvalue": 0.9701408245021876,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(1 itvs) + a_t",
+      "decision": "Autónomo: ciclo del crudo Q2/2008×5, la misma forma que el componente GDPDEC (de donde viene el suceso); 2008Q4 z≈−4.5 en la brecha",
+      "rationale": "",
+      "problems_found": "[diagnosis] la Q rechaza el ruido blanco en el retardo que decide (15, p=0.0147); la Q rechaza también en 8 (p=0.0410), 12 (p=0.0097)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GAPGDPD_v6__942ce79bc58b.png",
+      "out_path": "models/DEFL/GAPGDPD/GAPGDPD_m01_s0802x5.out",
+      "hist_path": "figs/GAPGDPD_v6_hist__0f5b41400618.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 5,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 2,
+      "parent_origen": "declarado",
+      "nodo": "estacionalidad",
+      "base_pre_path": "models/DEFL/GAPGDPD/GAPGDPD_m00.pre",
+      "base_pre_sha": "52d0acf051f17461600be08f24facc983e498912a3469e4f460e0cedb7632f63",
+      "pre_sha": "9d8f2282baa13ccfcb8f074b1ddb15f261b3a7929814a044eacb45f81b74a757",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 7,
+      "name": "m02_ar2",
+      "inp_path": "models/DEFL/GAPGDPD/GAPGDPD_m02_ar2.inp",
+      "timestamp": "2026-10-09T12:45:56",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.6666777686397289,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 2,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q2/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -135.32812056011446,
+        "aic": 286.6562411202289,
+        "bic": 304.29378207535666,
+        "sigma_a": 1.820109956925868,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.16204562575653458,
+          0.4657603657889504,
+          0.0791541932319717,
+          0.08414682464852796
+        ],
+        "jb_pvalue": 0.8200945596491191,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Autónomo: barras en 2, 7, 9 (como GDPDEC): AR(2)",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GAPGDPD_v7__b66a9687a8fc.png",
+      "out_path": "models/DEFL/GAPGDPD/GAPGDPD_m02_ar2.out",
+      "hist_path": "figs/GAPGDPD_v7_hist__0ca204cb7655.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 6,
+      "status": "adopted",
+      "why_abandoned": "",
+      "why_adopted": "Autónomo: AR(2) completo + ciclo del crudo Q2/2008×5 (ganancia −5.4; misma forma que GDPDEC): diagnosis limpia (Q p 0.08, JB p 0.82); ARMA(1,1) peor (AIC 287.9 frente a 286.7) y casi cancelación; AR(3) sobra (φ₃ t −0.38). Formales: SF 4.24 (d=1 basta); DCD sobredif θ̂ 0.87, LR 2.82, fuera de la banda pero con escalón (crítico subestimado según art): d=1 se mantiene (parsimonia y coherencia con GAP/GAPPCE), d=2 queda anotado. p del VECM = 3.",
+      "iteracion": 3,
+      "parent_origen": "declarado",
+      "nodo": "estacionalidad",
+      "base_pre_path": "models/DEFL/GAPGDPD/GAPGDPD_m01_s0802x5.pre",
+      "base_pre_sha": "9d8f2282baa13ccfcb8f074b1ddb15f261b3a7929814a044eacb45f81b74a757",
+      "pre_sha": "efa464a0b6add40cf66824ba5e877a7044e87fb48ebbb5ca98dbb5e3e8199a67",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 8,
+      "name": "m03_arma11",
+      "inp_path": "models/DEFL/GAPGDPD/GAPGDPD_m03_arma11.inp",
+      "timestamp": "2026-10-09T12:46:02",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.5662868407619414,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [
+          [
+            true
+          ]
+        ],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 1,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q2/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -135.94897249287123,
+        "aic": 287.89794498574247,
+        "bic": 305.5354859408702,
+        "sigma_a": 1.836762895929926,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.016626222420958903,
+          0.09523207494507324,
+          0.045284029890369726,
+          0.09505679473983475
+        ],
+        "jb_pvalue": 0.6896663366063625,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(1 itvs) + [1-φ(B)]⁻¹·[1-θ(B)]·a_t",
+      "decision": "Autónomo: rival ARMA(1,1)",
+      "rationale": "",
+      "problems_found": "[diagnosis] salvedad de la Q: pasa en 15 pero rechaza en 4 (p=0.0166), 12 (p=0.0453)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GAPGDPD_v8__55baa90ddbe0.png",
+      "out_path": "models/DEFL/GAPGDPD/GAPGDPD_m03_arma11.out",
+      "hist_path": "figs/GAPGDPD_v8_hist__86f5e397cd6b.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 6,
+      "status": "dead-end",
+      "why_abandoned": "ARMA(1,1): AIC 287.9 frente a 286.7 del AR(2), casi cancelación (φ 0.94, θ 0.83), Q(4) p 0.017.",
+      "why_adopted": "",
+      "iteracion": 4,
+      "parent_origen": "declarado",
+      "nodo": "estacionalidad",
+      "base_pre_path": "models/DEFL/GAPGDPD/GAPGDPD_m01_s0802x5.pre",
+      "base_pre_sha": "9d8f2282baa13ccfcb8f074b1ddb15f261b3a7929814a044eacb45f81b74a757",
+      "pre_sha": "3ba0b90bc0f1746c32f2ef1ab8305c5d6b5f1b4286439b2f4fafefa35d57d392",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 9,
+      "name": "m04_ar3",
+      "inp_path": "models/DEFL/GAPGDPD/GAPGDPD_m04_ar3.inp",
+      "timestamp": "2026-10-09T12:46:13",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.6499905560521025,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            true,
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 3,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q2/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -135.25101002942316,
+        "aic": 288.5020200588463,
+        "bic": 308.344253633365,
+        "sigma_a": 1.8182922526659797,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.29845374366335453,
+          0.04918653241851423,
+          0.0548385860112619
+        ],
+        "jb_pvalue": 0.858255492334945,
+        "npar": 3,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Autónomo: sobreparametrización de m02: AR(3)",
+      "rationale": "",
+      "problems_found": "[diagnosis] salvedad de la Q: pasa en 15 pero rechaza en 12 (p=0.0492)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GAPGDPD_v9__1692ab36c8db.png",
+      "out_path": "models/DEFL/GAPGDPD/GAPGDPD_m04_ar3.out",
+      "hist_path": "figs/GAPGDPD_v9_hist__bfe9b4331157.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 7,
+      "status": "dead-end",
+      "why_abandoned": "Sobreparametrización de m02: φ₃=−0.06 (t −0.38), AIC/BIC peores.",
+      "why_adopted": "",
+      "iteracion": 5,
+      "parent_origen": "declarado",
+      "nodo": "estacionalidad",
+      "base_pre_path": "models/DEFL/GAPGDPD/GAPGDPD_m02_ar2.pre",
+      "base_pre_sha": "efa464a0b6add40cf66824ba5e877a7044e87fb48ebbb5ca98dbb5e3e8199a67",
+      "pre_sha": "92c6c23ab6e8ee1d8fca59c6c9eabeb50051e393ffa150332a45802c82d14120",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4 · fue 0.1.17.dev0 (motor C)"
+    }
+  ]
+}

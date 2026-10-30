@@ -1,0 +1,351 @@
+{
+  "series": "IT",
+  "analyst": "",
+  "created": "2026-10-07",
+  "carril": "",
+  "entries": [
+    {
+      "version": 1,
+      "name": "PC1",
+      "inp_path": "IT/work/IT_m00.inp",
+      "timestamp": "2026-10-07T13:50:27",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": -0.2539556272662372,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [],
+        "dominio": "multiplicative"
+      },
+      "stats": {
+        "loglik": -265.5222593367197,
+        "aic": 541.0445186734394,
+        "bic": 552.0679817703942,
+        "sigma_a": 12.66985505799349,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.14562863913295432,
+          0.2334638233526305,
+          0.2891545817281579,
+          0.29410900471454104
+        ],
+        "jb_pvalue": 0.6919408200160471,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + [1-φ(B)]⁻¹·a_t",
+      "decision": "IT: lam=0, d=1 (ADF/KPSS), B1 (coherencia con Rc y Rd; f=2 significativa sola), AR(1) por la alternancia heredada de Rd (PACF(1)=-0.70)",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/IT_v1__0f3c61ee11c0.png",
+      "out_path": "IT/work/IT_m00.out",
+      "hist_path": "figs/IT_v1_hist__990effd14908.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": null,
+      "status": "adopted",
+      "why_abandoned": "",
+      "why_adopted": "Revisión A8 (10-oct). Se mantiene D=0 (armónicos deterministas) porque IT entra en el análisis multivariante (VECM_XSYS) y éste es mejor con D=0 (decisión del analista). ln IT d=1, AR(1) −0.69, μ: diagnosis limpia; d=1 confirmado (DCD sobre-dif. θ̂ 0.94; sub-dif. LR 38.4; candidato d=0 v2 con raíz 0.961, SF no rechaza) → I(1), no raíz 0.96. HECHO DOCUMENTADO: el MEG da f=1 estocástica (coef −0.80, LR 4.62, fuera de banda); el modelo S (v3, m02_meg1) es adecuado, con testigo λ² 0.80 (LR 4.62, genuina), f=2 determinista y BIC 537.0 frente a 552.1. Rc y Rd tienen f=1 determinista (coef −0.90 / −0.85, poca potencia): la estocasticidad está en el desfase estacional entre remesas y renta pagada.",
+      "iteracion": 1,
+      "parent_origen": "inferido",
+      "nodo": "",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "d8cbbe28b3651118f6a0ce03972ee251fcf0162899141a747e18e4204d361a9c",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 2,
+      "name": "PC2",
+      "inp_path": "IT/work/IT_m01_d0ar2.inp",
+      "timestamp": "2026-10-07T13:50:48",
+      "spec": {
+        "lam": 0.0,
+        "d": 0,
+        "D": 0,
+        "mu": 19.266912106114525,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 2,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": []
+      },
+      "stats": {
+        "loglik": -269.51172236179406,
+        "aic": 551.0234447235881,
+        "bic": 564.3404909546448,
+        "sigma_a": 12.532447282802123,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.07092129979487061,
+          0.12535689199514388,
+          0.16044857602029472,
+          0.19619078553733338
+        ],
+        "jb_pvalue": 0.6478041493241475,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "ln y_t = μ + (−1)ᵗ + D_t(1 arm.) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Candidato d=0: ln IT en niveles con AR(2) (absorbe ∇ y el AR negativo) para contrastar I(0)",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/IT_v2__71d6095db6d6.png",
+      "out_path": "IT/work/IT_m01_d0ar2.out",
+      "hist_path": "figs/IT_v2_hist__287c8a41d991.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 1,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 2,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "IT/work/IT_m00.pre",
+      "base_pre_sha": "d8cbbe28b3651118f6a0ce03972ee251fcf0162899141a747e18e4204d361a9c",
+      "pre_sha": "1d4a35159d51fec077037e31fcba92c3386bf1e8369cd0f030e5cbbbf7203084",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 3,
+      "name": "m02_meg1",
+      "inp_path": "models/EXT/IT/IT_m02_meg1.inp",
+      "timestamp": "2026-10-10T19:34:43",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": -0.590434,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          1,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": []
+      },
+      "stats": {
+        "loglik": -260.1710656477522,
+        "aic": 528.3421312955044,
+        "bic": 537.039680375087,
+        "sigma_a": 12.8911832638637,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.5622618566230004,
+          0.09744047106567955,
+          0.11449791011574817,
+          0.18145309468183157
+        ],
+        "jb_pvalue": 0.5723297567349355,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "(1+B²)∇[ln y_t] = μ + (−1)ᵗ + [1-φ(B)]⁻¹·a_t",
+      "decision": "Revisión A8: MEG sobre m00 da f=1 estocástica (coef −0.80, LR 4.62, fuera de banda). Modelo S: (1+B²) + testigo MA_f, sin cos/sin de f=1.\n[2026-10-10] ALTERNATIVA DOCUMENTADA (estacionalidad estocástica, MEG): f=1 estocástica genuina (testigo λ² 0.80, LR 4.62), f=2 determinista, AR(1) −0.73, d=1 (sub-dif. LR 40.7); BIC 537.0 vs 552.1 de m00. No se adopta: el análisis multivariante (VECM_XSYS) es mejor con D=0 (decisión del analista); el adoptado es m00.",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": "models/EXT/IT/IT_m02_meg1.out",
+      "hist_path": null,
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 2,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 3,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "models/EXT/IT/IT_m00.pre",
+      "base_pre_sha": "d8cbbe28b3651118f6a0ce03972ee251fcf0162899141a747e18e4204d361a9c",
+      "pre_sha": "4e54e59d8654f25ef80378d0aa77a52f97d05cc31386ca18a8c88bee05851a39",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @d048cb7 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 4,
+      "name": "m03_ar2",
+      "inp_path": "models/EXT/IT/IT_m03_ar2.inp",
+      "timestamp": "2026-10-10T19:34:48",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": -0.25161151317310415,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 2,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": []
+      },
+      "stats": {
+        "loglik": -265.38743726811674,
+        "aic": 542.7748745362335,
+        "bic": 556.0030302525793,
+        "sigma_a": 12.643526725214196,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.09362452679683608,
+          0.1763507141973425,
+          0.20883618652025526,
+          0.21946515634623986
+        ],
+        "jb_pvalue": 0.62433355463904,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Revisión A8: sobreajuste de m00 a AR(2) para obtener raíz real positiva y leer Shin-Fuller (AR(1) −0.69 no la tiene).",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/IT_v4__0bf4d1ba147c.png",
+      "out_path": "models/EXT/IT/IT_m03_ar2.out",
+      "hist_path": "figs/IT_v4_hist__c4256a42f599.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 3,
+      "status": "dead-end",
+      "why_abandoned": "Sobreajuste a AR(2) para leer Shin-Fuller: φ₂ n.s. (t 0.52) y ambas raíces negativas (−0.64, −0.10), así que SF sigue sin aplicar. Sin utilidad.",
+      "why_adopted": "",
+      "iteracion": 4,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "models/EXT/IT/IT_m00.pre",
+      "base_pre_sha": "d8cbbe28b3651118f6a0ce03972ee251fcf0162899141a747e18e4204d361a9c",
+      "pre_sha": "776052b10bef6a4f6b296b981c571b922b6ed3d7054c2897d13dbfc870b98711",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @d048cb7 · fue 0.1.17.dev0 (motor C)"
+    }
+  ]
+}

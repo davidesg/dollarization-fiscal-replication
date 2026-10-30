@@ -1,0 +1,1096 @@
+{
+  "series": "REV",
+  "analyst": "",
+  "created": "2026-10-28",
+  "carril": "guiado",
+  "entries": [
+    {
+      "version": 1,
+      "name": "m03_ar1",
+      "inp_path": "models/MACRO/REV_BCE/REVbce_m03_ar1",
+      "timestamp": "2026-10-28T13:33:07",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 2.7736137145517143,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          },
+          {
+            "type": "step",
+            "date": "Q1/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -228.55511275435623,
+        "aic": 475.11022550871246,
+        "bic": 494.95245908323113,
+        "sigma_a": 7.329660982310056,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.4574411599903979,
+          0.43628061261255413,
+          0.4166064908896747,
+          0.2833977975097888
+        ],
+        "jb_pvalue": 0.4239371146042229,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + I_t(2 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Misma especificación que REV_m03_ar1 sobre datos verificables del BCE.",
+      "rationale": "Revisión de datos 28-oct-2026: ingresos SPNF reconstruidos desde los ficheros del BCE (histórica hasta 2011, serie nueva actual desde 2013; 2012 = total anual del BCE 35.335,2 repartido con el perfil mensual de v_4). La v_4 de la hoja maestra no reproduce al BCE desde 2012 (v_4 = v_3 + v_5; resultado global distinto). Se reestima la especificación adoptada en REV/REV_m03_ar1 (armónicos, escalón CFDD 2008Q1, escalón petróleo 2008Q4×3, AR(1), μ) sobre los datos nuevos.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/REV_v1__f99d4a40f7f4.png",
+      "out_path": "models/MACRO/REV_BCE/REVbce_m03_ar1.out",
+      "hist_path": "figs/REV_v1_hist__2908cda9b84c.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": null,
+      "status": "dead-end",
+      "why_abandoned": "Reestimación rápida de la especificación anterior sobre los datos del BCE; sustituida por el recorrido guiado completo, que llega al mismo modelo (v12).",
+      "why_adopted": "Decisión del analista (28-oct-2026): con los ingresos verificables del BCE se mantiene la especificación de REV_m03_ar1. Diagnosis limpia (Q15 p 0.28, JB p 0.42, sin |z| > 3). El AR(1) −0.23 (t −1.88) se mantiene: con t 1.88 es admisible y coherente con el AR(1) de G. Sin escalón en 2012: no hay evidencia en los residuos del cambio de metodología. σ 8.07 → 7.33.",
+      "iteracion": 1,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "models/MACRO/REV/REV_m03_ar1.pre",
+      "base_pre_sha": "a993391e179012abfacfd271d5f03386d9027a71313b19b926662ae7084a7301",
+      "pre_sha": "1388e3fba45d40c089dd281778af1914300f5f6ea78dd87adba8685f2eb9b902",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    },
+    {
+      "version": 2,
+      "name": "m05_nooil",
+      "inp_path": "models/MACRO/REV_BCE/REVbce_m05_nooil",
+      "timestamp": "2026-10-28T13:33:22",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 2.1221933620346216,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q1/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -245.71113735316146,
+        "aic": 503.4222747063229,
+        "bic": 516.6504304226687,
+        "sigma_a": 9.471096373336795,
+        "q_pass": true,
+        "jb_pass": false,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 24,
+            "date": "Q1/2009",
+            "z": -4.132875245118425
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.5235393361846385,
+          0.747740010179007,
+          0.5781294197138558,
+          0.579110764494732
+        ],
+        "jb_pvalue": 1.1814159648847046e-09,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Especificación de REV_m05_nooil sobre los datos del BCE; entrada REVno.pre de VECM_FISC.",
+      "rationale": "Variante para el VEC fiscal (como REV_m05_nooil): sólo el escalón CFDD 2008Q1; la caída del petróleo queda en la parte estocástica, porque el escalón da a REV una ruptura que pertenece a la razón G/REV (TAU). Datos verificables del BCE (28-oct-2026).",
+      "problems_found": "[diagnosis] el Jarque-Bera rechaza la normalidad (p=0.0000); anómalos por encima del umbral calibrado (3.17): Q1/2009 (z=-4.13)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/REV_v2__e620793bc8cc.png",
+      "out_path": "models/MACRO/REV_BCE/REVbce_m05_nooil.out",
+      "hist_path": "figs/REV_v2_hist__14629f57aa74.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 1,
+      "status": "dead-end",
+      "why_abandoned": "Reestimación rápida de la variante sin petróleo; sustituida por v14, construida desde el recorrido guiado (misma especificación).",
+      "why_adopted": "Entrada REVno.pre del VEC fiscal, con el mismo criterio que REV_m05_nooil (decisión del 10-oct): sólo el escalón CFDD 2008Q1; la caída del petróleo 2008Q4–2009Q1 se deja en la parte estocástica porque es una ruptura de la razón G/REV (TAU), no de los ingresos. Por eso el JB falla (41.1; Q1/2009 z −4.13), como en la versión anterior (JB 18.3). No es el modelo univariante de REV (ése es v1); es la variante para el sistema. Pendiente de confirmación del analista.",
+      "iteracion": 2,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "models/MACRO/REV/REV_m05_nooil.pre",
+      "base_pre_sha": "afcdc157c301e1105adbea983aef81421ca08504532819e17afa73a5373978e3",
+      "pre_sha": "27a112e6969cace72ffbb04045422ae388bb38d7db3404221e3ad4ea1ded9319",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    },
+    {
+      "version": 3,
+      "name": "dominio",
+      "inp_path": "",
+      "timestamp": "2026-10-28T13:35:51",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "dominio = multiplicative",
+      "rationale": "declarado por el analista",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "dominio",
+        "decidido": "multiplicative",
+        "evidencia": "",
+        "alternativas": "",
+        "expectativas": "Ingresos del SPNF en millones de USD corrientes, trimestrales sin desestacionalizar (BCE, datos verificables). Se espera: crecimiento con el PIB nominal (deriva, I(1) en logaritmos); estacionalidad del calendario tributario (impuesto a la renta en 1T-2T); cambios de registro en 2008 (CFDD desde 2008M1) y caída de los ingresos petroleros en 2008T4–2009 y 2015; posible ruptura por el cambio de metodología del BCE en 2012 (MEFP 2014)."
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 2,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 3,
+      "parent_origen": "",
+      "nodo": "dominio",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    },
+    {
+      "version": 4,
+      "name": "lambda",
+      "inp_path": "",
+      "timestamp": "2026-10-28T13:35:51",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "lambda = 0",
+      "rationale": "Analista: λ=0. Magnitud multiplicativa (ingresos en USD corrientes); signos opuestos media-std, decide el dominio; coherente con G y con el modelo anterior de REV.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "lambda",
+        "decidido": "0",
+        "evidencia": "gap=+0.106; corr(nivel)=0.475; corr(log)=0.369; estadístico λ=0",
+        "alternativas": "",
+        "propuesta_valor": 0.0
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "0",
+      "coincide": true,
+      "parent": 3,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 3,
+      "parent_origen": "",
+      "nodo": "lambda",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    },
+    {
+      "version": 5,
+      "name": "d",
+      "inp_path": "",
+      "timestamp": "2026-10-28T13:36:14",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "d = 1",
+      "rationale": "Analista: d=1. Tendencia visible y ACF de decaimiento lento; ADF y KPSS coinciden en d=1. Contraste formal (SF/DCD) tras la estimación.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "d",
+        "decidido": "1",
+        "evidencia": "d=0: ADF p=0.299, KPSS p=0.010; d=1: ADF p=0.000, KPSS p=0.083",
+        "alternativas": "",
+        "propuesta_valor": 1
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "1",
+      "coincide": true,
+      "parent": 4,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 3,
+      "parent_origen": "",
+      "nodo": "d",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    },
+    {
+      "version": 6,
+      "name": "estacionalidad",
+      "inp_path": "",
+      "timestamp": "2026-10-28T13:36:34",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "estacionalidad = D=0 (B1, armónicos deterministas)",
+      "rationale": "se toma la propuesta de la herramienta",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "estacionalidad",
+        "decidido": "D=0 (B1, armónicos deterministas)",
+        "evidencia": "F-HAC=14.46, p=0.0000",
+        "alternativas": "",
+        "propuesta_valor": "B1"
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "estacional (B1: D=0 + armónicos)",
+      "coincide": true,
+      "parent": 5,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 3,
+      "parent_origen": "",
+      "nodo": "estacionalidad",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    },
+    {
+      "version": 7,
+      "name": "g00",
+      "inp_path": "models/MACRO/REV_BCE/REVbce_g00.inp",
+      "timestamp": "2026-10-28T13:37:11",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 2.546378073116927,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [],
+        "dominio": "multiplicative"
+      },
+      "stats": {
+        "loglik": -250.27369382858478,
+        "aic": 508.54738765716957,
+        "bic": 517.3661581347334,
+        "sigma_a": 10.140017592258625,
+        "q_pass": true,
+        "jb_pass": false,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 24,
+            "date": "Q1/2009",
+            "z": -3.7207839037368666
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.1279770313096149,
+          0.131228164426753,
+          0.18275809209086324,
+          0.2212399408974285
+        ],
+        "jb_pvalue": 6.0062001883093055e-05,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + a_t",
+      "decision": "B1: ∇ln REV con armónicos f=1, f=2 y μ, sin ARMA ni intervenciones (recorrido guiado nuevo, datos BCE).",
+      "rationale": "Analista: B1 (D=0 + armónicos), objetivo multivariante (entra en el VEC fiscal). μ por criterio del analista (mantener la deriva).",
+      "problems_found": "[diagnosis] el Jarque-Bera rechaza la normalidad (p=0.0001); anómalos por encima del umbral calibrado (3.17): Q1/2009 (z=-3.72)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/REV_v7__007a4aad42cc.png",
+      "out_path": "models/MACRO/REV_BCE/REVbce_g00.out",
+      "hist_path": "figs/REV_v7_hist__c0851a777fad.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 6,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 3,
+      "parent_origen": "inferido",
+      "nodo": "estacionalidad",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "d13d23150b62724145a5f5cdf62290f45dacb665ffd5ba7e17725e0ca604d5a6",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    },
+    {
+      "version": 8,
+      "name": "g01_s0801",
+      "inp_path": "models/MACRO/REV_BCE/REVbce_g01_s0801.inp",
+      "timestamp": "2026-10-28T13:39:52",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 2.1020921982844816,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q1/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -246.36887774924065,
+        "aic": 502.7377554984813,
+        "bic": 513.7612185954362,
+        "sigma_a": 9.565940220674763,
+        "q_pass": true,
+        "jb_pass": false,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 24,
+            "date": "Q1/2009",
+            "z": -3.758302206597887
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.4724540137181449,
+          0.6978557387622784,
+          0.5040737370357087,
+          0.48310518928753043
+        ],
+        "jb_pvalue": 2.8344437667089438e-05,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + I_t(1 itvs) + a_t",
+      "decision": "Escalón 2008T1: cambio de registro de la CFDD (neto → bruto).",
+      "rationale": "Analista: intervención justificada por información extramuestral; antes de 2008 se añadía el neto a los ingresos, desde 2008T1 las partidas por separado.",
+      "problems_found": "[diagnosis] el Jarque-Bera rechaza la normalidad (p=0.0000); anómalos por encima del umbral calibrado (3.17): Q1/2009 (z=-3.76)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/REV_v8__6f8c387f4275.png",
+      "out_path": "models/MACRO/REV_BCE/REVbce_g01_s0801.out",
+      "hist_path": "figs/REV_v8_hist__a25737824d85.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 7,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 4,
+      "parent_origen": "declarado",
+      "nodo": "estacionalidad",
+      "base_pre_path": "models/MACRO/REV_BCE/REVbce_g00.inp",
+      "base_pre_sha": "d13d23150b62724145a5f5cdf62290f45dacb665ffd5ba7e17725e0ca604d5a6",
+      "pre_sha": "a051bf078a3810f6a38da52efd4f9cdb6f9ebe7d6cbf6f34f4fef326e9353fdb",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    },
+    {
+      "version": 9,
+      "name": "g02_s0804x3",
+      "inp_path": "models/MACRO/REV_BCE/REVbce_g02_s0804x3.inp",
+      "timestamp": "2026-10-28T13:40:48",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 2.7769636960439934,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q1/2008"
+          },
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -230.2708557730283,
+        "aic": 476.5417115460566,
+        "bic": 494.17925250118435,
+        "sigma_a": 7.522811301418927,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 15,
+            "date": "Q4/2006",
+            "z": 3.103113462430002
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.24390807098261036,
+          0.40904686826404224,
+          0.37594620415944413,
+          0.26542961686640165
+        ],
+        "jb_pvalue": 0.12910097453925323,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + I_t(2 itvs) + a_t",
+      "decision": "Escalón 2008T4×3 (petróleo), forma propuesta por art y confirmada por el analista.",
+      "rationale": "Analista: confirma Q4/2008×3, permanente (ω(1) −42.5 [−70.9, −14.1]); única configuración en la banda de AIC; misma forma que el modelo anterior.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/REV_v9__aaad54a8e749.png",
+      "out_path": "models/MACRO/REV_BCE/REVbce_g02_s0804x3.out",
+      "hist_path": "figs/REV_v9_hist__3bf0ae1fd699.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 8,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 5,
+      "parent_origen": "declarado",
+      "nodo": "estacionalidad",
+      "base_pre_path": "models/MACRO/REV_BCE/REVbce_g01_s0801.inp",
+      "base_pre_sha": "a051bf078a3810f6a38da52efd4f9cdb6f9ebe7d6cbf6f34f4fef326e9353fdb",
+      "pre_sha": "bbdca39b7554fa10e21272d5d041b5081c36ccfa0e5ab909e9f92e6964ed2861",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    },
+    {
+      "version": 10,
+      "name": "ordenes",
+      "inp_path": "",
+      "timestamp": "2026-10-28T13:41:01",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "ordenes = ARMA(1,0)",
+      "rationale": "Recorrido guiado con datos verificables del BCE (28-oct-2026). ln REV, d=1, armónicos f=1,2 (HSM: deterministas), escalón CFDD 2008T1 (+26.5; neto→bruto, información del analista), escalón petróleo 2008T4×3 (ganancia −40.8 permanente, forma identificada por el dato), AR(1) −0.23 (t −1.88; se mantiene: AIC, JB y residuos mejoran frente a (0,0), LR 3.4 p 0.06, coherente con G), μ 2.77 %/trim. Diagnosis limpia (Q15 p 0.28, JB p 0.42). d=1: el par en f=0 discrepa (DCD sobre-dif. θ̂ 0.86 LR 5.93, crítico subestimado por los escalones permanentes; Shin-Fuller por sobreajuste AR(3) Φ 3.38, p 0.009) → d=1 por el criterio PE, como en el análisis anterior.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "ordenes",
+        "decidido": "ARMA(1,0)",
+        "evidencia": "ARMA(0,0) sim=0.935; ARMA(1,0) sim=0.953; ARMA(0,1) sim=0.945 — sobre residuos de `REVbce_g02_s0804x3.pre`",
+        "alternativas": "",
+        "propuesta_valor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "empate": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ]
+        ]
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "ARMA(0,0)",
+      "coincide": "empate",
+      "parent": 9,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 6,
+      "parent_origen": "",
+      "nodo": "ordenes",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    },
+    {
+      "version": 11,
+      "name": "g03_ar0",
+      "inp_path": "models/MACRO/REV_BCE/REVbce_g03_ar0.inp",
+      "timestamp": "2026-10-28T13:41:43",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 2.776993,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q1/2008"
+          },
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -230.27085577233595,
+        "aic": 476.5417115446719,
+        "bic": 494.17925249979965,
+        "sigma_a": 7.522811301341187,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 15,
+            "date": "Q4/2006",
+            "z": 3.1031136121786247
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.24390839883566917,
+          0.40904748406381053,
+          0.3759469194429852,
+          0.2654305262579073
+        ],
+        "jb_pvalue": 0.1291007012029274,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + I_t(2 itvs) + a_t",
+      "decision": "Candidato ARMA(0,0) sobre g02 (ruido blanco).",
+      "rationale": "Empate en el nodo de órdenes; el analista pide estimar (0,0) y AR(1).",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/REV_v11__6eaa9ee54e42.png",
+      "out_path": "models/MACRO/REV_BCE/REVbce_g03_ar0.out",
+      "hist_path": "figs/REV_v11_hist__be390894f083.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 9,
+      "status": "dead-end",
+      "why_abandoned": "Candidato (0,0) del empate de órdenes: el analista elige el AR(1) (v12), que mejora AIC, JB y residuos (LR 3.4, p 0.06).",
+      "why_adopted": "",
+      "iteracion": 6,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/MACRO/REV_BCE/REVbce_g02_s0804x3.pre",
+      "base_pre_sha": "bbdca39b7554fa10e21272d5d041b5081c36ccfa0e5ab909e9f92e6964ed2861",
+      "pre_sha": "93550245e50ba21a6a170a8e757bce4476a7a1ead1142adbaf8d2c9b993f0466",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    },
+    {
+      "version": 12,
+      "name": "g04_ar1",
+      "inp_path": "models/MACRO/REV_BCE/REVbce_g04_ar1.inp",
+      "timestamp": "2026-10-28T13:41:48",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 2.773614561833067,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q1/2008"
+          },
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -228.55511272465742,
+        "aic": 475.11022544931484,
+        "bic": 494.9524590238335,
+        "sigma_a": 7.32966097587934,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.45744012885906915,
+          0.4362790393491143,
+          0.416602959070274,
+          0.28339602853196544
+        ],
+        "jb_pvalue": 0.42393727172212814,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + I_t(2 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Candidato AR(1) sobre g02.",
+      "rationale": "Empate en el nodo de órdenes; el analista pide estimar (0,0) y AR(1). AR(1) es la especificación del modelo anterior y la de G.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/REV_v12__0f81b0e610e7.png",
+      "out_path": "models/MACRO/REV_BCE/REVbce_g04_ar1.out",
+      "hist_path": "figs/REV_v12_hist__b5eac65fb189.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 9,
+      "status": "adopted",
+      "why_abandoned": "",
+      "why_adopted": "Recorrido guiado con datos verificables del BCE (28-oct-2026). ln REV, d=1, armónicos f=1,2 (HSM: deterministas), escalón CFDD 2008T1 (+26.5; neto→bruto, información del analista), escalón petróleo 2008T4×3 (ganancia −40.8 permanente, forma identificada por el dato), AR(1) −0.23 (t −1.88; se mantiene: AIC, JB y residuos mejoran frente a (0,0), LR 3.4 p 0.06, coherente con G), μ 2.77 %/trim. Diagnosis limpia (Q15 p 0.28, JB p 0.42). d=1: el par en f=0 discrepa (DCD sobre-dif. θ̂ 0.86 LR 5.93, crítico subestimado por los escalones permanentes; Shin-Fuller por sobreajuste AR(3) Φ 3.38, p 0.009) → d=1 por el criterio PE, como en el análisis anterior.",
+      "iteracion": 7,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/MACRO/REV_BCE/REVbce_g02_s0804x3.pre",
+      "base_pre_sha": "bbdca39b7554fa10e21272d5d041b5081c36ccfa0e5ab909e9f92e6964ed2861",
+      "pre_sha": "e8a6a1de640416015ba2944ecc40b7feba18bc2ff16b1e53fbaece4db874d450",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    },
+    {
+      "version": 13,
+      "name": "g05_ar2",
+      "inp_path": "models/MACRO/REV_BCE/REVbce_g05_ar2.inp",
+      "timestamp": "2026-10-28T13:42:55",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 2.7599670393567948,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 2,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q1/2008"
+          },
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -228.5457960257366,
+        "aic": 477.0915920514732,
+        "bic": 499.13851824538284,
+        "sigma_a": 7.328574159809014,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.2760630203021742,
+          0.3253720915717664,
+          0.323853659116797,
+          0.20934163612158996
+        ],
+        "jb_pvalue": 0.46157079082628305,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + I_t(2 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Sobreajuste AR(2) de g04 para recuperar el lado AR (Shin-Fuller) del par en f=0.",
+      "rationale": "El DCD de sobrediferenciación sobre g04 da θ̂ 0.86, LR 5.93, sin par (AR(1) negativo: SF no aplica). Como en el análisis anterior (v9 de REV), se sobreajusta para contrastar d con Shin-Fuller.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/REV_v13__89ea0997b357.png",
+      "out_path": "models/MACRO/REV_BCE/REVbce_g05_ar2.out",
+      "hist_path": "figs/REV_v13_hist__34dd625fd4fa.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 12,
+      "status": "dead-end",
+      "why_abandoned": "Sobreajuste AR(2) sólo para el contraste de Shin-Fuller (φ₂ t −0.14): confirma que el AR(1) basta.",
+      "why_adopted": "",
+      "iteracion": 8,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/MACRO/REV_BCE/REVbce_g04_ar1.pre",
+      "base_pre_sha": "e8a6a1de640416015ba2944ecc40b7feba18bc2ff16b1e53fbaece4db874d450",
+      "pre_sha": "bc8583c401e3033c85bbcb3de30f6a12fae3f1471b5d17ea5621f7ea59f2ad33",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    },
+    {
+      "version": 14,
+      "name": "g06_nooil_ar1",
+      "inp_path": "models/MACRO/REV_BCE/REVbce_g06_nooil_ar1.inp",
+      "timestamp": "2026-10-28T14:04:30",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 2.122199889536864,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q1/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -245.71113733662463,
+        "aic": 503.42227467324926,
+        "bic": 516.650430389595,
+        "sigma_a": 9.471096376853287,
+        "q_pass": true,
+        "jb_pass": false,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 24,
+            "date": "Q1/2009",
+            "z": -4.132875759020606
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.5235395875315669,
+          0.74774045198991,
+          0.5781305708749725,
+          0.5791115431142455
+        ],
+        "jb_pvalue": 1.1813728631005283e-09,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Variante para el VEC fiscal: especificación adoptada (g04) sin el escalón del petróleo (sólo CFDD 2008T1), AR(1), μ.",
+      "rationale": "Criterio del analista (mantenido del 10-oct): la caída del petróleo de 2008T4 es una ruptura de la razón G/REV (escalón +16.9 en TAU), no de los ingresos dentro del sistema; se deja en la parte estocástica de REV para que el VEC la vea en la relación.",
+      "problems_found": "[diagnosis] el Jarque-Bera rechaza la normalidad (p=0.0000); anómalos por encima del umbral calibrado (3.17): Q1/2009 (z=-4.13)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/REV_v14__2c01d4432765.png",
+      "out_path": "models/MACRO/REV_BCE/REVbce_g06_nooil_ar1.out",
+      "hist_path": "figs/REV_v14_hist__e101098c210e.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 8,
+      "status": "adopted",
+      "why_abandoned": "",
+      "why_adopted": "Entrada REVno del VEC fiscal (criterio del analista, mantenido): la especificación adoptada (v12) sin el escalón del petróleo; la caída 2008T4–2009T1 queda en la parte estocástica porque es una ruptura de la razón G/REV (TAU, escalón +16.9), no de los ingresos dentro del sistema. Por diseño el JB falla (41.1; 2009T1 z −4.13); Q limpia (p 0.58). AR(1) −0.14 (t −1.15) se mantiene por coherencia con v12.",
+      "iteracion": 9,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/MACRO/REV_BCE/REVbce_g01_s0801.pre",
+      "base_pre_sha": "a051bf078a3810f6a38da52efd4f9cdb6f9ebe7d6cbf6f34f4fef326e9353fdb",
+      "pre_sha": "0bb1081c2ef4363b362b9c30f719c053f670a5371d960b7325f199ac39b206d0",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    }
+  ]
+}

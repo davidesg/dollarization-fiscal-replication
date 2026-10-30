@@ -1,0 +1,29 @@
+series,source,rule,unit,note
+PE,"master Data:v_1 (INEC CPI, base 2014)",PPP-aligned (b = 2011); mean of 3 months,"index, US level of b = 100",Ecuador price level in % of the US level of year b
+PU,"master Data:v_2 (BLS CPI-U, NSA)",rebased to the annual mean of 2011 = 100; mean of 3 months,index,
+GAP,PE / PU,ratio,ratio,Ecuador / US price level
+GY,master Data:v_3 (BCE SPNF expenditure) / Data trim:v_10 (GDP),sum of 3 months / quarterly GDP,ratio,"SPNF: 'Gastos totales' to 2011, 'Total erogaciones' from 2012; includes CFDD from 2008M1"
+G,master Data:v_3 (BCE SPNF expenditure),sum of 3 months,USD million,
+REV,"BCE Operaciones del SPNF: 'Total Ingresos' (historical, to 2011), 'TOTAL INGRESOS' (current series, from 2013); 2012 = BCE annual total, monthly profile of master v_4",sum of 3 months,USD million,"replaces master v_4, which from 2012 does not match the BCE (DATA.md section 7)"
+TAU,G / REV,ratio,ratio,100 ln TAU = deficit in % of revenue
+YN,BCE CNT 127 Dem_Corr_bru: P.I.B.,as published,USD million,"current prices, NSA"
+YR,BCE CNT 127 Dem_Cad_bru: P.I.B.,as published,USD million of 2018,"chained volume, NSA"
+X,master Data trim (BCE balance of payments): Exportaciones (bienes + servicios),as published,USD million,
+M,master Data trim (BCE balance of payments): Importaciones (bienes + servicios),as published,USD million,
+Rc,"master Data trim (BCE balance of payments): income + current transfers, credit",as published; sum,USD million,~95 % remittances received
+Rd,"master Data trim (BCE balance of payments): income + current transfers, debit",as published; sum,USD million,"~84 % income paid (interest, profits)"
+CAc,X + Rc,sum,USD million,current-account credits
+CAd,M + Rd,sum,USD million,current-account debits
+BXE,X / M,ratio,ratio,trade balance as a coverage ratio
+SE,CAc / CAd,ratio,ratio,"current-account coverage ratio; SE = w BXE + (1 - w) IT, w = M / (M + Rd)"
+IT,Rc / Rd,ratio,ratio,income and transfers coverage ratio
+PCEEC,"BCE CNT 127, current / chained volume, household consumption (incl. NPISH)","implicit deflator, NSA; PPP-aligned (b = 2011, PA.NUS.PRVT.PP)",index,
+PCEUSA,BEA via FRED DPCERD3Q086SBEA_2026-10-09.csv,rebased to the annual mean of 2011 = 100,index,seasonally adjusted at source
+GAPPCE,PCEEC / PCEUSA,ratio,ratio,
+GDPDEC,"BCE CNT 127, current / chained volume, GDP","implicit deflator, NSA; PPP-aligned (b = 2011, PA.NUS.PPP)",index,
+GDPDUSA,BEA via FRED GDPDEF_2026-10-09.csv,rebased to the annual mean of 2011 = 100,index,seasonally adjusted at source
+GAPGDPD,GDPDEC / GDPDUSA,ratio,ratio,
+WTI,"FRED WTISPLC (EIA), monthly",mean of 3 months,USD per barrel,
+IPCEC,master Data:v_1 (INEC CPI),"PPP-aligned as PE, monthly",index,monthly
+IPCUSA,"master Data:v_2 (BLS CPI-U, NSA)","as PU, monthly",index,monthly
+RIPC,IPCEC / IPCUSA,ratio,ratio,monthly

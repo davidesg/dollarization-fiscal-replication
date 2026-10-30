@@ -1,0 +1,655 @@
+{
+  "series": "GY",
+  "analyst": "",
+  "created": "2026-10-07",
+  "carril": "",
+  "entries": [
+    {
+      "version": 1,
+      "name": "PC1",
+      "inp_path": "GY2/work/GY_m00.inp",
+      "timestamp": "2026-10-07T11:44:22",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.0,
+        "estimate_mu": false,
+        "alter": true,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": []
+      },
+      "stats": {
+        "loglik": -234.60127807341058,
+        "aic": 475.20255614682117,
+        "bic": 481.81663400499406,
+        "sigma_a": 8.025091573957168,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.010165858877835388,
+          0.08190664234189604,
+          0.207198968112577,
+          0.3709454006623131
+        ],
+        "jb_pvalue": 0.7677418931715765,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = (−1)ᵗ + D_t(1 arm.) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Revisión desde cero (pasada 2): lam=0, d=1, B1 armónicos; modelo base m00",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GY_v1__10966dddeacb.png",
+      "out_path": "GY2/work/GY_m00.out",
+      "hist_path": "figs/GY_v1_hist__04e6738ca2b3.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": null,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "inferido",
+      "nodo": "",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "dd99ceef09c34151d39c9692e1ea5cfd27cec87e513bc8aa8730254492c71568",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 2,
+      "name": "PC2",
+      "inp_path": "GY2/work/GY_m01_ar1.inp",
+      "timestamp": "2026-10-07T11:45:33",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.0,
+        "estimate_mu": false,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": []
+      },
+      "stats": {
+        "loglik": -230.22919681551065,
+        "aic": 468.4583936310213,
+        "bic": 477.27716410858517,
+        "sigma_a": 7.510802345308673,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.8261784182488157,
+          0.9858465413214133,
+          0.9870432663316476,
+          0.9957723335094539
+        ],
+        "jb_pvalue": 0.6085888149370442,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = (−1)ᵗ + D_t(1 arm.) + [1-φ(B)]⁻¹·a_t",
+      "decision": "AR(1) sin mu (empate AR/MA ya resuelto en la pasada 1 a favor de AR(1); coincide con FUE G_Z.2 salvo mu)",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GY_v2__0cccb47120be.png",
+      "out_path": "GY2/work/GY_m01_ar1.out",
+      "hist_path": "figs/GY_v2_hist__e99f5a713083.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 1,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 2,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "GY2/work/GY_m00.pre",
+      "base_pre_sha": "dd99ceef09c34151d39c9692e1ea5cfd27cec87e513bc8aa8730254492c71568",
+      "pre_sha": "8d613c9014e6e48e2335724e6efd0c70498ce8b65b94c2f5c61a9c69bd081f3b",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 3,
+      "name": "PC3",
+      "inp_path": "GY2/work/GY_m02_i0802.inp",
+      "timestamp": "2026-10-07T11:49:36",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.0,
+        "estimate_mu": false,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q2/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -215.7494902088941,
+        "aic": 447.4989804177882,
+        "bic": 465.1365213729159,
+        "sigma_a": 6.039758071347261,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 18,
+            "date": "Q3/2007",
+            "z": 3.001663338007096
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.26548768997162076,
+          0.5652221670073616,
+          0.7845049632991352,
+          0.8684599090062366
+        ],
+        "jb_pvalue": 0.4603150690514889,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = (−1)ᵗ + D_t(1 arm.) + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Intervención 2008Q2x4 (step, 4 escalones): el dato y la escalera de Ockham coinciden; el analista asume retardo del efecto CFDD respecto a ene-2008",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GY_v3__8519c9000aa8.png",
+      "out_path": "GY2/work/GY_m02_i0802.out",
+      "hist_path": "figs/GY_v3_hist__01f4d6a2d922.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 2,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 3,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "GY2/work/GY_m01_ar1.inp",
+      "base_pre_sha": "8d613c9014e6e48e2335724e6efd0c70498ce8b65b94c2f5c61a9c69bd081f3b",
+      "pre_sha": "2fa68a9c4b92e3a2580934c57089856b665e88d471b8fb467041c5fbda102bc0",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 4,
+      "name": "PC4",
+      "inp_path": "GY2/work/GY_m03a_step0802.inp",
+      "timestamp": "2026-10-07T11:52:45",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.0,
+        "estimate_mu": false,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q2/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -223.41884773420736,
+        "aic": 456.8376954684147,
+        "bic": 467.8611585653696,
+        "sigma_a": 6.775652289440385,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.27006786236908353,
+          0.6324969798798907,
+          0.5581241950375815,
+          0.6303226319171404
+        ],
+        "jb_pvalue": 0.9097831283009581,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = (−1)ᵗ + D_t(1 arm.) + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Reformulación parsimoniosa: escalón permanente 2008Q2 (1 ω) — parte 1 de 2",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GY_v4__4c07157f6ed7.png",
+      "out_path": "GY2/work/GY_m03a_step0802.out",
+      "hist_path": "figs/GY_v4_hist__9df956118e99.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 2,
+      "status": "adopted",
+      "why_abandoned": "",
+      "why_adopted": "G/Y M1 (decisión del analista, 7-oct-2026; revisado 10-oct, TODO A1/A2; revision_empirica §4.8): ln G/Y, d=1, armónicos f=1 y f=2 deterministas (MEG; requisito B1 del sistema), AR(1) −0.52, escalón 2008T2 +25.8 sin μ. El escalón está justificado con información extramuestral: la CFDD (subsidio a combustibles) entra en el gasto del SPNF desde enero de 2008 (BCE), con efecto visible desde 2008T2; es un cambio de registro y debe controlarse. M2 (M1 + impulso 2008T3–T4) se mantiene sólo como robustez: lo justifica el dato, no información externa. Contrastes formales 10-oct: d=1 por abajo (sub-dif LR 18.8), DCD sobre-dif θ̂≈1; MEG f1, f2 deterministas. Es la entrada GY_M1.pre de VECM_GAP_GY (modelo central) y la fila Δγ de tab:uni2.",
+      "iteracion": 4,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "GY2/work/GY_m01_ar1.inp",
+      "base_pre_sha": "8d613c9014e6e48e2335724e6efd0c70498ce8b65b94c2f5c61a9c69bd081f3b",
+      "pre_sha": "2c6c270944f49137f3361513df191a7e9b977d809cd4f56938f447a15a7d115e",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 5,
+      "name": "PC5",
+      "inp_path": "GY2/work/GY_m03_step_pulse.inp",
+      "timestamp": "2026-10-07T11:52:53",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.0,
+        "estimate_mu": false,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q2/2008"
+          },
+          {
+            "type": "impulse",
+            "date": "Q3/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -215.76178737765758,
+        "aic": 445.52357475531517,
+        "bic": 460.95642309105193,
+        "sigma_a": 6.041006217946023,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 18,
+            "date": "Q3/2007",
+            "z": 3.0031308502941436
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.2815314833816738,
+          0.574309608489078,
+          0.7981398787492818,
+          0.882413449790085
+        ],
+        "jb_pvalue": 0.44335121395787647,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = (−1)ᵗ + D_t(1 arm.) + I_t(2 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Reformulación parsimoniosa: + impulso en el nivel 2008Q3-Q4 (2 ω) — parte 2 de 2 (transitorio: inversión pública y precio del combustible 2008)",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GY_v5__8d9db7a65999.png",
+      "out_path": "GY2/work/GY_m03_step_pulse.out",
+      "hist_path": "figs/GY_v5_hist__34538124fe26.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 4,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 5,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "GY2/work/GY_m03a_step0802.pre",
+      "base_pre_sha": "2c6c270944f49137f3361513df191a7e9b977d809cd4f56938f447a15a7d115e",
+      "pre_sha": "34b1e2b4e72478b7435a231c75b47a5f2f2005d6fce21925a071b25e659f800b",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 6,
+      "name": "MEG_f1",
+      "inp_path": "GY2/work/GY_m04_M2_megf1.inp",
+      "timestamp": "2026-10-07T11:59:13",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.0,
+        "estimate_mu": false,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          1,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q2/2008"
+          },
+          {
+            "type": "impulse",
+            "date": "Q3/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -212.29634109421391,
+        "aic": 436.59268218842783,
+        "bic": 449.63900580780165,
+        "sigma_a": 6.181374898477904,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 16,
+            "date": "Q3/2007",
+            "z": 3.1918761062989702
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.2977010564694976,
+          0.7656163421485395,
+          0.8171417526856273,
+          0.8776149083385503
+        ],
+        "jb_pvalue": 0.14108080337152043,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "(1+B²)∇[ln y_t] = (−1)ᵗ + I_t(2 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "M2: integrar f=1 (1+B^2) con testigo MA_f libre para verificar si la estocasticidad es real o casi-cancelación (pérdida de potencia por el impulso 2008)",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": "GY2/work/GY_m04_M2_megf1.out",
+      "hist_path": null,
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 5,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 6,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "GY2/work/GY_m03_step_pulse.pre",
+      "base_pre_sha": "34b1e2b4e72478b7435a231c75b47a5f2f2005d6fce21925a071b25e659f800b",
+      "pre_sha": "876c23ed4b8c70a00429a7cb949ad02c9d46b8fcb2894f14d9dd4c9df2c39ae4",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 7,
+      "name": "PC7",
+      "inp_path": "GY2/work/GY_m05_M1_d0ar2.inp",
+      "timestamp": "2026-10-07T12:00:40",
+      "spec": {
+        "lam": 0.0,
+        "d": 0,
+        "D": 0,
+        "mu": -133.88609342638165,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 2,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q2/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -227.31338746744825,
+        "aic": 468.6267749348965,
+        "bic": 484.16332887112924,
+        "sigma_a": 6.729826471949014,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.08538891067694399,
+          0.36981132397639493,
+          0.3748308979855801,
+          0.4462521743871455
+        ],
+        "jb_pvalue": 0.9550261180636938,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "ln y_t = μ + (−1)ᵗ + D_t(1 arm.) + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Candidato d=0 + escalón 2008Q2 (M1) con AR(2)+mu: ¿G/Y estacionaria salvo ruptura (Perron)?",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GY_v7__1262eb884b06.png",
+      "out_path": "GY2/work/GY_m05_M1_d0ar2.out",
+      "hist_path": "figs/GY_v7_hist__863e601e5f45.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 4,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 7,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "GY2/work/GY_m03a_step0802.pre",
+      "base_pre_sha": "2c6c270944f49137f3361513df191a7e9b977d809cd4f56938f447a15a7d115e",
+      "pre_sha": "a35741333adf225fd342e4446e5844cb79c447302f6869b5124ba01b0474b67b",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d · fue 0.1.17.dev0 (motor C)"
+    }
+  ]
+}

@@ -1,0 +1,788 @@
+{
+  "series": "YN",
+  "analyst": "",
+  "created": "2026-10-10",
+  "carril": "guiado",
+  "entries": [
+    {
+      "version": 1,
+      "name": "dominio",
+      "inp_path": "",
+      "timestamp": "2026-10-10T13:38:33",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "dominio = multiplicative",
+      "rationale": "declarado por el analista",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "dominio",
+        "decidido": "multiplicative",
+        "evidencia": "",
+        "alternativas": "",
+        "expectativas": "PIB nominal de Ecuador (CNT BCE entrega 127, precios corrientes, sin desestacionalizar, 2003T1–2019T4; = v_10, denominador de G/Y); fila «Nominal output» de tab:uni2. Logaritmos, d=1 con μ ≈ 1.8 % trimestral (paper: AR(2), impulso 2008T2–3). Estacionalidad como en YR (posiblemente estocástica). Episodio 2008–09: caída del deflactor del PIB (petróleo, escalón 2008Q4 ×2 en GDPDEC_G); 2015–16 petróleo."
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "",
+      "coincide": null,
+      "parent": null,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "dominio",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @d048cb7 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 2,
+      "name": "lambda",
+      "inp_path": "",
+      "timestamp": "2026-10-10T13:38:33",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "lambda = 0",
+      "rationale": "Analista: λ=0 por dominio multiplicativo.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "lambda",
+        "decidido": "0",
+        "evidencia": "gap=+0.184; corr(nivel)=0.715; corr(log)=0.531; estadístico λ=0",
+        "alternativas": "",
+        "propuesta_valor": 0.0
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "0",
+      "coincide": true,
+      "parent": 1,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "lambda",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @d048cb7 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 3,
+      "name": "d",
+      "inp_path": "",
+      "timestamp": "2026-10-10T13:38:47",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "d = 1",
+      "rationale": "Analista: d=1 (tendencia, ACF lenta; ADF/KPSS coinciden en ∇).",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "d",
+        "decidido": "1",
+        "evidencia": "d=0: ADF p=0.041, KPSS p=0.010; d=1: ADF p=0.001, KPSS p=0.068",
+        "alternativas": "",
+        "propuesta_valor": 1
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "1",
+      "coincide": true,
+      "parent": 2,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "d",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @d048cb7 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 4,
+      "name": "estacionalidad",
+      "inp_path": "",
+      "timestamp": "2026-10-10T13:39:02",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "estacionalidad = D=0 (B1, armónicos deterministas)",
+      "rationale": "se toma la propuesta de la herramienta",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "estacionalidad",
+        "decidido": "D=0 (B1, armónicos deterministas)",
+        "evidencia": "F-HAC=163.81, p=0.0000",
+        "alternativas": "",
+        "propuesta_valor": "B1"
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "estacional (B1: D=0 + armónicos)",
+      "coincide": true,
+      "parent": 3,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "estacionalidad",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @d048cb7 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 5,
+      "name": "m00",
+      "inp_path": "models/MACRO/YN/YN_m00.inp",
+      "timestamp": "2026-10-10T13:39:24",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 1.8790372566241866,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": []
+      },
+      "stats": {
+        "loglik": -170.84494780999879,
+        "aic": 349.68989561999757,
+        "bic": 358.50866609756144,
+        "sigma_a": 3.0987105122972363,
+        "q_pass": true,
+        "jb_pass": false,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 23,
+            "date": "Q4/2008",
+            "z": -3.5891604663253798
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.08255694786305168,
+          0.2194057582921285,
+          0.3464825668468796,
+          0.19643183701406697
+        ],
+        "jb_pvalue": 0.004771801043396458,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + a_t",
+      "decision": "B1: armónicos f1 (cos/sin) + (−1)ᵗ, μ, sin ARMA",
+      "rationale": "",
+      "problems_found": "[diagnosis] el Jarque-Bera rechaza la normalidad (p=0.0048); anómalos por encima del umbral calibrado (3.17): Q4/2008 (z=-3.59)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/YN_v5__9bb3caf8139a.png",
+      "out_path": "models/MACRO/YN/YN_m00.out",
+      "hist_path": "figs/YN_v5_hist__e6989995aac9.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 4,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "inferido",
+      "nodo": "estacionalidad",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "93af8f50357a634ea23530c76ac91093686b7253c5a20dd85b6289168e6a20b7",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @d048cb7 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 6,
+      "name": "m01_s0804x2",
+      "inp_path": "models/MACRO/YN/YN_m01_s0804x2.inp",
+      "timestamp": "2026-10-10T13:40:10",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 2.139757509162743,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -161.23420084344792,
+        "aic": 334.46840168689585,
+        "bic": 347.6965574032416,
+        "sigma_a": 2.6846277469134066,
+        "q_pass": false,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.00024301956026662186,
+          0.0013870679703102962,
+          0.0005047658474800487,
+          2.336291273641322e-05
+        ],
+        "jb_pvalue": 0.6023191404489986,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + I_t(1 itvs) + a_t",
+      "decision": "",
+      "rationale": "Analista: escalón Q4/2008×2 por coherencia con el componente que causa el suceso (deflactor GDPDEC_G, ×2, petróleo). El dato solo no identifica (×1 a ΔAIC 1.9).",
+      "problems_found": "[diagnosis] la Q rechaza el ruido blanco en el retardo que decide (15, p=0.0000); la Q rechaza también en 4 (p=0.0002), 8 (p=0.0014), 12 (p=0.0005)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/YN_v6__09a1ac9cd500.png",
+      "out_path": "models/MACRO/YN/YN_m01_s0804x2.out",
+      "hist_path": "figs/YN_v6_hist__e3f0d47345dd.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 5,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 2,
+      "parent_origen": "declarado",
+      "nodo": "estacionalidad",
+      "base_pre_path": "models/MACRO/YN/YN_m00.inp",
+      "base_pre_sha": "93af8f50357a634ea23530c76ac91093686b7253c5a20dd85b6289168e6a20b7",
+      "pre_sha": "abef1f02ca467a00c86bf7b1d0a8a9e2ed47788fa43fd7333268cf48505b3d33",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @d048cb7 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 7,
+      "name": "ordenes",
+      "inp_path": "",
+      "timestamp": "2026-10-10T13:40:36",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "ordenes = ARMA(1,1)×(1,0)_4",
+      "rationale": "Revisión 10-oct (guiado). ln YN: d=1; escalón 2008T4×2 (−13.0, −7.8; permanente ≈ −20.8 %, el suceso del deflactor/petróleo, coherente con GDPDEC_G ×2); armónicos f=1 deterministas (MEG LR 0); f=2 estocástica (MEG sobre m04: coef −0.85, LR 3.93) → (1+B) con testigo θ 0.85; AR(1) φ 0.44 × AR(1)_4 Φ 0.31 (t 2.2); μ 2.08 %/trim. Diagnosis limpia; SF/DCD coinciden en d=1. BIC 334.1, el mejor entre los adecuados.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "ordenes",
+        "decidido": "ARMA(1,1)×(1,0)_4",
+        "evidencia": "ARMA(0,2)×(1,0)_4 sim=0.965; ARMA(0,2)×(0,1)_4 sim=0.963; ARMA(2,0)×(1,0)_4 sim=0.943 — sobre residuos de `YN_m01_s0804x2.pre`",
+        "alternativas": "",
+        "propuesta_valor": [
+          0,
+          2,
+          1,
+          0
+        ],
+        "empate": [
+          [
+            0,
+            2,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "ARMA(0,2)×(1,0)_4",
+      "coincide": false,
+      "parent": 6,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 3,
+      "parent_origen": "",
+      "nodo": "ordenes",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @d048cb7 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 8,
+      "name": "m02_ar2",
+      "inp_path": "models/MACRO/YN/YN_m02_ar2.inp",
+      "timestamp": "2026-10-10T13:41:18",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 2.071552436833976,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 2,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -155.18568627999437,
+        "aic": 326.37137255998874,
+        "bic": 344.0089135151165,
+        "sigma_a": 2.4471276438731815,
+        "q_pass": false,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.024982789075597922,
+          0.23476546194538417,
+          0.05386985969928437,
+          0.005670872063155086
+        ],
+        "jb_pvalue": 0.37295413091071017,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Analista: AR(2) regular completo como baseline B1 (como YR y el paper); el retardo 4 lo decide el MEG.",
+      "rationale": "",
+      "problems_found": "[diagnosis] la Q rechaza el ruido blanco en el retardo que decide (15, p=0.0057); la Q rechaza también en 4 (p=0.0250)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/YN_v8__473f564965cf.png",
+      "out_path": "models/MACRO/YN/YN_m02_ar2.out",
+      "hist_path": "figs/YN_v8_hist__96168ef8161e.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 6,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 3,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/MACRO/YN/YN_m01_s0804x2.pre",
+      "base_pre_sha": "abef1f02ca467a00c86bf7b1d0a8a9e2ed47788fa43fd7333268cf48505b3d33",
+      "pre_sha": "2f45afc3a0901f82ec656036fa6b3202dcc44c2f3545802f6d931471b3d6fd45",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @d048cb7 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 9,
+      "name": "m03_ar2_sar1",
+      "inp_path": "models/MACRO/YN/YN_m03_ar2_sar1.inp",
+      "timestamp": "2026-10-10T13:42:34",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 2.0704883923461406,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [
+          [
+            true
+          ]
+        ],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 2,
+        "q": 0,
+        "P": 1,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -151.4007348783445,
+        "aic": 320.801469756689,
+        "bic": 340.6437033312077,
+        "sigma_a": 2.3028981479877437,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.5843421467738715,
+          0.6292467442539003,
+          0.3802549701615625
+        ],
+        "jb_pvalue": 0.4653791926229881,
+        "npar": 3,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + I_t(1 itvs) + [1-Φ(B^4)·φ(B)]⁻¹·a_t",
+      "decision": "Analista: la barra en el retardo 4 de m02 podría ser un pequeño AR(1)_4 estacionario (en vez de f=2 estocástica). m02 + AR_4(1), armónicos intactos.",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/YN_v9__2ae7d828e8dd.png",
+      "out_path": "models/MACRO/YN/YN_m03_ar2_sar1.out",
+      "hist_path": "figs/YN_v9_hist__d0119f0fbd0e.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 8,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 4,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/MACRO/YN/YN_m02_ar2.pre",
+      "base_pre_sha": "2f45afc3a0901f82ec656036fa6b3202dcc44c2f3545802f6d931471b3d6fd45",
+      "pre_sha": "9c95c1ca31d772a930f7c7c62f9348eafb3e64e453bee674e6f8babb1d26535d",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @d048cb7 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 10,
+      "name": "m04_ar1_sar1",
+      "inp_path": "models/MACRO/YN/YN_m04_ar1_sar1",
+      "timestamp": "2026-10-10T13:43:57",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 2.082576274042827,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [
+          [
+            true
+          ]
+        ],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 1,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -152.17994588086782,
+        "aic": 320.35989176173564,
+        "bic": 337.9974327168634,
+        "sigma_a": 2.328342046045466,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.11856345576758287,
+          0.37693662368885616,
+          0.6061789709548029,
+          0.46061727012933007
+        ],
+        "jb_pvalue": 0.5068279638517875,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + I_t(1 itvs) + [1-Φ(B^4)·φ(B)]⁻¹·a_t",
+      "decision": "[2026-10-10] ALTERNATIVA DOCUMENTADA con D=0 (armónicos f1 y (−1)ᵗ deterministas): ln YN d=1, escalón 2008T4×2, AR(1) 0.34 × AR(1)_4 0.43, μ 2.08 %; diagnosis limpia, SF/DCD d=1, BIC 338.0; φ₂ podado de m03 (LR 1.56, p 0.21). Referencia si el addon no incluye HSM/MEG (en él, f=2 sale estocástica: coef −0.85, LR 3.93). Adoptado con MEG: m05.",
+      "rationale": "Analista: podar φ₂ (t 1.26) de m03 → AR(1)×AR(1)_4.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/YN_v10__695c27e2618d.png",
+      "out_path": "models/MACRO/YN/YN_m04_ar1_sar1.out",
+      "hist_path": "figs/YN_v10_hist__14421848a19e.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 9,
+      "status": "adopted",
+      "why_abandoned": "",
+      "why_adopted": "Modelo de las TABLAS DEL PAPER (decisión del analista, 10-oct-2026): las tablas usan estacionalidad determinista en todas las frecuencias y el análisis de estacionalidad estocástica (HSM) va al addon. YN m04: ∇ ln PIB nominal con armónicos, escalón 2008T4×2 (petróleo), AR(1) 0.34 × AR(1)₄ 0.43, μ 2.08 %/trim.; SF 12.3, DCD⁺ 0.4. m05_meg2 ((1+B) en f=2 con testigo) sigue adoptado como modelo del addon.",
+      "iteracion": 5,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/MACRO/YN/YN_m03_ar2_sar1.pre",
+      "base_pre_sha": "9c95c1ca31d772a930f7c7c62f9348eafb3e64e453bee674e6f8babb1d26535d",
+      "pre_sha": "2c8775fa58fac85073da4db46f76709135b39b928b2935135605dd8f2ae5acba",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @d048cb7 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 11,
+      "name": "m05_meg2",
+      "inp_path": "models/MACRO/YN/YN_m05_meg2.inp",
+      "timestamp": "2026-10-10T13:44:54",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 4.165785,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [
+          [
+            true
+          ]
+        ],
+        "ar_s_free": [
+          [
+            true
+          ]
+        ],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          1
+        ],
+        "p": 1,
+        "q": 1,
+        "P": 1,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -150.29058569288316,
+        "aic": 316.5811713857663,
+        "bic": 334.0984093219777,
+        "sigma_a": 2.3199540128122877,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.3755469920951293,
+          0.3996740132853627,
+          0.28556894934396604
+        ],
+        "jb_pvalue": 0.5359260047304968,
+        "npar": 3,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "(1+B)∇[ln y_t] = μ + D_t(1 arm.) + I_t(1 itvs) + [1-Φ(B^4)·φ(B)]⁻¹·[1-θ(B)]·a_t",
+      "decision": "MEG sobre m04 (alternativa D=0): f=2 estocástica (coef −0.85, LR 3.93). Raíz (1+B) + testigo, sin (−1)ᵗ; f=1 determinista se mantiene.",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": "models/MACRO/YN/YN_m05_meg2.out",
+      "hist_path": null,
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 10,
+      "status": "adopted",
+      "why_abandoned": "",
+      "why_adopted": "Revisión 10-oct (guiado). ln YN: d=1; escalón 2008T4×2 (−13.0, −7.8; permanente ≈ −20.8 %, el suceso del deflactor/petróleo, coherente con GDPDEC_G ×2); armónicos f=1 deterministas (MEG LR 0); f=2 estocástica (MEG sobre m04: coef −0.85, LR 3.93) → (1+B) con testigo θ 0.85; AR(1) φ 0.44 × AR(1)_4 Φ 0.31 (t 2.2); μ 2.08 %/trim. Diagnosis limpia; SF/DCD coinciden en d=1. BIC 334.1, el mejor entre los adecuados.",
+      "iteracion": 6,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/MACRO/YN/YN_m04_ar1_sar1.pre",
+      "base_pre_sha": "2c8775fa58fac85073da4db46f76709135b39b928b2935135605dd8f2ae5acba",
+      "pre_sha": "986901ecf37a8bc5f40f310315e2786429bdd2109bd36c1b0ae36af0330d9747",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @d048cb7 · fue 0.1.17.dev0 (motor C)"
+    }
+  ]
+}

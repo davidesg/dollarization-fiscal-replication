@@ -1,0 +1,2 @@
+# IT (I(1)) into the level of GAP, by subtraction
+GAP <- IT 0 0 0

@@ -1,0 +1,817 @@
+{
+  "series": "GAPPCE",
+  "analyst": "",
+  "created": "2026-10-09",
+  "carril": "guiado",
+  "entries": [
+    {
+      "version": 1,
+      "name": "dominio",
+      "inp_path": "",
+      "timestamp": "2026-10-09T11:29:08",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "dominio = ratio",
+      "rationale": "declarado por el analista",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "dominio",
+        "decidido": "ratio",
+        "evidencia": "",
+        "alternativas": "",
+        "expectativas": "Razón Ecuador/EE. UU. de deflactores del consumo de los hogares (Ecuador implícito BCE en bruto; EE. UU. implícito PCE del BEA, SA), alineada con la PPA de consumo 2011. Como el GAP del IPC: I(1), log, posible escalón en 2008, estacionalidad pequeña o nula. Debe cointegrar con G/Y con θ cercano al del IPC."
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "",
+      "coincide": null,
+      "parent": null,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "dominio",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 2,
+      "name": "lambda",
+      "inp_path": "",
+      "timestamp": "2026-10-09T11:29:08",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "lambda = 0",
+      "rationale": "Usuario confirma λ=0 por dominio: ln GAPPCE = ln PCEEC − ln PCEUSA, ambos en log (como GAP del IPC).",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "lambda",
+        "decidido": "0",
+        "evidencia": "gap=-0.154; corr(nivel)=0.352; corr(log)=0.506; estadístico λ=1",
+        "alternativas": "",
+        "propuesta_valor": 1.0
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "1",
+      "coincide": false,
+      "parent": 1,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "lambda",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 3,
+      "name": "d",
+      "inp_path": "",
+      "timestamp": "2026-10-09T12:16:25",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "d = 1",
+      "rationale": "Usuario confirma d=1 de partida: tendencia y ACF lenta; ambigüedad en d=1 (KPSS) = deriva de la inflación de Ecuador; d=2 a los contrastes formales (como PCEEC y GAP IPC).",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "d",
+        "decidido": "1",
+        "evidencia": "d=0: ADF p=0.144, KPSS p=0.010; d=1: ADF p=0.000, KPSS p=0.011",
+        "alternativas": "",
+        "propuesta_valor": 1
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "1",
+      "coincide": true,
+      "parent": 2,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "d",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 4,
+      "name": "estacionalidad",
+      "inp_path": "",
+      "timestamp": "2026-10-09T12:16:49",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "estacionalidad = D=0 (sin estacionalidad)",
+      "rationale": "se toma la propuesta de la herramienta",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "estacionalidad",
+        "decidido": "D=0 (sin estacionalidad)",
+        "evidencia": "F-HAC=0.76, p=0.5225",
+        "alternativas": "",
+        "propuesta_valor": "A"
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "sin estacionalidad (D=0)",
+      "coincide": true,
+      "parent": 3,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "estacionalidad",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 5,
+      "name": "m00",
+      "inp_path": "models/DEFL/GAPPCE/GAPPCE_m00.inp",
+      "timestamp": "2026-10-09T12:17:17",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.527221,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": []
+      },
+      "stats": {
+        "loglik": -113.84550015522083,
+        "aic": 229.69100031044167,
+        "bic": 231.89569292983262,
+        "sigma_a": 1.3234580375040979,
+        "q_pass": true,
+        "jb_pass": false,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.016709796947608324,
+          0.016049032699054333,
+          0.04925306193180823,
+          0.11042144473331073
+        ],
+        "jb_pvalue": 0.017021946589667627,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + a_t",
+      "decision": "Usuario confirma D=0 sin armónicos (HAC F=0.76 p=0.52). Modelo base ∇ln con μ para calibrar 2008",
+      "rationale": "",
+      "problems_found": "[diagnosis] salvedad de la Q: pasa en 15 pero rechaza en 4 (p=0.0167), 8 (p=0.0160), 12 (p=0.0493); el Jarque-Bera rechaza la normalidad (p=0.0170)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GAPPCE_v5__9071b3e8ed9f.png",
+      "out_path": "models/DEFL/GAPPCE/GAPPCE_m00.out",
+      "hist_path": "figs/GAPPCE_v5_hist__21e0c3f32b1f.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 4,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "inferido",
+      "nodo": "estacionalidad",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "f23ff4b3bfdfe3de6bf5afd034312609a5a64c3ed4c4b53adfdf4f9c6cbbe382",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 6,
+      "name": "m01_ar1",
+      "inp_path": "models/DEFL/GAPPCE/GAPPCE_m01_ar1.inp",
+      "timestamp": "2026-10-09T12:18:23",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.5574717694885003,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": []
+      },
+      "stats": {
+        "loglik": -108.0963511309813,
+        "aic": 220.1927022619626,
+        "bic": 224.60208750074455,
+        "sigma_a": 1.2128370308978662,
+        "q_pass": true,
+        "jb_pass": false,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.8161974086329933,
+          0.6305532269916507,
+          0.5680590248010912,
+          0.5988458324336543
+        ],
+        "jb_pvalue": 0.020900451502694838,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + [1-φ(B)]⁻¹·a_t",
+      "decision": "AR(1) antes que intervenir (como GAP IPC): PACF corta en 1; 2008 no distorsiona la identificación",
+      "rationale": "",
+      "problems_found": "[diagnosis] el Jarque-Bera rechaza la normalidad (p=0.0209)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GAPPCE_v6__ae8d0d172680.png",
+      "out_path": "models/DEFL/GAPPCE/GAPPCE_m01_ar1.out",
+      "hist_path": "figs/GAPPCE_v6_hist__9d422645b3d8.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 5,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 2,
+      "parent_origen": "inferido",
+      "nodo": "estacionalidad",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "e9392f6f47ee431aab245aa8aa1835669610417afcd6526da5363b8cf5594cc7",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 7,
+      "name": "m02_ar1_s0804",
+      "inp_path": "models/DEFL/GAPPCE/GAPPCE_m02_ar1_s0804.inp",
+      "timestamp": "2026-10-09T12:19:17",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.5169617907750698,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -102.88898373258746,
+        "aic": 211.77796746517492,
+        "bic": 218.39204532334782,
+        "sigma_a": 1.121474920286045,
+        "q_pass": true,
+        "jb_pass": false,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.9048215140093052,
+          0.06707038741412885,
+          0.05971849782636196,
+          0.11588221959681344
+        ],
+        "jb_pvalue": 0.016819926164549286,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Prueba pedida por el analista: escalón Q4/2008 (como GAP del IPC, ω=+1.85) por coherencia; se mantiene sólo si ω es significativo y arregla el JB",
+      "rationale": "",
+      "problems_found": "[diagnosis] el Jarque-Bera rechaza la normalidad (p=0.0168)\n[2026-10-10] Revisión 10-oct: el JB (p 0.017) lo explica un solo anómalo, 2003T2 (primera observación): con un impulso ahí (v11) el JB pasa (p 0.093) y el BIC no cambia (218.2 vs 218.4). Como no hay justificación extramuestral para intervenir 2003T2, no se interviene: m02 se mantiene con esta salvedad. Formales: SF 7.26, DCD θ̂ 0.91 (banda) → d=1.",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GAPPCE_v7__160a50b177ac.png",
+      "out_path": "models/DEFL/GAPPCE/GAPPCE_m02_ar1_s0804.out",
+      "hist_path": "figs/GAPPCE_v7_hist__1b779fe7dd4a.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 6,
+      "status": "adopted",
+      "why_abandoned": "",
+      "why_adopted": "Modelo final de GAPPCE (cerrado por el analista 9-oct-2026): AR(1) + escalón Q4/2008 (ω=+3.44, t 3.4, LR 10.4 p≈0.001; espejo del desplome de PCEUSA; coherente con GAP IPC). AR(2), ARMA(1,1) no significativos; AR(5) diagnóstico LR 3.5, 4 gl, p≈0.47: la barra del retardo 5 (−0.34; 1/3 del par 2003Q2–2004Q3) no se modela. Salvedad: JB p 0.017 por asimetría (2003–04 convergencia post-dolarización, 2010Q1), sin suceso común; no se interviene. Formales: SF Φ=7.26 (d=1 basta), DCD sobredif θ̂=0.91 LR 2.49 → banda de cuasi-cancelación, d=1 por parsimonia (como PCEEC); subdif LR 15.7.",
+      "iteracion": 3,
+      "parent_origen": "declarado",
+      "nodo": "estacionalidad",
+      "base_pre_path": "models/DEFL/GAPPCE/GAPPCE_m01_ar1.pre",
+      "base_pre_sha": "e9392f6f47ee431aab245aa8aa1835669610417afcd6526da5363b8cf5594cc7",
+      "pre_sha": "378d23b361986438c66306d01a93eafe52951dd03b6b52e3635b8fad165cb6c5",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 8,
+      "name": "m03_ar2",
+      "inp_path": "models/DEFL/GAPPCE/GAPPCE_m03_ar2.inp",
+      "timestamp": "2026-10-09T12:20:47",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.5195580019593413,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 2,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -102.86726038294557,
+        "aic": 213.73452076589115,
+        "bic": 222.55329124345502,
+        "sigma_a": 1.1210819301459416,
+        "q_pass": true,
+        "jb_pass": false,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 28,
+            "date": "Q1/2010",
+            "z": 3.0145607271058905
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.8132961059660471,
+          0.03756563657253109,
+          0.03978969960458367,
+          0.08620752020325517
+        ],
+        "jb_pvalue": 0.014490431356798204,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Sobreparametrización de m02: AR(2)",
+      "rationale": "",
+      "problems_found": "[diagnosis] salvedad de la Q: pasa en 15 pero rechaza en 8 (p=0.0376), 12 (p=0.0398); el Jarque-Bera rechaza la normalidad (p=0.0145)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GAPPCE_v8__7d1e2150e711.png",
+      "out_path": "models/DEFL/GAPPCE/GAPPCE_m03_ar2.out",
+      "hist_path": "figs/GAPPCE_v8_hist__8284be0dc9fe.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 7,
+      "status": "dead-end",
+      "why_abandoned": "Sobreparametrización de m02: φ₂=0.03 (t 0.21).",
+      "why_adopted": "",
+      "iteracion": 4,
+      "parent_origen": "declarado",
+      "nodo": "estacionalidad",
+      "base_pre_path": "models/DEFL/GAPPCE/GAPPCE_m02_ar1_s0804.pre",
+      "base_pre_sha": "378d23b361986438c66306d01a93eafe52951dd03b6b52e3635b8fad165cb6c5",
+      "pre_sha": "aae1510cdc39447b3b3281b95ef6e95137ed90fd7d69967f413a7a897d7a9f34",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 9,
+      "name": "m04_arma11",
+      "inp_path": "models/DEFL/GAPPCE/GAPPCE_m04_arma11.inp",
+      "timestamp": "2026-10-09T12:20:53",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.5194349795363628,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [
+          [
+            true
+          ]
+        ],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 1,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -102.86943955798904,
+        "aic": 213.73887911597808,
+        "bic": 222.55764959354195,
+        "sigma_a": 1.1211209171843615,
+        "q_pass": true,
+        "jb_pass": false,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 28,
+            "date": "Q1/2010",
+            "z": 3.01275597908818
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.8075722536891676,
+          0.037517302545884035,
+          0.03944714895000356,
+          0.08544185756637779
+        ],
+        "jb_pvalue": 0.014625002502955557,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(1 itvs) + [1-φ(B)]⁻¹·[1-θ(B)]·a_t",
+      "decision": "Sobreparametrización de m02: ARMA(1,1)",
+      "rationale": "",
+      "problems_found": "[diagnosis] salvedad de la Q: pasa en 15 pero rechaza en 8 (p=0.0375), 12 (p=0.0394); el Jarque-Bera rechaza la normalidad (p=0.0146)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GAPPCE_v9__7e8c5b608c22.png",
+      "out_path": "models/DEFL/GAPPCE/GAPPCE_m04_arma11.out",
+      "hist_path": "figs/GAPPCE_v9_hist__ec2e79bcaa42.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 7,
+      "status": "dead-end",
+      "why_abandoned": "Sobreparametrización de m02: θ₁=0.05 (t 0.20), corr AR–MA 0.86.",
+      "why_adopted": "",
+      "iteracion": 5,
+      "parent_origen": "declarado",
+      "nodo": "estacionalidad",
+      "base_pre_path": "models/DEFL/GAPPCE/GAPPCE_m02_ar1_s0804.pre",
+      "base_pre_sha": "378d23b361986438c66306d01a93eafe52951dd03b6b52e3635b8fad165cb6c5",
+      "pre_sha": "f913c6ffe6ec24bcd7cd74f28ce79ddaf9a7f2f8eafee6415e759c7dc1360467",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 10,
+      "name": "m05_ar5",
+      "inp_path": "models/DEFL/GAPPCE/GAPPCE_m05_ar5.inp",
+      "timestamp": "2026-10-09T12:20:57",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.45928929065351254,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 5,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -101.12447203376945,
+        "aic": 216.2489440675389,
+        "bic": 231.68179240327567,
+        "sigma_a": 1.0892514489329126,
+        "q_pass": true,
+        "jb_pass": false,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.019721074447464848,
+          0.039190243133290226,
+          0.08897568649553811
+        ],
+        "jb_pvalue": 0.00768278731213609,
+        "npar": 5,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Diagnóstico (no candidato): AR(5) completo para medir cuánto compra la barra del retardo 5",
+      "rationale": "",
+      "problems_found": "[diagnosis] salvedad de la Q: pasa en 15 pero rechaza en 8 (p=0.0197), 12 (p=0.0392); el Jarque-Bera rechaza la normalidad (p=0.0077)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GAPPCE_v10__f67762647cd6.png",
+      "out_path": "models/DEFL/GAPPCE/GAPPCE_m05_ar5.out",
+      "hist_path": "figs/GAPPCE_v10_hist__d98e4f38a2a1.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 7,
+      "status": "dead-end",
+      "why_abandoned": "Diagnóstico del retardo 5: AR(5) completo frente a AR(1) LR 3.5, 4 gl, p≈0.47; AIC/BIC peores; mueve el escalón (4.36) y μ.",
+      "why_adopted": "",
+      "iteracion": 6,
+      "parent_origen": "declarado",
+      "nodo": "estacionalidad",
+      "base_pre_path": "models/DEFL/GAPPCE/GAPPCE_m02_ar1_s0804.pre",
+      "base_pre_sha": "378d23b361986438c66306d01a93eafe52951dd03b6b52e3635b8fad165cb6c5",
+      "pre_sha": "1bb522af4fc3e6fa33c77ff135ff58fa0506f1f785eb5ee938c96ced1071fed3",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 11,
+      "name": "m06_p0302",
+      "inp_path": "models/DEFL/GAPPCE/GAPPCE_m06_p0302.inp",
+      "timestamp": "2026-10-10T12:04:37",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.4996551905536544,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          },
+          {
+            "type": "impulse",
+            "date": "Q2/2003"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -100.689011695745,
+        "aic": 209.37802339149,
+        "bic": 218.19679386905386,
+        "sigma_a": 1.0851479536584272,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 28,
+            "date": "Q1/2010",
+            "z": 3.05997562976996
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.9248177920469837,
+          0.12525652663267917,
+          0.13315846257864516,
+          0.17398636083967134
+        ],
+        "jb_pvalue": 0.0926616462336844,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(2 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "",
+      "rationale": "Revisión 10-oct: m02 falla JB (p 0.017, asimetría que arranca en 2003T2, primera observación). Como en GYB, impulso en la condición inicial para ver si resuelve el JB.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GAPPCE_v11__fe8ca4ac4d35.png",
+      "out_path": "models/DEFL/GAPPCE/GAPPCE_m06_p0302.out",
+      "hist_path": "figs/GAPPCE_v11_hist__0fc6262a1cbf.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 7,
+      "status": "dead-end",
+      "why_abandoned": "Diagnóstico, no modelo (10-oct): un solo anómalo, 2003T2, explica el JB de m02 (con el impulso JB p 0.017 → 0.093). Sin justificación extramuestral para ese suceso no se interviene (decisión del analista). Se mantiene m02 (v7) con la salvedad documentada.",
+      "why_adopted": "",
+      "iteracion": 7,
+      "parent_origen": "declarado",
+      "nodo": "estacionalidad",
+      "base_pre_path": "models/DEFL/GAPPCE/GAPPCE_m02_ar1_s0804.inp",
+      "base_pre_sha": "378d23b361986438c66306d01a93eafe52951dd03b6b52e3635b8fad165cb6c5",
+      "pre_sha": "ddf46d00c71e424374c991bbb7bb2e0345bff1dab20bfd0846db9088b6eb5cbd",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @d048cb7 · fue 0.1.17.dev0 (motor C)"
+    }
+  ]
+}

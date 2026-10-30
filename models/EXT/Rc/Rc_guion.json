@@ -1,0 +1,282 @@
+{
+  "series": "Rc",
+  "analyst": "",
+  "created": "2026-10-07",
+  "carril": "",
+  "entries": [
+    {
+      "version": 1,
+      "name": "PC1",
+      "inp_path": "Rc/work/Rc_m00.inp",
+      "timestamp": "2026-10-07T13:42:20",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 1.1690445922386248,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [],
+        "dominio": "multiplicative"
+      },
+      "stats": {
+        "loglik": -211.67311733699546,
+        "aic": 431.3462346739909,
+        "bic": 440.1650051515548,
+        "sigma_a": 5.6994046713388515,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 8,
+            "date": "Q1/2005",
+            "z": 3.3079807792050007
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.4878352607774564,
+          0.3117167559190549,
+          0.49855985869166963,
+          0.44638382316283864
+        ],
+        "jb_pvalue": 0.12813887469813764,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Rc: lam=0 (común), d=1 provisional (par formal decide), B1 (HAC F=5.88, f=1 y f=2); m00 con mu",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/Rc_v1__6fa4394a921b.png",
+      "out_path": "Rc/work/Rc_m00.out",
+      "hist_path": "figs/Rc_v1_hist__9b2b316efa16.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": null,
+      "status": "adopted",
+      "why_abandoned": "",
+      "why_adopted": "Adopción registrada en la revisión del 10-oct-2026 (decidida el 7-oct, §4.13): ln Rc d=1, armónicos f1/f2, μ, sin ARMA (AR(1) de v2 sobra), 2005T1 (z 3.33) no intervenido. Por abajo: sub-dif LR 158 y candidato d=0 (v3) con raíz 0.982, SF no rechaza. Por arriba (10-oct): DCD sobre-dif. θ̂ 0.876, LR 2.40 (> 2.15 con armónicos), un solo lado (sin AR libre): cambio de deriva de las remesas; d=1 (criterio PE).",
+      "iteracion": 1,
+      "parent_origen": "inferido",
+      "nodo": "",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "f110fc8d5c7b3eb94647cc58aff722f474d7c781429849e540212aee78e2edb1",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 2,
+      "name": "PC2",
+      "inp_path": "Rc/work/Rc_m01_ar1.inp",
+      "timestamp": "2026-10-07T13:42:58",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 1.1504355205212722,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": []
+      },
+      "stats": {
+        "loglik": -210.7218363348735,
+        "aic": 431.443672669747,
+        "bic": 442.46713576670186,
+        "sigma_a": 5.617869684181894,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 8,
+            "date": "Q1/2005",
+            "z": 3.0672544905776737
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.7489425482934153,
+          0.5134168508506072,
+          0.6366866099993884,
+          0.6660112699579819
+        ],
+        "jb_pvalue": 0.5145587911306237,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Sobreajuste de m00 con AR(1); 2005T1 no intervenido (no decide órdenes)",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/Rc_v2__2a6b1c60b76d.png",
+      "out_path": "Rc/work/Rc_m01_ar1.out",
+      "hist_path": "figs/Rc_v2_hist__dbcbbeedd145.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 1,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 2,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "Rc/work/Rc_m00.pre",
+      "base_pre_sha": "f110fc8d5c7b3eb94647cc58aff722f474d7c781429849e540212aee78e2edb1",
+      "pre_sha": "17f0bcf691a23942349dcc01fe7c901e681f9ccb0179d0257b6ec9738bf416e6",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 3,
+      "name": "PC3",
+      "inp_path": "Rc/work/Rc_m02_d0ar1.inp",
+      "timestamp": "2026-10-07T13:45:40",
+      "spec": {
+        "lam": 0.0,
+        "d": 0,
+        "D": 0,
+        "mu": 655.6026668404289,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": []
+      },
+      "stats": {
+        "loglik": -217.7646179583299,
+        "aic": 445.5292359166598,
+        "bic": 456.6267744425403,
+        "sigma_a": 5.805849946306816,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 9,
+            "date": "Q1/2005",
+            "z": 3.3266032593905193
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.341314131474713,
+          0.2669432463311452,
+          0.4603756190931253,
+          0.37952735102670765
+        ],
+        "jb_pvalue": 0.1113230228890111,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "ln y_t = μ + (−1)ᵗ + D_t(1 arm.) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Candidato d=0: ln Rc en niveles con AR(1), armónicos y mu (para cerrar d sin el DCD sub-dif dudoso, BUG-0224)",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/Rc_v3__95fc31b1c98c.png",
+      "out_path": "Rc/work/Rc_m02_d0ar1.out",
+      "hist_path": "figs/Rc_v3_hist__330713ec07f7.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 2,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 3,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "Rc/work/Rc_m01_ar1.pre",
+      "base_pre_sha": "17f0bcf691a23942349dcc01fe7c901e681f9ccb0179d0257b6ec9738bf416e6",
+      "pre_sha": "3177c0412056df034a60f92ae4ca2814a77daf03be3edc89011f820e972f4a9b",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d+sucio · fue 0.1.17.dev0 (motor C)"
+    }
+  ]
+}

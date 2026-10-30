@@ -1,0 +1,714 @@
+{
+  "series": "IPCEC",
+  "analyst": "",
+  "created": "2026-10-09",
+  "carril": "guiado",
+  "entries": [
+    {
+      "version": 1,
+      "name": "dominio",
+      "inp_path": "",
+      "timestamp": "2026-10-09T18:20:27",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "dominio = price_index",
+      "rationale": "declarado por el analista",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "dominio",
+        "decidido": "price_index",
+        "evidencia": "",
+        "alternativas": "",
+        "expectativas": "IPC mensual de Ecuador (INEC, en bruto), media 2011 = 100 × PPA del consumo 2011; 2002M1–2008M6. Índice de precios: λ=0, I(1) con deriva (inflación), quizá I(2) por la desinflación post-dolarización de 2002 (inflación ≈ 12 % en 2002 bajando a ≈ 2–3 %). Estacionalidad mensual probable (IPC en bruto; Ecuador con estacionalidad marcada en educación/alimentos). Posible repunte inflacionario en 2008 (alimentos y expansión fiscal)."
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "",
+      "coincide": null,
+      "parent": null,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "dominio",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @7cde324 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 2,
+      "name": "lambda",
+      "inp_path": "",
+      "timestamp": "2026-10-09T18:20:27",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "lambda = 0",
+      "rationale": "Dominio price_index: λ=0 (∇ln = inflación mensual). La dispersión alta de 2002 es la desinflación post-dolarización, no escala. Confirmado por el analista.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "lambda",
+        "decidido": "0",
+        "evidencia": "gap=-0.088; corr(nivel)=0.685; corr(log)=0.773; estadístico λ=1; regla de dominio `price_index`",
+        "alternativas": "",
+        "propuesta_valor": 0.0
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "0",
+      "coincide": true,
+      "parent": 1,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "lambda",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @7cde324 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 3,
+      "name": "d",
+      "inp_path": "",
+      "timestamp": "2026-10-09T18:20:52",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "d = 1",
+      "rationale": "ADF y KPSS coinciden: d=0 raíz unitaria (ADF p 0.92, KPSS p 0.01); d=1 estacionaria (ADF p 0.000, KPSS p 0.10). ACF lenta, PACF ≈1. d=2 se examina en formales. Confirmado por el analista.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "d",
+        "decidido": "1",
+        "evidencia": "d=0: ADF p=0.922, KPSS p=0.010; d=1: ADF p=0.000, KPSS p=0.100",
+        "alternativas": "",
+        "propuesta_valor": 1
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "1",
+      "coincide": true,
+      "parent": 2,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "d",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @7cde324 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 4,
+      "name": "estacionalidad",
+      "inp_path": "",
+      "timestamp": "2026-10-09T18:21:44",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "estacionalidad = D=0 (B1, armónicos deterministas)",
+      "rationale": "se toma la propuesta de la herramienta",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "estacionalidad",
+        "decidido": "D=0 (B1, armónicos deterministas)",
+        "evidencia": "F-HAC=4.49, p=0.0001",
+        "alternativas": "",
+        "propuesta_valor": "B1"
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "estacional (B1: D=0 + armónicos)",
+      "coincide": true,
+      "parent": 3,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "estacionalidad",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @7cde324 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 5,
+      "name": "m00",
+      "inp_path": "models/RIPC/A/IPCEC/IPCEC_m00.inp",
+      "timestamp": "2026-10-09T18:22:20",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.39688809244300227,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 5,
+        "interventions": []
+      },
+      "stats": {
+        "loglik": -37.90749967386386,
+        "aic": 99.81499934772772,
+        "bic": 127.94066440997193,
+        "sigma_a": 0.3958842761301412,
+        "q_pass": false,
+        "jb_pass": false,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 12,
+            "date": "01/2003",
+            "z": 4.090848695031283
+          }
+        ],
+        "q_lags": [
+          12,
+          24,
+          36,
+          39
+        ],
+        "q_pvalues": [
+          3.82810849686166e-09,
+          3.8822855052966787e-07,
+          9.561111524503119e-06,
+          2.8615865955705644e-06
+        ],
+        "jb_pvalue": 5.452993462517589e-07,
+        "npar": 0,
+        "nobs": 78,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(5 arm.) + a_t",
+      "decision": "",
+      "rationale": "B1: estacionalidad determinista (HAC F 4.49, p 0.0001; f=1,2,5 significativas), armónicos en todas las frecuencias (5 pares + alterna), sin podar antes del MEG. Modelo base para calibrar distorsiones antes del ARMA. Confirmado por el analista.",
+      "problems_found": "[diagnosis] la Q rechaza el ruido blanco en el retardo que decide (39, p=0.0000); la Q rechaza también en 12 (p=0.0000), 24 (p=0.0000), 36 (p=0.0000); el Jarque-Bera rechaza la normalidad (p=0.0000); anómalos por encima del umbral calibrado (3.21): 01/2003 (z=+4.09)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/IPCEC_v5__e4d0aa045c36.png",
+      "out_path": "models/RIPC/A/IPCEC/IPCEC_m00.out",
+      "hist_path": "figs/IPCEC_v5_hist__644af58fea9f.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 4,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "inferido",
+      "nodo": "estacionalidad",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "70f4f1c360fcffba119efd07d0e58949858b9b0852cfcda9dd278ec60323f5d7",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @7cde324 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 6,
+      "name": "ordenes",
+      "inp_path": "",
+      "timestamp": "2026-10-09T18:24:15",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "ordenes = ARMA(1,0)",
+      "rationale": "Guiado (analista): AR(1) (φ 0.69) + escalón en el nivel 2003M1 (+1.74 %, t 7.6; Treadway ✓, vecinos −0.25/+0.18) + armónicos deterministas completos + μ 0.40 % mensual. Diagnosis limpia (Q39 p 0.65, JB p 0.65). Frente a ARMA(1,1)+escalón: θ 0.28 t 1.7, LR 3.14 p 0.076, BIC peor. Se mantienen d=1 y estacionalidad determinista por decisión del analista (ver problems_found): la persistencia no explicada de la inflación es, probablemente, convergencia post-dolarización no especificada en el univariante, que es lo que modela el RIPC.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "ordenes",
+        "decidido": "ARMA(1,0)",
+        "evidencia": "ARMA(1,0) sim=0.906; ARMA(1,1) sim=0.905; ARMA(2,1) sim=0.908 — sobre residuos de `IPCEC_m00.pre`",
+        "alternativas": "",
+        "propuesta_valor": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "empate": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            0,
+            0
+          ]
+        ]
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "ARMA(1,0)",
+      "coincide": true,
+      "parent": 5,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 2,
+      "parent_origen": "",
+      "nodo": "ordenes",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @7cde324 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 7,
+      "name": "m01_ar1",
+      "inp_path": "models/RIPC/A/IPCEC/IPCEC_m01_ar1.inp",
+      "timestamp": "2026-10-09T18:24:56",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.41497804907934494,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 5,
+        "interventions": []
+      },
+      "stats": {
+        "loglik": -24.502965281063318,
+        "aic": 75.00593056212664,
+        "bic": 105.47540104622453,
+        "sigma_a": 0.331841900242153,
+        "q_pass": true,
+        "jb_pass": false,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 12,
+            "date": "01/2003",
+            "z": 4.550075002770194
+          }
+        ],
+        "q_lags": [
+          12,
+          24,
+          36,
+          39
+        ],
+        "q_pvalues": [
+          0.5904743130655387,
+          0.7918844927399009,
+          0.715256278815327,
+          0.6619534464346342
+        ],
+        "jb_pvalue": 2.8488127801676963e-14,
+        "npar": 1,
+        "nobs": 78,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(5 arm.) + [1-φ(B)]⁻¹·a_t",
+      "decision": "",
+      "rationale": "PACF corta en 1 (0.53; 0.62 sin 2003M1): AR(1). Empate material con ARMA(1,1) (Δprevisión 0.65σ): se estiman los dos. Confirmado por el analista.",
+      "problems_found": "[diagnosis] el Jarque-Bera rechaza la normalidad (p=0.0000); anómalos por encima del umbral calibrado (3.21): 01/2003 (z=+4.55)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/IPCEC_v7__24924a736b34.png",
+      "out_path": "models/RIPC/A/IPCEC/IPCEC_m01_ar1.out",
+      "hist_path": "figs/IPCEC_v7_hist__aa33a220d0f7.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 5,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 2,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/RIPC/A/IPCEC/IPCEC_m00.pre",
+      "base_pre_sha": "70f4f1c360fcffba119efd07d0e58949858b9b0852cfcda9dd278ec60323f5d7",
+      "pre_sha": "f4dabbb041bc78e12557616939a7939d6a8d98add0d768a587bbe1917edfe987",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @7cde324 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 8,
+      "name": "m02_arma11",
+      "inp_path": "models/RIPC/A/IPCEC/IPCEC_m02_arma11.inp",
+      "timestamp": "2026-10-09T18:24:58",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.47744251080966144,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [
+          [
+            true
+          ]
+        ],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 1,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 5,
+        "interventions": []
+      },
+      "stats": {
+        "loglik": -22.215071022460826,
+        "aic": 72.43014204492165,
+        "bic": 105.24341795087324,
+        "sigma_a": 0.32159021518472886,
+        "q_pass": true,
+        "jb_pass": false,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 12,
+            "date": "01/2003",
+            "z": 4.504880952525448
+          }
+        ],
+        "q_lags": [
+          12,
+          24,
+          36,
+          39
+        ],
+        "q_pvalues": [
+          0.6412120442280183,
+          0.9061955802543273,
+          0.9325477414830916,
+          0.9288617459981228
+        ],
+        "jb_pvalue": 4.083075285147267e-13,
+        "npar": 2,
+        "nobs": 78,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(5 arm.) + [1-φ(B)]⁻¹·[1-θ(B)]·a_t",
+      "decision": "",
+      "rationale": "Rival del empate: ARMA(1,1) (mejor AICc; ACF positiva hasta lag 10, persistencia larga). Confirmado por el analista.",
+      "problems_found": "[diagnosis] el Jarque-Bera rechaza la normalidad (p=0.0000); anómalos por encima del umbral calibrado (3.21): 01/2003 (z=+4.50)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/IPCEC_v8__373336eb79e6.png",
+      "out_path": "models/RIPC/A/IPCEC/IPCEC_m02_arma11.out",
+      "hist_path": "figs/IPCEC_v8_hist__739bca6b9716.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 5,
+      "status": "dead-end",
+      "why_abandoned": "ARMA(1,1): con 2003M1 sin tratar θ 0.46 (LR 4.56, p 0.033) recogía en parte el salto; con el escalón (v10) θ 0.28, t 1.7, LR 3.14 p 0.076 y BIC peor que el AR(1). Se queda el AR(1).",
+      "why_adopted": "",
+      "iteracion": 3,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/RIPC/A/IPCEC/IPCEC_m00.pre",
+      "base_pre_sha": "70f4f1c360fcffba119efd07d0e58949858b9b0852cfcda9dd278ec60323f5d7",
+      "pre_sha": "95220abe60b94096f36f21fc0aa0910152ff7ace0d22ea7b260c9a0a8e16c033",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @7cde324 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 9,
+      "name": "m03_ar1_s0301",
+      "inp_path": "models/RIPC/A/IPCEC/IPCEC_m03_ar1_s0301.inp",
+      "timestamp": "2026-10-09T18:26:35",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.4044589050761504,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 5,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "01/2003"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -3.6983226454673925,
+        "aic": 35.396645290934785,
+        "bic": 68.20992119688637,
+        "sigma_a": 0.2528177994444422,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          12,
+          24,
+          36,
+          39
+        ],
+        "q_pvalues": [
+          0.21723970369821133,
+          0.6029495932020663,
+          0.6368114570504344,
+          0.6469790784646592
+        ],
+        "jb_pvalue": 0.6528204209146337,
+        "npar": 1,
+        "nobs": 78,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(5 arm.) + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "",
+      "rationale": "Por adecuación (JB 62.4 por un único dato): escalón en el nivel en 2003M1 sobre el AR(1). El escaneo da un período alterado. Se interviene en los dos rivales para rehacer la comparación AR(1) frente a ARMA(1,1). Decidido por el analista.",
+      "problems_found": "[2026-10-09] Contrastes formales: (1) MEG: f=1..5 deterministas (LR ≤ 1.41 < 2.06); f=6 (Nyquist) sale ESTOCÁSTICA (coef −0.86, LR 5.07 > 1.94), coherente con alterna determinista no significativa (t −1.3) y barra en lag 2 (+0.24). No se reformula: muestra corta, coef a 0.14 de la frontera y sin lectura económica clara; se mantiene la alterna determinista. (2) Par en f=0: SF 4.66 (d=1 basta) frente a DCD sobredif θ̂ 0.70, LR 4.77 (crít. ≈2.15 con armónicos; efecto del escalón no medido), fuera de la banda; subdif LR 48.2. d=2 ABIERTO, no estimado. Lectura del analista: la inflación cambia de nivel (2002 alta, 2004–07 baja, 2008 repunte) — probablemente convergencia post-dolarización no especificada en el univariante; es lo que modela el RIPC (transición ω0/(1−δB)). Mismo patrón que el IPC_EC trimestral (DCD LR 4.1–7.4).",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/IPCEC_v9__6b0908ce3591.png",
+      "out_path": "models/RIPC/A/IPCEC/IPCEC_m03_ar1_s0301.out",
+      "hist_path": "figs/IPCEC_v9_hist__dc41023bbe6b.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 7,
+      "status": "adopted",
+      "why_abandoned": "",
+      "why_adopted": "Guiado (analista): AR(1) (φ 0.69) + escalón en el nivel 2003M1 (+1.74 %, t 7.6; Treadway ✓, vecinos −0.25/+0.18) + armónicos deterministas completos + μ 0.40 % mensual. Diagnosis limpia (Q39 p 0.65, JB p 0.65). Frente a ARMA(1,1)+escalón: θ 0.28 t 1.7, LR 3.14 p 0.076, BIC peor. Se mantienen d=1 y estacionalidad determinista por decisión del analista (ver problems_found): la persistencia no explicada de la inflación es, probablemente, convergencia post-dolarización no especificada en el univariante, que es lo que modela el RIPC.",
+      "iteracion": 4,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/RIPC/A/IPCEC/IPCEC_m01_ar1.pre",
+      "base_pre_sha": "f4dabbb041bc78e12557616939a7939d6a8d98add0d768a587bbe1917edfe987",
+      "pre_sha": "24dbb0d0801bf3fbfc6d0b8ce9b8c0f931a3d1001e310b460e3b4a7e59f5522f",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @7cde324 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 10,
+      "name": "m04_arma11_s0301",
+      "inp_path": "models/RIPC/A/IPCEC/IPCEC_m04_arma11_s0301.inp",
+      "timestamp": "2026-10-09T18:26:37",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.4477210947631836,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [
+          [
+            true
+          ]
+        ],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 1,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 5,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "01/2003"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -2.127341009301368,
+        "aic": 34.254682018602736,
+        "bic": 69.411763346408,
+        "sigma_a": 0.2474231155131498,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          12,
+          24,
+          36,
+          39
+        ],
+        "q_pvalues": [
+          0.24592034292850606,
+          0.6430305191773507,
+          0.6978203767598723,
+          0.7418612420347128
+        ],
+        "jb_pvalue": 0.8181767202923275,
+        "npar": 2,
+        "nobs": 78,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(5 arm.) + I_t(1 itvs) + [1-φ(B)]⁻¹·[1-θ(B)]·a_t",
+      "decision": "",
+      "rationale": "Por adecuación: el mismo escalón en 2003M1 sobre el ARMA(1,1), para rehacer la comparación con el dato tratado. Decidido por el analista.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/IPCEC_v10__0b1d55f5f4ae.png",
+      "out_path": "models/RIPC/A/IPCEC/IPCEC_m04_arma11_s0301.out",
+      "hist_path": "figs/IPCEC_v10_hist__6f9b6ada1087.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 8,
+      "status": "dead-end",
+      "why_abandoned": "Arrastrado por el callejón de v8: ARMA(1,1): con 2003M1 sin tratar θ 0.46 (LR 4.56, p 0.033) recogía en parte el salto; con el escalón (v10) θ 0.28, t 1.7, LR 3.14 p 0.076 y BIC peor que el AR(1). Se queda el AR(1).",
+      "why_adopted": "",
+      "iteracion": 5,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/RIPC/A/IPCEC/IPCEC_m02_arma11.pre",
+      "base_pre_sha": "95220abe60b94096f36f21fc0aa0910152ff7ace0d22ea7b260c9a0a8e16c033",
+      "pre_sha": "89bbb81f8c5411671af6137b68c428eab72e8b6f98386f89fe004ff87fa9e2ac",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @7cde324 · fue 0.1.17.dev0 (motor C)"
+    }
+  ]
+}

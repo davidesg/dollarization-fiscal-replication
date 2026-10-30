@@ -1,0 +1,119 @@
+************************************************
+*        Input file for program DRVUS          *
+* Copyright (C) 1996 Jos? Alberto Mauricio     *
+************************************************
+
+** Frequency of time series: either 1(A), 4(Q) or 12(M):
+ 4
+** Number of observations and starting date of time series:
+ 68  1 2003 REV
+** Number of deterministic variables (including seasonal components):
+4
+**
+cos 1
+sin 1
+alter
+step 1 2008
+**
+0 0 0 0 
+**
+-2.603846  1
+**
+-1.703467  1
+**
+2.520087  1
+**
+27.972601  1
+**
+0 0 0 0 
+**Number and orders of regular AR operators:
+1 1
+**
+-0.3054 1
+** Number and orders of annual AR operators:
+0
+** Number and orders of regular MA operators:
+0
+** Number and orders of anual MA operators:
+0
+** Number and frequencies of regular AR(2) operators with fixed frequency:
+0
+** Number and frequencies of regular MA(2) operators with fixed frequency:
+0
+** Mean parameter (mu):
+2.793097 1
+** Box-Cox lambda, regular differences and complete annual differences:
+0.00 1 0
+** Individual factors of the annual difference (from freq 0.0): 
+ 0 0 0
+** ACF/PACF bands (0 Automatic) and reescaling factor: 
+ 0.00 100.00
+** Time series (stochastic and non-standard deterministic variables): 
+1605.600955 
+1729.472370 
+1821.847341 
+1753.322202 
+1842.548568 
+2046.849733 
+2167.826927 
+2119.251344 
+2012.591406 
+2428.077704 
+2379.057541 
+2326.016923 
+2541.946459 
+3098.639144 
+2454.673969 
+3167.459067 
+2728.754559 
+3300.945638 
+3814.813389 
+3786.078982 
+4921.193571 
+5883.997216 
+6255.662777 
+5047.521495 
+3446.165044 
+4781.935302 
+4821.499940 
+5328.812661 
+5808.662689 
+5874.657746 
+5480.655910 
+6014.425472 
+6990.741957 
+8210.999458 
+7891.730800 
+8096.300802 
+8727.652497 
+9380.025040 
+8712.007079 
+8515.540778 
+8815.118532 
+9654.860231 
+9316.028984 
+9513.646682 
+9459.045906 
+10484.148533 
+9263.850274 
+9692.998591 
+8983.396910 
+10026.374158 
+9283.426784 
+7899.023810 
+7711.232560 
+8255.911947 
+8317.304303 
+8785.483283 
+8739.940059 
+9203.832087 
+9000.436577 
+9345.760142 
+9452.273014 
+10529.814232 
+10166.708461 
+10852.350226 
+9487.267198 
+10609.719378 
+9850.461457 
+9110.069701 

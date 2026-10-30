@@ -1,0 +1,172 @@
+{
+ "aug_rank": {
+  "path": "build/drvec/aug_rank/aug_rank.out",
+  "series": [
+   "GY",
+   "BXE",
+   "GAP"
+  ],
+  "deterministic": "case 2 -- E[nabla Y2] = 0, E[W] free",
+  "logL": null,
+  "npar": null,
+  "rank": [
+   {
+    "r": 0,
+    "lr": 24.46
+   },
+   {
+    "r": 1,
+    "lr": 9.218
+   }
+  ],
+  "boot": [
+   {
+    "r": 0,
+    "lr": 24.46,
+    "c10": 20.54,
+    "c5": 23.76,
+    "c1": 29.37,
+    "p": 0.04,
+    "reps": 499
+   },
+   {
+    "r": 1,
+    "lr": 9.218,
+    "c10": 14.49,
+    "c5": 16.79,
+    "c1": 21.8,
+    "p": 0.396,
+    "reps": 499
+   }
+  ],
+  "params": {},
+  "alpha": null,
+  "beta": null,
+  "beta_fixed": false,
+  "weakex_wald": {},
+  "lr_restr": null,
+  "Q": null,
+  "JB": null,
+  "args": [
+   "VECM_AUG/m05",
+   "GY.pre BXE.pre GAP.pre 4 0 0 -case 2 -lrtest -bootstrap 499"
+  ]
+ },
+ "tb_rank": {
+  "path": "build/drvec/tb_rank/tb_rank.out",
+  "series": [
+   "M",
+   "X"
+  ],
+  "deterministic": "case 3 -- E[nabla Y2] free, E[W] free",
+  "logL": null,
+  "npar": null,
+  "rank": [
+   {
+    "r": 0,
+    "lr": 15.5053
+   }
+  ],
+  "boot": [
+   {
+    "r": 0,
+    "lr": 15.5053,
+    "c10": 10.68,
+    "c5": 12.53,
+    "c1": 20.45,
+    "p": 0.028,
+    "reps": 499
+   }
+  ],
+  "params": {},
+  "alpha": null,
+  "beta": null,
+  "beta_fixed": false,
+  "weakex_wald": {},
+  "lr_restr": null,
+  "Q": null,
+  "JB": null,
+  "args": [
+   "VECM_BOP",
+   "M.pre X.pre 2 0 0 -case pre -lrtest -bootstrap 499"
+  ]
+ },
+ "ca_rank": {
+  "path": "build/drvec/ca_rank/ca_rank.out",
+  "series": [
+   "CAd",
+   "CAc"
+  ],
+  "deterministic": "case 3 -- E[nabla Y2] free, E[W] free",
+  "logL": null,
+  "npar": null,
+  "rank": [
+   {
+    "r": 0,
+    "lr": 14.8558
+   }
+  ],
+  "boot": [
+   {
+    "r": 0,
+    "lr": 14.8558,
+    "c10": 10.43,
+    "c5": 12.43,
+    "c1": 19.23,
+    "p": 0.034,
+    "reps": 499
+   }
+  ],
+  "params": {},
+  "alpha": null,
+  "beta": null,
+  "beta_fixed": false,
+  "weakex_wald": {},
+  "lr_restr": null,
+  "Q": null,
+  "JB": null,
+  "args": [
+   "VECM_BOP",
+   "CAd.pre CAc.pre 2 0 0 -case pre -lrtest -bootstrap 499"
+  ]
+ },
+ "rt_rank": {
+  "path": "build/drvec/rt_rank/rt_rank.out",
+  "series": [
+   "Rd",
+   "Rc"
+  ],
+  "deterministic": "case 3 -- E[nabla Y2] free, E[W] free",
+  "logL": null,
+  "npar": null,
+  "rank": [
+   {
+    "r": 0,
+    "lr": 6.8914
+   }
+  ],
+  "boot": [
+   {
+    "r": 0,
+    "lr": 6.8914,
+    "c10": 9.99,
+    "c5": 12.18,
+    "c1": 18.47,
+    "p": 0.256,
+    "reps": 499
+   }
+  ],
+  "params": {},
+  "alpha": null,
+  "beta": null,
+  "beta_fixed": false,
+  "weakex_wald": {},
+  "lr_restr": null,
+  "Q": null,
+  "JB": null,
+  "args": [
+   "VECM_BOP",
+   "Rd.pre Rc.pre 2 0 0 -case pre -lrtest -bootstrap 499"
+  ]
+ }
+}

@@ -1,0 +1,656 @@
+{
+  "series": "PE",
+  "analyst": "",
+  "created": "2026-10-07",
+  "carril": "",
+  "entries": [
+    {
+      "version": 1,
+      "name": "PC1",
+      "inp_path": "PE/work/PE_m00.inp",
+      "timestamp": "2026-10-07T12:04:26",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.7529434207089427,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [],
+        "dominio": "price_index"
+      },
+      "stats": {
+        "loglik": -69.02560599108119,
+        "aic": 146.05121198216239,
+        "bic": 154.86998245972626,
+        "sigma_a": 0.6779338190952667,
+        "q_pass": false,
+        "jb_pass": false,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 21,
+            "date": "Q2/2008",
+            "z": 4.069353375572971
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          2.1671596739381016e-09,
+          3.028217665512756e-08,
+          6.373949124061085e-08,
+          3.420799383757611e-07
+        ],
+        "jb_pvalue": 6.665218389567178e-09,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + [1-φ(B)]⁻¹·a_t",
+      "decision": "IPC Ecuador: lam=0 (dominio), d=1 provisional, B1 armónicos; m00 con mu (la media de la inflación es la tasa de inflación)",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/PE_v1__097dcd7b8b15.png",
+      "out_path": "PE/work/PE_m00.out",
+      "hist_path": "figs/PE_v1_hist__39c22b01c7ed.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": null,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "inferido",
+      "nodo": "",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "abd8cbe9454b2908f01f8c1fd93056f71466680a237d4f03f1690d499ab3e9a2",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 2,
+      "name": "PC2",
+      "inp_path": "PE/work/PE_m01_s0801x2.inp",
+      "timestamp": "2026-10-07T12:07:04",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.6811322722752109,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q1/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -53.70511610499246,
+        "aic": 119.41023220998493,
+        "bic": 132.63838792633072,
+        "sigma_a": 0.5393612899272736,
+        "q_pass": false,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          1.0049236665032879e-08,
+          1.1188089010794044e-08,
+          3.0872769896106433e-09,
+          1.3439434343176515e-08
+        ],
+        "jb_pvalue": 0.843470707500505,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Analista: dos escalones a partir de 2008Q1 (Q1/2008x2) en lugar del x3 que propone el mecanismo",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/PE_v2__ba7eb0bf709c.png",
+      "out_path": "PE/work/PE_m01_s0801x2.out",
+      "hist_path": "figs/PE_v2_hist__d21153269cae.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 1,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 2,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "PE/work/PE_m00.inp",
+      "base_pre_sha": "abd8cbe9454b2908f01f8c1fd93056f71466680a237d4f03f1690d499ab3e9a2",
+      "pre_sha": "6ce132d2a5726cc43eeeb98281e811d5edf1b586b35debe3b0c60636a4a203a6",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 3,
+      "name": "PC3",
+      "inp_path": "PE/work/PE_m02_s0801x3.inp",
+      "timestamp": "2026-10-07T12:08:21",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.6578142404825987,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q1/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -49.36911230222122,
+        "aic": 112.73822460444244,
+        "bic": 128.1710729401792,
+        "sigma_a": 0.5055612348947118,
+        "q_pass": false,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          4.354872684686484e-09,
+          1.0535512462439556e-09,
+          1.210475386592691e-09,
+          9.722421090430089e-09
+        ],
+        "jb_pvalue": 0.30740830932536733,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Q1/2008x2 falla Treadway (vecino 2008Q3 z=+2.77); se construye Q1/2008x3 (forma identificada por el dato)",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/PE_v3__bd601c5e7272.png",
+      "out_path": "PE/work/PE_m02_s0801x3.out",
+      "hist_path": "figs/PE_v3_hist__167697523d6e.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 1,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 3,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "PE/work/PE_m00.inp",
+      "base_pre_sha": "abd8cbe9454b2908f01f8c1fd93056f71466680a237d4f03f1690d499ab3e9a2",
+      "pre_sha": "eb0ef84d60ce7f026394f3000bb71db8606407c10524574becbd02633760f0f7",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 4,
+      "name": "PC4",
+      "inp_path": "PE/work/PE_m03_ar1.inp",
+      "timestamp": "2026-10-07T12:09:59",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.6658321030554263,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q1/2008"
+          }
+        ],
+        "dominio": "price_index"
+      },
+      "stats": {
+        "loglik": -40.191008345223715,
+        "aic": 96.38201669044743,
+        "bic": 114.01955764557516,
+        "sigma_a": 0.43986973122613704,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.07880872670052419,
+          0.1694433749582709,
+          0.06653631426185702,
+          0.10264634207136525
+        ],
+        "jb_pvalue": 0.7051528977810115,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Analista: empezar por AR(1), lo que muestran ACF/PACF (pico dominante en lag 1)",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/PE_v4__ca85da011905.png",
+      "out_path": "PE/work/PE_m03_ar1.out",
+      "hist_path": "figs/PE_v4_hist__aa0a4d996cb7.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 3,
+      "status": "adopted",
+      "why_abandoned": "",
+      "why_adopted": "Revisión A5 (10-oct-2026): se mantiene d=1 (PE_m03_ar1). Shin-Fuller confirma d=1 (Φ=7.71); el DCD de sobrediferenciación pide d+1 (θ̂=0.78, LR 7.38) y el candidato ARIMA(0,2,1) (m06) tiene subdiferenciación LR 26.2 y BIC 105.5 frente a 114.0: el par en f=0 discrepa y la evidencia es ambigua entre d=1 y d=2. Decisión del analista: d=1, coherente con GAP I(1) y con la convergencia como fenómeno transitorio de la muestra.",
+      "iteracion": 4,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "PE/work/PE_m02_s0801x3.pre",
+      "base_pre_sha": "eb0ef84d60ce7f026394f3000bb71db8606407c10524574becbd02633760f0f7",
+      "pre_sha": "12ba0c5a5c157597dc1fa4b55105aa6172db212b8818f4b89824a063fddad89a",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 5,
+      "name": "PC5",
+      "inp_path": "PE/work/PE_m04_ar1_sar1.inp",
+      "timestamp": "2026-10-07T12:11:34",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.6594375865753765,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [
+          [
+            true
+          ]
+        ],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 1,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q1/2008"
+          }
+        ],
+        "dominio": "price_index"
+      },
+      "stats": {
+        "loglik": -38.16209016667775,
+        "aic": 94.3241803333555,
+        "bic": 114.16641390787419,
+        "sigma_a": 0.42604324126244647,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.13010934090548898,
+          0.3547312220922658,
+          0.14173351029164705,
+          0.19842792563922496
+        ],
+        "jb_pvalue": 0.6173950065449567,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + I_t(1 itvs) + [1-Φ(B^4)·φ(B)]⁻¹·a_t",
+      "decision": "Analista: estudiar AR(1)x AR(1)_4 (señal residual en lag 4: PACF +0.27, ACF +0.22)",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/PE_v5__f6cfa244e40b.png",
+      "out_path": "PE/work/PE_m04_ar1_sar1.out",
+      "hist_path": "figs/PE_v5_hist__d44955bd5bda.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 3,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 5,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "PE/work/PE_m02_s0801x3.pre",
+      "base_pre_sha": "eb0ef84d60ce7f026394f3000bb71db8606407c10524574becbd02633760f0f7",
+      "pre_sha": "373a985a7eb13ded57aba804a910ea63a243b4626e22a77c7b62e3392b47c585",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 6,
+      "name": "m05_d2",
+      "inp_path": "models/PE/PE_m05_d2",
+      "timestamp": "2026-10-10T11:33:08",
+      "spec": {
+        "lam": 0.0,
+        "d": 2,
+        "D": 0,
+        "mu": 0.0,
+        "estimate_mu": false,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [
+          [
+            true
+          ]
+        ],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 1,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q1/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -37.78751752250448,
+        "aic": 91.57503504500896,
+        "bic": 109.09227298122036,
+        "sigma_a": 0.4266420038921174,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.33999513713001006,
+          0.5521818974584565,
+          0.29119313270679537,
+          0.3383666974512489
+        ],
+        "jb_pvalue": 0.8548157750369945,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇^2[ln y_t] = (−1)ᵗ + D_t(1 arm.) + I_t(1 itvs) + [1-φ(B)]⁻¹·[1-θ(B)]·a_t",
+      "decision": "",
+      "rationale": "Revisión A5: el DCD de sobrediferenciación sobre m03 pide d+1 (θ̂=0.78, LR 7.38) fuera de la banda; SF dice d=1. Se estima el candidato rival ARIMA(1,2,1) sin μ.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/PE_v6__b5f928cf85cd.png",
+      "out_path": "models/PE/PE_m05_d2.out",
+      "hist_path": "figs/PE_v6_hist__bcb132214995.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 5,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 6,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "models/PE/PE_m03_ar1.pre",
+      "base_pre_sha": "12ba0c5a5c157597dc1fa4b55105aa6172db212b8818f4b89824a063fddad89a",
+      "pre_sha": "0035811bd0668bd5230aa89ad5bad83eb3a7922e4c9bdbd3e49c8a33ca6218cb",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @d048cb7 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 7,
+      "name": "m06_d2ma1",
+      "inp_path": "models/PE/PE_m06_d2ma1",
+      "timestamp": "2026-10-10T11:34:11",
+      "spec": {
+        "lam": 0.0,
+        "d": 2,
+        "D": 0,
+        "mu": 0.0,
+        "estimate_mu": false,
+        "alter": true,
+        "ar_free": [],
+        "ma_free": [
+          [
+            true
+          ]
+        ],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 0,
+        "q": 1,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q1/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -38.107590232047706,
+        "aic": 90.21518046409541,
+        "bic": 105.54276365828039,
+        "sigma_a": 0.42878389378586995,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 5,
+            "date": "Q3/2004",
+            "z": -3.0019500446791514
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.5338190658331263,
+          0.5184988146247055,
+          0.27346173573122856,
+          0.30329303652345485
+        ],
+        "jb_pvalue": 0.802035695116341,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇^2[ln y_t] = (−1)ᵗ + D_t(1 arm.) + I_t(1 itvs) + [1-θ(B)]·a_t",
+      "decision": "[2026-10-10] No se adopta: queda como salvedad de robustez de A5. ARIMA(0,2,1) θ=0.707 (sub-dif. LR 26.2), MEG f1,f2 deterministas, BIC 105.5 vs 114.0 de m03. El analista mantiene d=1 (SF confirma d=1, resultado ambiguo; GAP es I(1)).",
+      "rationale": "AR(1) de m05 no significativo (t=0.81): ARIMA(0,2,1) para contrastar θ=1 (sub-diferenciación).",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/PE_v7__2b935bf3a84e.png",
+      "out_path": "models/PE/PE_m06_d2ma1.out",
+      "hist_path": "figs/PE_v7_hist__ed6d8b7d653b.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 6,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 7,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "models/PE/PE_m05_d2.pre",
+      "base_pre_sha": "0035811bd0668bd5230aa89ad5bad83eb3a7922e4c9bdbd3e49c8a33ca6218cb",
+      "pre_sha": "68ffb7da2dc49ceae511fbca5cb5ba0816c3b1f3192dbdf201cbe662c6efffef",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @d048cb7 · fue 0.1.17.dev0 (motor C)"
+    }
+  ]
+}

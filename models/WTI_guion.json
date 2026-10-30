@@ -1,0 +1,668 @@
+{
+  "series": "WTI",
+  "analyst": "",
+  "created": "2026-10-05",
+  "carril": "",
+  "entries": [
+    {
+      "version": 1,
+      "name": "PC1",
+      "inp_path": "WTI_m00.inp",
+      "timestamp": "2026-10-05T23:20:24",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.0,
+        "estimate_mu": false,
+        "alter": false,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": []
+      },
+      "stats": {
+        "loglik": -280.82661530084414,
+        "aic": 561.6532306016883,
+        "bic": 561.6532306016883,
+        "sigma_a": 15.998636284932363,
+        "q_pass": true,
+        "jb_pass": false,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 23,
+            "date": "Q4/2008",
+            "z": -4.418304440402271
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.1843118189431172,
+          0.4664510825608109,
+          0.713510034126688,
+          0.8442774774506011
+        ],
+        "jb_pvalue": 1.2943066587029606e-20,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = [1-φ(B)]⁻¹·a_t",
+      "decision": "lam=0, d=1 (decisión del analista: la serie deambula; reevaluar con Shin-Fuller/DCD), D=0 sin armónicos (HAC F=1.76 p=0.16)",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/WTI_v1__5e5f56661383.png",
+      "out_path": "WTI_m00.out",
+      "hist_path": "figs/WTI_v1_hist__6bff70c7c6bc.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": null,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "inferido",
+      "nodo": "",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "7cdfebc1747b73800468baa77d3556734411de9265f95ce2fee1fbf63ec4bcef",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @a33b893+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 2,
+      "name": "PC2",
+      "inp_path": "WTI_m01_i0804.inp",
+      "timestamp": "2026-10-05T23:23:54",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.0,
+        "estimate_mu": false,
+        "alter": false,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -263.3930092950849,
+        "aic": 532.7860185901698,
+        "bic": 539.4000964483427,
+        "sigma_a": 12.33326904879615,
+        "q_pass": true,
+        "jb_pass": false,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 48,
+            "date": "Q1/2015",
+            "z": -3.4818978655211303
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.3735718093465975,
+          0.7170459246242742,
+          0.889379509885955,
+          0.8614096907735909
+        ],
+        "jb_pvalue": 0.0007362402674719938,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Intervención Q4/2008×3 (step, 3 escalones), identificada por el dato (ΔAIC 4.7 frente a ×2)",
+      "rationale": "Normalidad (JB=91.6) y suceso relevante; la intervención no cambia la identificación ARMA (paseo aleatorio)",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/WTI_v2__c388477e5a42.png",
+      "out_path": "WTI_m01_i0804.out",
+      "hist_path": "figs/WTI_v2_hist__c4d3e544734a.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 1,
+      "status": "adopted",
+      "why_abandoned": "",
+      "why_adopted": "Revisión 29-oct-2026 (decisión del analista): ln WTI d=1, paseo aleatorio SIN deriva, escalón 2008T4 ×3. Una deriva en ∇ln WTI implicaría una tendencia creciente indefinida en el precio del petróleo, sin sentido económico; la μ de m04–m06 sólo compensa los dos escalones. No se interviene 2014T4: no hay justificación suficiente para esa intervención, aunque corregiría el JB (p 0.001), que se acepta. Es el modelo que entra en todos los sistemas de drvec (VECM_WTI/WTI.pre, mismo sha) y la fila WTI de tab:ur_app.",
+      "iteracion": 2,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "WTI/work/WTI_m00.inp",
+      "base_pre_sha": "7cdfebc1747b73800468baa77d3556734411de9265f95ce2fee1fbf63ec4bcef",
+      "pre_sha": "9740835e36694f56cd97e37c1d0e014fb97b4604083163587208bcbf99779408",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @a33b893+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 3,
+      "name": "PC3",
+      "inp_path": "WTI/work/WTI_m02_d0ar2.inp",
+      "timestamp": "2026-10-05T23:27:18",
+      "spec": {
+        "lam": 0.0,
+        "d": 0,
+        "D": 0,
+        "mu": 434.99419215011574,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 2,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -267.8818451635322,
+        "aic": 547.7636903270644,
+        "bic": 561.0807365581211,
+        "sigma_a": 12.15359746740464,
+        "q_pass": true,
+        "jb_pass": false,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 49,
+            "date": "Q1/2015",
+            "z": -3.117169521833678
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.13508828956536145,
+          0.3694171599280396,
+          0.5455201286717383,
+          0.6452766843031525
+        ],
+        "jb_pvalue": 0.041902343562850226,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "ln y_t = μ + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Candidato d=0: AR(2)+mu+intervención 2008 en niveles, para Shin-Fuller (reevaluar d)",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/WTI_v3__3043e1a58a32.png",
+      "out_path": "WTI_m02_d0ar2.out",
+      "hist_path": "figs/WTI_v3_hist__46d1145d1c0c.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 2,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 3,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "WTI/work/WTI_m01_i0804.pre",
+      "base_pre_sha": "9740835e36694f56cd97e37c1d0e014fb97b4604083163587208bcbf99779408",
+      "pre_sha": "7ff86b9c6ee2a685e3ddd84df562103220f6eb366f7cd2d5df892c5148dd907a",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @a33b893+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 4,
+      "name": "m03_i0804_s1404x4",
+      "inp_path": "WTI_m03_i0804_s1404x4.inp",
+      "timestamp": "2026-10-10T19:40:03",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.0,
+        "estimate_mu": false,
+        "alter": false,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          },
+          {
+            "type": "step",
+            "date": "Q4/2014"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -250.20343773472206,
+        "aic": 514.4068754694441,
+        "bic": 529.8397238051808,
+        "sigma_a": 10.129390358698492,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.8592915287091839,
+          0.982903942126791,
+          0.9511042394444879,
+          0.7172159685951489
+        ],
+        "jb_pvalue": 0.6205446321643946,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = I_t(2 itvs) + a_t",
+      "decision": "",
+      "rationale": "Revisión A10: m01 falla JB (p 0.0007) por 2015T1 (z −3.51) y 2014T4. Causa extramuestral: OPEP nov-2014. El dato identifica Q4/2014×4. Sólo para el univariante (adecuación); el sistema mantiene la entrada sin esta intervención (análisis de relación).",
+      "problems_found": "[diagnosis] la media residual no es cero (t=+2.43)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/WTI_v4__e1f5f826b994.png",
+      "out_path": "WTI_m03_i0804_s1404x4.out",
+      "hist_path": "figs/WTI_v4_hist__6242125a2316.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 3,
+      "status": "dead-end",
+      "why_abandoned": "Revisión 29-oct-2026 (decisión del analista): la intervención en 2014T4 no está justificada, aunque mejora el JB; y sus descendientes (m04–m06) añaden una deriva μ que implicaría una tendencia creciente indefinida en ln WTI, sin sentido económico (sólo compensa los dos escalones). Se adopta v2 (m01, sin deriva, sólo 2008T4).",
+      "why_adopted": "",
+      "iteracion": 4,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "WTI_m01_i0804.inp",
+      "base_pre_sha": "9740835e36694f56cd97e37c1d0e014fb97b4604083163587208bcbf99779408",
+      "pre_sha": "5635d2d6f98434be1d715c44d455d5e0d3fade3a27e09bc9a6b79033ef08e3e6",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @d048cb7 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 5,
+      "name": "m04_mu",
+      "inp_path": "WTI_m04_i0804_s1404x4_mu.inp",
+      "timestamp": "2026-10-10T19:40:17",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 3.235513671859915,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          },
+          {
+            "type": "step",
+            "date": "Q4/2014"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -246.99361700457212,
+        "aic": 509.98723400914423,
+        "bic": 527.624774964272,
+        "sigma_a": 9.655554663918162,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.864328094912273,
+          0.9673279967301955,
+          0.905342942826076,
+          0.7185206023144568
+        ],
+        "jb_pvalue": 0.46458938998683186,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(2 itvs) + a_t",
+      "decision": "Media residual t=2.43 tras los dos escalones permanentes: se estima μ (la deriva entre caídas).",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/WTI_v5__030d83719885.png",
+      "out_path": "WTI_m04_i0804_s1404x4_mu.out",
+      "hist_path": "figs/WTI_v5_hist__5151ca1bb45a.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 4,
+      "status": "dead-end",
+      "why_abandoned": "Arrastrado por el callejón de v4: Revisión 29-oct-2026 (decisión del analista): la intervención en 2014T4 no está justificada, aunque mejora el JB; y sus descendientes (m04–m06) añaden una deriva μ que implicaría una tendencia creciente indefinida en ln WTI, sin sentido económico (sólo compensa los dos escalones). Se adopta v2 (m01, sin deriva, sólo 2008T4).",
+      "why_adopted": "",
+      "iteracion": 5,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "WTI_m03_i0804_s1404x4.pre",
+      "base_pre_sha": "5635d2d6f98434be1d715c44d455d5e0d3fade3a27e09bc9a6b79033ef08e3e6",
+      "pre_sha": "b260bdc32052f43899c110e91290fea7598aeba5435742a7c118b5fef335ccd0",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @d048cb7 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 6,
+      "name": "m05_no1502",
+      "inp_path": "WTI_m05_s1404_no1502.inp",
+      "timestamp": "2026-10-10T19:42:29",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 3.4700250796487735,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          },
+          {
+            "type": "step",
+            "date": "Q4/2014"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -248.05610167070466,
+        "aic": 510.1122033414093,
+        "bic": 525.545051677146,
+        "sigma_a": 9.809892768505016,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.7406378498203763,
+          0.9307083281046585,
+          0.8966751407074005,
+          0.8734735987211821
+        ],
+        "jb_pvalue": 0.5679796724171335,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(2 itvs) + a_t",
+      "decision": "",
+      "rationale": "Analista: el escalón de 2015T2 (ω₂ del Q4/2014×4, t 1.47) parece sobrar; se fija a 0 y se contrasta por LR (1 gl).",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/WTI_v6__d9177dde60fe.png",
+      "out_path": "WTI_m05_s1404_no1502.out",
+      "hist_path": "figs/WTI_v6_hist__c5b42dfe9e7f.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 5,
+      "status": "dead-end",
+      "why_abandoned": "Arrastrado por el callejón de v4: Revisión 29-oct-2026 (decisión del analista): la intervención en 2014T4 no está justificada, aunque mejora el JB; y sus descendientes (m04–m06) añaden una deriva μ que implicaría una tendencia creciente indefinida en ln WTI, sin sentido económico (sólo compensa los dos escalones). Se adopta v2 (m01, sin deriva, sólo 2008T4).",
+      "why_adopted": "",
+      "iteracion": 6,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "WTI_m04_i0804_s1404x4_mu.pre",
+      "base_pre_sha": "b260bdc32052f43899c110e91290fea7598aeba5435742a7c118b5fef335ccd0",
+      "pre_sha": "cecd9ded99f7ab6761341d91fa2ca22c19845cc7f03c277fbf07b5ac45f3b810",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @d048cb7 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 7,
+      "name": "m06_s1404x2",
+      "inp_path": "WTI_m06_s1404x2.inp",
+      "timestamp": "2026-10-10T19:44:27",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 3.058996496029843,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          },
+          {
+            "type": "step",
+            "date": "Q4/2014"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -251.2214875740757,
+        "aic": 514.4429751481514,
+        "bic": 527.6711308644972,
+        "sigma_a": 10.284479440976295,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.44528386052784374,
+          0.6879753152443083,
+          0.6160400601601457,
+          0.48002900860907227
+        ],
+        "jb_pvalue": 0.522362266338317,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(2 itvs) + a_t",
+      "decision": "",
+      "rationale": "Analista: sólo está justificado Q4/2014×2 (decisión OPEP nov-2014: caída en 2014T4 y 2015T1); se quitan los escalones de 2015T2 y 2015T3.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/WTI_v7__5498ab2ef560.png",
+      "out_path": "WTI_m06_s1404x2.out",
+      "hist_path": "figs/WTI_v7_hist__1e575ce405fe.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 6,
+      "status": "dead-end",
+      "why_abandoned": "Arrastrado por el callejón de v4: Revisión 29-oct-2026 (decisión del analista): la intervención en 2014T4 no está justificada, aunque mejora el JB; y sus descendientes (m04–m06) añaden una deriva μ que implicaría una tendencia creciente indefinida en ln WTI, sin sentido económico (sólo compensa los dos escalones). Se adopta v2 (m01, sin deriva, sólo 2008T4).",
+      "why_adopted": "Revisión A10 (10-oct). Univariante del WTI: ln WTI d=1, paseo aleatorio con deriva μ 3.06 %/trim.; escalón 2008T4×3 (−77.6 permanente); escalón Q4/2014×2 (OPEP 27-nov-2014: −32, −44; −76 permanente), lo único con causa extramuestral clara en 2014–15 (decisión del analista). Diagnosis limpia (JB de m01 p 0.0007 resuelto), Treadway ✓, d=1 (sub-dif. LR 67; candidato d=0 raíz 0.968). Anotado: un escalón adicional en 2015T3 (m05) es significativo (LR 6.33, p 0.012; BIC −2.1) pero no se interviene (segunda pata bajista sin suceso único; residuos −2.4/−2.6σ < 3.16). El sistema WTI→G/Y (C10/C11) mantiene sus entradas WTI (m01, sólo 2008) y WTIraw (m00).",
+      "iteracion": 7,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "WTI_m05_s1404_no1502.pre",
+      "base_pre_sha": "cecd9ded99f7ab6761341d91fa2ca22c19845cc7f03c277fbf07b5ac45f3b810",
+      "pre_sha": "717a2752deb97f5073420e77055948adfa245ad969d6543c2bcf85201b90f6f0",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @d048cb7 · fue 0.1.17.dev0 (motor C)"
+    }
+  ]
+}

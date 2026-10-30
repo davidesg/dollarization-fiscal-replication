@@ -1,0 +1,116 @@
+************************************************
+*        Input file for program DRVUS          *
+* Copyright (C) 1996 Jos? Alberto Mauricio     *
+************************************************
+
+** Frequency of time series: either 1(A), 4(Q) or 12(M):
+ 4
+** Number of observations and starting date of time series:
+ 68  1 2003 X
+** Number of deterministic variables (including seasonal components):
+3
+**
+cos 1
+sin 1
+alter
+**
+0 0 0 
+**
+-1.755266  1
+**
+-2.083078  1
+**
+0.451332  1
+**
+0 0 0 
+**Number and orders of regular AR operators:
+1 1
+**
+0.0000 0
+** Number and orders of annual AR operators:
+0
+** Number and orders of regular MA operators:
+0
+** Number and orders of anual MA operators:
+0
+** Number and frequencies of regular AR(2) operators with fixed frequency:
+0
+** Number and frequencies of regular MA(2) operators with fixed frequency:
+0
+** Mean parameter (mu):
+1.906564 1
+** Box-Cox lambda, regular differences and complete annual differences:
+0.00 1 0
+** Individual factors of the annual difference (from freq 0.0): 
+ 0 0 0
+** ACF/PACF bands (0 Automatic) and reescaling factor: 
+ 0.00 100.00
+** Time series (stochastic and non-standard deterministic variables): 
+1809.39565681044 
+1714.87411533803 
+1817.20104287045 
+1985.5081003329 
+1981.82436635293 
+2301.95360513481 
+2355.49636603779 
+2342.42918732753 
+2566.86947994084 
+2814.74775646454 
+3037.62211332433 
+3060.57289007823 
+3389.89557249323 
+3691.91286461081 
+3652.08975712443 
+3478.72429687552 
+3273.13559900745 
+3782.81901657604 
+4286.72427834154 
+4727.56651457246 
+5133.77177978525 
+6179.52869302654 
+5798.30321659738 
+3790.77997953293 
+3109.40851818147 
+3754.7040400913 
+4301.24646044711 
+4583.19096686702 
+4642.55266712694 
+4928.9432507964 
+4652.77172220768 
+5385.04603722362 
+5905.69016386695 
+6274.48712325959 
+6199.52145335436 
+6290.09437787757 
+6849.23583654968 
+6695.82953957851 
+6564.85905735443 
+6262.98652284296 
+6866.18808002382 
+6594.22754825249 
+7127.21946481749 
+7040.50797271257 
+7438.53272751131 
+7566.65153320645 
+7345.98604029514 
+6591.59903872509 
+5688.94494007894 
+5677.89173212061 
+5231.63017196534 
+4841.59370084142 
+4452.12243020059 
+5076.00534665458 
+5077.3744221668 
+5483.39338870898 
+5532.79683688892 
+5487.61796099101 
+5479.65320199379 
+6030.24590539193 
+6098.07256942711 
+6440.46208800221 
+6533.67828036786 
+6334.10983638037 
+6126.52697303388 
+6688.06584480305 
+6639.98548249202 
+6571.21312127986 

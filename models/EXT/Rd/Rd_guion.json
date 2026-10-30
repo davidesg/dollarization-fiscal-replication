@@ -1,0 +1,179 @@
+{
+  "series": "Rd",
+  "analyst": "",
+  "created": "2026-10-07",
+  "carril": "",
+  "entries": [
+    {
+      "version": 1,
+      "name": "PC1",
+      "inp_path": "Rd/work/Rd_m00.inp",
+      "timestamp": "2026-10-07T13:47:58",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 1.417074487713102,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [],
+        "dominio": "multiplicative"
+      },
+      "stats": {
+        "loglik": -281.42535838919343,
+        "aic": 570.8507167783869,
+        "bic": 579.6694872559507,
+        "sigma_a": 16.14224825809855,
+        "q_pass": false,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          9.992007221626409e-16,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "jb_pvalue": 0.5463799040859576,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Rd: lam=0, d=1 (ADF/KPSS), B1 (HAC f=2; amplitud de la alternancia cambia hacia 2009); m00 con mu",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/Rd_v1__c954263d03f5.png",
+      "out_path": "Rd/work/Rd_m00.out",
+      "hist_path": "figs/Rd_v1_hist__cfa99c138f7a.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": null,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "inferido",
+      "nodo": "",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "6f57c7a910ad349eeb85e29eed57ec9cb65e061dc4896da675f5aaf42be7ec54",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 2,
+      "name": "PC2",
+      "inp_path": "Rd/work/Rd_m01_ar1.inp",
+      "timestamp": "2026-10-07T13:48:26",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 1.4622949954053102,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": []
+      },
+      "stats": {
+        "loglik": -258.7922779099371,
+        "aic": 527.5845558198743,
+        "bic": 538.6080189168291,
+        "sigma_a": 11.45747464035101,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.12741104831122096,
+          0.2412793294379333,
+          0.30099152576409927,
+          0.23571178969399054
+        ],
+        "jb_pvalue": 0.8674654974024446,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Opción A: AR(1) (PACF(1)=-0.70) para la alternancia de amplitud variable",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/Rd_v2__16f29816396c.png",
+      "out_path": "Rd/work/Rd_m01_ar1.out",
+      "hist_path": "figs/Rd_v2_hist__de22a48f5d9f.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 1,
+      "status": "adopted",
+      "why_abandoned": "",
+      "why_adopted": "Adopción registrada en la revisión del 10-oct-2026 (decidida el 7-oct, §4.13): ln Rd d=1, armónicos f1/f2, AR(1) −0.70 (alternancia semestral de cupones de amplitud variable), μ. Formales 10-oct limpios: DCD θ̂ 0.92 (LR 0.76), sub-dif LR 40.0; MEG f1, f2 deterministas.",
+      "iteracion": 2,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "Rd/work/Rd_m00.pre",
+      "base_pre_sha": "6f57c7a910ad349eeb85e29eed57ec9cb65e061dc4896da675f5aaf42be7ec54",
+      "pre_sha": "35c047970e8ca2f8b2285ca176ad8e813a5ac169fb6ca87842309fa37b0712fb",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d+sucio · fue 0.1.17.dev0 (motor C)"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+* G/Y and CPI_USA weakly exogenous: only GAPc (row 3) adjusts
+3 1
+0
+0
+1

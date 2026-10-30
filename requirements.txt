@@ -1,0 +1,9 @@
+# The ATSW suite from PyPI. The meta-package pins its members (fue, art-tseries,
+# drtran, drvarma, sima-tseries, drvec); fix the version that produced expected/.
+atsw==2.1.0  # the first release that includes drvec (drvec 0.1.0)
+numpy
+scipy
+pandas
+openpyxl     # .xlsx sources in data/raw
+xlrd         # .xls sources in data/raw (INEC, BCE bulletin 69)
+matplotlib

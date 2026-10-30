@@ -1,0 +1,1825 @@
+{
+ "meta": {
+  "art": "0.2.3.dev0",
+  "fue": "0.1.18"
+ },
+ "rows": {
+  "$\\ln BXE_t = x_t - i_t$|bxe": {
+   "main": {
+    "model": "EXT/BXE/BXE_m05_i0804x2.inp",
+    "adopted_pre": "EXT/BXE/BXE_m05_i0804x2.pre",
+    "under": null,
+    "ur": [
+     {
+      "d": 0,
+      "adf_stat": -2.6616325764525857,
+      "adf_p": 0.08091605003540014,
+      "kpss_stat": 0.08882037861802773,
+      "kpss_p": 0.1,
+      "verdict": "ambiguous"
+     },
+     {
+      "d": 1,
+      "adf_stat": -6.489799177585231,
+      "adf_p": 1.2347787608303878e-08,
+      "kpss_stat": 0.12519074427661686,
+      "kpss_p": 0.1,
+      "verdict": "stationary"
+     }
+    ],
+    "reproduces": true,
+    "maxdiff": 3.900909283660603e-05,
+    "loglik": -222.31588044191005,
+    "d": 0,
+    "D": 0,
+    "lam": 0.0,
+    "seasonality": "f1 D",
+    "phi": [
+     [
+      0.555639,
+      0.10115985864258872
+     ]
+    ],
+    "complex": null,
+    "other": [],
+    "interventions": [
+     {
+      "type": "impulse",
+      "date": "2008Q4",
+      "n": 2,
+      "omega": [
+       -30.884514629013516,
+       25.046565062010075
+      ],
+      "delta": []
+     }
+    ],
+    "mean": {
+     "value": -3.302613,
+     "se": 1.70726
+    },
+    "sigma": 6.3451942268,
+    "q": {
+     "lag": 15,
+     "stat": 9.7,
+     "df": 14,
+     "p": 0.7837715688793034
+    },
+    "jb": 0.313176,
+    "jb_p": 0.8550562694403241,
+    "sf": {
+     "stat": 7.063403811100443,
+     "c10": 1.0636,
+     "c5": 1.75,
+     "rejects": true,
+     "overfit": false
+    },
+    "dcd": {
+     "stat": 0.0,
+     "theta": 0.9999999994182511,
+     "r10": false,
+     "r5": false
+    },
+    "params": [
+     {
+      "idx": 1,
+      "label": "ω0 [det. 1]",
+      "value": -3.304603,
+      "se": 0.972706
+     },
+     {
+      "idx": 2,
+      "label": "ω0 [det. 2]",
+      "value": 1.840705,
+      "se": 0.972526
+     },
+     {
+      "idx": 3,
+      "label": "ω0 [det. 3]",
+      "value": -30.884515,
+      "se": 6.277758
+     },
+     {
+      "idx": 4,
+      "label": "ω1 [det. 3]",
+      "value": 25.046565,
+      "se": 6.279942
+     },
+     {
+      "idx": 5,
+      "label": "φ1 [AR regular 1]",
+      "value": 0.555639,
+      "se": 0.10116
+     },
+     {
+      "idx": 6,
+      "label": "μ",
+      "value": -3.302613,
+      "se": 1.70726
+     }
+    ]
+   }
+  },
+  "$\\ln SE_t = cr_t - de_t$|se": {
+   "main": {
+    "model": "EXT/SE/SE_m03_i0804x2.inp",
+    "adopted_pre": "EXT/SE/SE_m03_i0804x2.pre",
+    "under": null,
+    "ur": [
+     {
+      "d": 0,
+      "adf_stat": -5.251338035690493,
+      "adf_p": 6.900568809564855e-06,
+      "kpss_stat": 0.25276788359159374,
+      "kpss_p": 0.1,
+      "verdict": "stationary"
+     },
+     {
+      "d": 1,
+      "adf_stat": -5.977548991551669,
+      "adf_p": 1.8718327785678326e-07,
+      "kpss_stat": 0.0895794433216548,
+      "kpss_p": 0.1,
+      "verdict": "stationary"
+     }
+    ],
+    "reproduces": true,
+    "maxdiff": 4.73832540390795e-05,
+    "loglik": -221.6902114717039,
+    "d": 0,
+    "D": 0,
+    "lam": 0.0,
+    "seasonality": "f1 D, f2 D",
+    "phi": [
+     [
+      0.607947,
+      0.09514036998309694
+     ]
+    ],
+    "complex": null,
+    "other": [],
+    "interventions": [
+     {
+      "type": "impulse",
+      "date": "2008Q4",
+      "n": 2,
+      "omega": [
+       -23.988010887502533,
+       19.907377661137296
+      ],
+      "delta": []
+     }
+    ],
+    "mean": {
+     "value": 0.652681,
+     "se": 1.905987
+    },
+    "sigma": 6.2828203687,
+    "q": {
+     "lag": 15,
+     "stat": 6.34,
+     "df": 14,
+     "p": 0.9571806836912893
+    },
+    "jb": 0.953225,
+    "jb_p": 0.6208830748762353,
+    "sf": {
+     "stat": 6.063860949757441,
+     "c10": 1.0636,
+     "c5": 1.75,
+     "rejects": true,
+     "overfit": false
+    },
+    "dcd": {
+     "stat": 6.941718311281875e-10,
+     "theta": 0.9999999181803167,
+     "r10": false,
+     "r5": false
+    },
+    "params": [
+     {
+      "idx": 1,
+      "label": "ω0 [det. 1]",
+      "value": -3.047399,
+      "se": 0.942421
+     },
+     {
+      "idx": 2,
+      "label": "ω0 [det. 2]",
+      "value": 1.52864,
+      "se": 0.942676
+     },
+     {
+      "idx": 3,
+      "label": "ω0 [det. 3]",
+      "value": -0.955801,
+      "se": 0.486505
+     },
+     {
+      "idx": 4,
+      "label": "ω0 [det. 4]",
+      "value": -23.988011,
+      "se": 6.178986
+     },
+     {
+      "idx": 5,
+      "label": "ω1 [det. 4]",
+      "value": 19.907378,
+      "se": 6.178783
+     },
+     {
+      "idx": 6,
+      "label": "φ1 [AR regular 1]",
+      "value": 0.607947,
+      "se": 0.09514
+     },
+     {
+      "idx": 7,
+      "label": "μ",
+      "value": 0.652681,
+      "se": 1.905987
+     }
+    ]
+   }
+  },
+  "$\\ln IT_t = rc_t - rd_t$|it": {
+   "main": {
+    "model": "EXT/IT/IT_m00.inp",
+    "adopted_pre": "EXT/IT/IT_m00.pre",
+    "under": {
+     "stat": 39.010195934038734,
+     "theta": 0.18436009001938414,
+     "r10": true,
+     "r5": true
+    },
+    "ur": [
+     {
+      "d": 0,
+      "adf_stat": -0.4889872332223874,
+      "adf_p": 0.8941477065504899,
+      "kpss_stat": 0.4990870682578934,
+      "kpss_p": 0.041872281923897886,
+      "verdict": "unit_root"
+     },
+     {
+      "d": 1,
+      "adf_stat": -4.269659310685318,
+      "adf_p": 0.0005011336925749291,
+      "kpss_stat": 0.23017557298350858,
+      "kpss_p": 0.1,
+      "verdict": "stationary"
+     }
+    ],
+    "reproduces": true,
+    "maxdiff": 4.271732913474491e-05,
+    "loglik": -265.5222593367197,
+    "d": 1,
+    "D": 0,
+    "lam": 0.0,
+    "seasonality": "f1 D, f2 D",
+    "phi": [
+     [
+      -0.691543,
+      0.0862238250162191
+     ]
+    ],
+    "complex": null,
+    "other": [],
+    "interventions": [],
+    "mean": {
+     "value": -0.253956,
+     "se": 0.921471
+    },
+    "sigma": 12.669855058,
+    "q": {
+     "lag": 15,
+     "stat": 16.32,
+     "df": 14,
+     "p": 0.29422535439689396
+    },
+    "jb": 0.73651,
+    "jb_p": 0.6919407143079471,
+    "sf": {
+     "na": "Shin-Fuller no aplica: el AR no tiene raíz real positiva; en f=0 decide el DCD. Sus raíces reales son negativas (φ̂ = -0.6915): una raíz negativa no tiene nada que ver con `d`, y Φ̂₁ᵤ sobre ella no significaría nada."
+    },
+    "dcd": {
+     "stat": 1.064837064244557,
+     "theta": 0.9429968129949758,
+     "r10": true,
+     "r5": false
+    },
+    "params": [
+     {
+      "idx": 1,
+      "label": "ω0 [det. 1]",
+      "value": -2.138321,
+      "se": 1.279692
+     },
+     {
+      "idx": 2,
+      "label": "ω0 [det. 2]",
+      "value": -1.828211,
+      "se": 1.279611
+     },
+     {
+      "idx": 3,
+      "label": "ω0 [det. 3]",
+      "value": -3.352327,
+      "se": 2.428952
+     },
+     {
+      "idx": 4,
+      "label": "φ1 [AR regular 1]",
+      "value": -0.691543,
+      "se": 0.086224
+     },
+     {
+      "idx": 5,
+      "label": "μ",
+      "value": -0.253956,
+      "se": 0.921471
+     }
+    ]
+   }
+  },
+  "$\\ln WTI_t$|wti": {
+   "main": {
+    "model": "WTI_m06_s1404x2.inp",
+    "adopted_pre": "WTI_m06_s1404x2.pre",
+    "under": {
+     "stat": 68.61562356170202,
+     "theta": -0.008041057296265018,
+     "r10": true,
+     "r5": true
+    },
+    "ur": [
+     {
+      "d": 0,
+      "adf_stat": -3.024544528571813,
+      "adf_p": 0.032664961315961354,
+      "kpss_stat": 0.28203585469076303,
+      "kpss_p": 0.1,
+      "verdict": "stationary"
+     },
+     {
+      "d": 1,
+      "adf_stat": -6.1581667382155345,
+      "adf_p": 7.282557518840742e-08,
+      "kpss_stat": 0.13455164872675254,
+      "kpss_p": 0.1,
+      "verdict": "stationary"
+     }
+    ],
+    "reproduces": true,
+    "maxdiff": 4.960298429779186e-07,
+    "loglik": -251.2214875740757,
+    "d": 1,
+    "D": 0,
+    "lam": 0.0,
+    "seasonality": "--",
+    "phi": [],
+    "complex": null,
+    "other": [],
+    "interventions": [
+     {
+      "type": "step",
+      "date": "2008Q4",
+      "n": 3,
+      "omega": [
+       -73.43312699773908,
+       33.71225663352139,
+       -29.584493107072987
+      ],
+      "delta": []
+     },
+     {
+      "type": "step",
+      "date": "2014Q4",
+      "n": 2,
+      "omega": [
+       -32.066119141302224,
+       44.08505810389312
+      ],
+      "delta": []
+     }
+    ],
+    "mean": {
+     "value": 3.058996,
+     "se": 1.306113
+    },
+    "sigma": 10.284479441,
+    "q": {
+     "lag": 15,
+     "stat": 14.61,
+     "df": 15,
+     "p": 0.4798569238282375
+    },
+    "jb": 1.298788,
+    "jb_p": 0.5223622323781005,
+    "sf": {
+     "na": "No free regular AR parameters — SF test not applicable."
+    },
+    "dcd": {
+     "stat": 0.27729268601854073,
+     "theta": 0.9609934811420658,
+     "r10": false,
+     "r5": false
+    },
+    "params": [
+     {
+      "idx": 1,
+      "label": "ω0 [det. 1]",
+      "value": -73.433127,
+      "se": 10.367182
+     },
+     {
+      "idx": 2,
+      "label": "ω1 [det. 1]",
+      "value": 33.712257,
+      "se": 10.367749
+     },
+     {
+      "idx": 3,
+      "label": "ω2 [det. 1]",
+      "value": -29.584493,
+      "se": 10.367991
+     },
+     {
+      "idx": 4,
+      "label": "ω0 [det. 2]",
+      "value": -32.066119,
+      "se": 10.367082
+     },
+     {
+      "idx": 5,
+      "label": "ω1 [det. 2]",
+      "value": 44.085058,
+      "se": 10.367581
+     },
+     {
+      "idx": 6,
+      "label": "μ",
+      "value": 3.058996,
+      "se": 1.306113
+     }
+    ]
+   }
+  },
+  "$\\ln(PGE_t/PGU_t)$|gapgdpd": {
+   "main": {
+    "model": "DEFL/GAPGDPD_G/GAPGDPD_m03_x2_ar2.inp",
+    "adopted_pre": "DEFL/GAPGDPD_G/GAPGDPD_m03_x2_ar2.pre",
+    "under": {
+     "stat": 12.937939100761923,
+     "theta": 0.28106654154355826,
+     "r10": true,
+     "r5": true
+    },
+    "ur": [
+     {
+      "d": 0,
+      "adf_stat": -2.5298283575578333,
+      "adf_p": 0.10838439808673467,
+      "kpss_stat": 0.933860343075116,
+      "kpss_p": 0.01,
+      "verdict": "unit_root"
+     },
+     {
+      "d": 1,
+      "adf_stat": -5.8246690074935925,
+      "adf_p": 4.105813800115262e-07,
+      "kpss_stat": 0.4434781278471606,
+      "kpss_p": 0.05841460006587905,
+      "verdict": "stationary"
+     }
+    ],
+    "reproduces": true,
+    "maxdiff": 2.359206506620526e-05,
+    "loglik": -140.81758704794058,
+    "d": 1,
+    "D": 0,
+    "lam": 0.0,
+    "seasonality": "--",
+    "phi": [
+     [
+      0.090376,
+      0.1135326869233076
+     ],
+     [
+      0.412521,
+      0.12027015423298487
+     ]
+    ],
+    "complex": null,
+    "other": [],
+    "interventions": [
+     {
+      "type": "step",
+      "date": "2008Q4",
+      "n": 2,
+      "omega": [
+       -16.284597781776586,
+       4.913618146289879
+      ],
+      "delta": []
+     }
+    ],
+    "mean": {
+     "value": 0.772541,
+     "se": 0.473888
+    },
+    "sigma": 1.9735887924,
+    "q": {
+     "lag": 15,
+     "stat": 18.3,
+     "df": 13,
+     "p": 0.14645725362277315
+    },
+    "jb": 0.069141,
+    "jb_p": 0.9660202328593376,
+    "sf": {
+     "stat": 3.9062255544694438,
+     "c10": 1.0636,
+     "c5": 1.75,
+     "rejects": true,
+     "overfit": false
+    },
+    "dcd": {
+     "stat": 1.7975700553209322,
+     "theta": 0.8605822658944009,
+     "r10": true,
+     "r5": false
+    },
+    "params": [
+     {
+      "idx": 1,
+      "label": "ω0 [det. 1]",
+      "value": -16.284598,
+      "se": 1.988365
+     },
+     {
+      "idx": 2,
+      "label": "ω1 [det. 1]",
+      "value": 4.913618,
+      "se": 1.873545
+     },
+     {
+      "idx": 3,
+      "label": "φ1 [AR regular 1]",
+      "value": 0.090376,
+      "se": 0.113533
+     },
+     {
+      "idx": 4,
+      "label": "φ2 [AR regular 1]",
+      "value": 0.412521,
+      "se": 0.12027
+     },
+     {
+      "idx": 5,
+      "label": "μ",
+      "value": 0.772541,
+      "se": 0.473888
+     }
+    ]
+   }
+  },
+  "$\\ln(PCE_t/PCU_t)$|gappce": {
+   "main": {
+    "model": "DEFL/GAPPCE/GAPPCE_m02_ar1_s0804.inp",
+    "adopted_pre": "DEFL/GAPPCE/GAPPCE_m02_ar1_s0804.pre",
+    "under": {
+     "stat": 20.529020273578453,
+     "theta": 0.04964801569048687,
+     "r10": true,
+     "r5": true
+    },
+    "ur": [
+     {
+      "d": 0,
+      "adf_stat": -2.391088728289309,
+      "adf_p": 0.14426736191384543,
+      "kpss_stat": 1.1341746399533246,
+      "kpss_p": 0.01,
+      "verdict": "unit_root"
+     },
+     {
+      "d": 1,
+      "adf_stat": -5.816796113801077,
+      "adf_p": 4.2737969865499816e-07,
+      "kpss_stat": 0.7237572353186266,
+      "kpss_p": 0.011385705880124856,
+      "verdict": "ambiguous"
+     }
+    ],
+    "reproduces": true,
+    "maxdiff": 5.093029680436345e-06,
+    "loglik": -102.88898373258746,
+    "d": 1,
+    "D": 0,
+    "lam": 0.0,
+    "seasonality": "--",
+    "phi": [
+     [
+      0.492505,
+      0.11625680194843124
+     ]
+    ],
+    "complex": null,
+    "other": [],
+    "interventions": [
+     {
+      "type": "step",
+      "date": "2008Q4",
+      "n": 1,
+      "omega": [
+       3.440184868158618
+      ],
+      "delta": []
+     }
+    ],
+    "mean": {
+     "value": 0.516962,
+     "se": 0.267172
+    },
+    "sigma": 1.1214749203,
+    "q": {
+     "lag": 15,
+     "stat": 20.47,
+     "df": 14,
+     "p": 0.1160060529362748
+    },
+    "jb": 8.170382,
+    "jb_p": 0.01681992640319699,
+    "sf": {
+     "stat": 7.264434628194266,
+     "c10": 1.0636,
+     "c5": 1.75,
+     "rejects": true,
+     "overfit": false
+    },
+    "dcd": {
+     "stat": 2.4910930229808628,
+     "theta": 0.9067170271511288,
+     "r10": true,
+     "r5": true
+    },
+    "params": [
+     {
+      "idx": 1,
+      "label": "ω0 [det. 1]",
+      "value": 3.440185,
+      "se": 1.00801
+     },
+     {
+      "idx": 2,
+      "label": "φ1 [AR regular 1]",
+      "value": 0.492505,
+      "se": 0.116257
+     },
+     {
+      "idx": 3,
+      "label": "μ",
+      "value": 0.516962,
+      "se": 0.267172
+     }
+    ]
+   }
+  },
+  "$g_t$|g": {
+   "main": {
+    "model": "MACRO/G/G_m02_ar1.inp",
+    "adopted_pre": "MACRO/G/G_m02_ar1.pre",
+    "under": {
+     "stat": 10.619512590026147,
+     "theta": -0.3466872902410331,
+     "r10": true,
+     "r5": true
+    },
+    "ur": [
+     {
+      "d": 0,
+      "adf_stat": -2.6009766933756837,
+      "adf_p": 0.0927955727568322,
+      "kpss_stat": 1.1267550474903727,
+      "kpss_p": 0.01,
+      "verdict": "unit_root"
+     },
+     {
+      "d": 1,
+      "adf_stat": -1.9204456126036105,
+      "adf_p": 0.32250481662812003,
+      "kpss_stat": 0.2573170671238286,
+      "kpss_p": 0.1,
+      "verdict": "ambiguous"
+     }
+    ],
+    "reproduces": true,
+    "maxdiff": 4.704678214850766e-05,
+    "loglik": -235.8919533259679,
+    "d": 1,
+    "D": 0,
+    "lam": 0.0,
+    "seasonality": "f1 D, f2 D",
+    "phi": [
+     [
+      -0.388747,
+      0.11707100409267275
+     ]
+    ],
+    "complex": null,
+    "other": [],
+    "interventions": [
+     {
+      "type": "step",
+      "date": "2008Q2",
+      "n": 1,
+      "omega": [
+       31.74910520482398
+      ],
+      "delta": []
+     }
+    ],
+    "mean": {
+     "value": 2.36374,
+     "se": 0.732377
+    },
+    "sigma": 8.1711869903,
+    "q": {
+     "lag": 15,
+     "stat": 12.12,
+     "df": 14,
+     "p": 0.5966663528128098
+    },
+    "jb": 1.719542,
+    "jb_p": 0.4232589975309681,
+    "sf": {
+     "stat": 12.209521826865227,
+     "c10": 1.0636,
+     "c5": 1.75,
+     "rejects": true,
+     "overfit": true
+    },
+    "dcd": {
+     "stat": 2.775047531353948,
+     "theta": 0.9146824132017121,
+     "r10": true,
+     "r5": true
+    },
+    "params": [
+     {
+      "idx": 1,
+      "label": "ω0 [det. 1]",
+      "value": 11.462432,
+      "se": 0.940979
+     },
+     {
+      "idx": 2,
+      "label": "ω0 [det. 2]",
+      "value": -5.030007,
+      "se": 0.940804
+     },
+     {
+      "idx": 3,
+      "label": "ω0 [det. 3]",
+      "value": 6.548992,
+      "se": 0.81149
+     },
+     {
+      "idx": 4,
+      "label": "ω0 [det. 4]",
+      "value": 31.749105,
+      "se": 8.21138
+     },
+     {
+      "idx": 5,
+      "label": "φ1 [AR regular 1]",
+      "value": -0.388747,
+      "se": 0.117071
+     },
+     {
+      "idx": 6,
+      "label": "μ",
+      "value": 2.36374,
+      "se": 0.732377
+     }
+    ]
+   }
+  },
+  "$re_t$|re": {
+   "main": {
+    "model": "MACRO/REV_BCE/REVbce_g04_ar1.inp",
+    "adopted_pre": "MACRO/REV_BCE/REVbce_g04_ar1.pre",
+    "under": {
+     "stat": 4.908778420705744,
+     "theta": -2.8282702974474667e-05,
+     "r10": true,
+     "r5": true
+    },
+    "ur": [
+     {
+      "d": 0,
+      "adf_stat": -1.9709081343593131,
+      "adf_p": 0.29947270170908924,
+      "kpss_stat": 1.1087672001426585,
+      "kpss_p": 0.01,
+      "verdict": "unit_root"
+     },
+     {
+      "d": 1,
+      "adf_stat": -9.888628593882714,
+      "adf_p": 3.6074444257619144e-17,
+      "kpss_stat": 0.3872600252862778,
+      "kpss_p": 0.08264654082488027,
+      "verdict": "stationary"
+     }
+    ],
+    "reproduces": true,
+    "maxdiff": 4.555640531456184e-05,
+    "loglik": -228.55511272465742,
+    "d": 1,
+    "D": 0,
+    "lam": 0.0,
+    "seasonality": "f1 D, f2 D",
+    "phi": [
+     [
+      -0.229154,
+      0.12213171168877407
+     ]
+    ],
+    "complex": null,
+    "other": [],
+    "interventions": [
+     {
+      "type": "step",
+      "date": "2008Q1",
+      "n": 1,
+      "omega": [
+       26.483595877067565
+      ],
+      "delta": []
+     },
+     {
+      "type": "step",
+      "date": "2008Q4",
+      "n": 3,
+      "omega": [
+       -21.38368687244158,
+       39.386224891585684,
+       -22.387910449501554
+      ],
+      "delta": []
+     }
+    ],
+    "mean": {
+     "value": 2.773615,
+     "se": 0.760515
+    },
+    "sigma": 7.3296609759,
+    "q": {
+     "lag": 15,
+     "stat": 16.51,
+     "df": 14,
+     "p": 0.28323069539892104
+    },
+    "jb": 1.71634,
+    "jb_p": 0.42393717792456065,
+    "sf": {
+     "stat": 3.376049583428255,
+     "c10": 1.0636,
+     "c5": 1.75,
+     "rejects": true,
+     "overfit": true
+    },
+    "dcd": {
+     "stat": 5.928885767547513,
+     "theta": 0.8614817718139791,
+     "r10": true,
+     "r5": true
+    },
+    "params": [
+     {
+      "idx": 1,
+      "label": "ω0 [det. 1]",
+      "value": -3.158706,
+      "se": 0.904506
+     },
+     {
+      "idx": 2,
+      "label": "ω0 [det. 2]",
+      "value": -1.486999,
+      "se": 0.904205
+     },
+     {
+      "idx": 3,
+      "label": "ω0 [det. 3]",
+      "value": 1.938557,
+      "se": 0.59393
+     },
+     {
+      "idx": 4,
+      "label": "ω0 [det. 4]",
+      "value": 26.483596,
+      "se": 7.401301
+     },
+     {
+      "idx": 5,
+      "label": "ω0 [det. 5]",
+      "value": -21.383687,
+      "se": 7.654119
+     },
+     {
+      "idx": 6,
+      "label": "ω1 [det. 5]",
+      "value": 39.386225,
+      "se": 7.813978
+     },
+     {
+      "idx": 7,
+      "label": "ω2 [det. 5]",
+      "value": -22.38791,
+      "se": 7.583974
+     },
+     {
+      "idx": 8,
+      "label": "φ1 [AR regular 1]",
+      "value": -0.229154,
+      "se": 0.122132
+     },
+     {
+      "idx": 9,
+      "label": "μ",
+      "value": 2.773615,
+      "se": 0.760515
+     }
+    ]
+   }
+  },
+  "$\\tau_t = g_t - re_t$|tau": {
+   "main": {
+    "model": "MACRO/TAU_BCE/TAUbce_g02_ar2_s0804x3.inp",
+    "adopted_pre": "MACRO/TAU_BCE/TAUbce_g02_ar2_s0804x3.pre",
+    "under": null,
+    "ur": [
+     {
+      "d": 0,
+      "adf_stat": -1.3821173970464298,
+      "adf_p": 0.5908186058127427,
+      "kpss_stat": 1.2536600299884384,
+      "kpss_p": 0.01,
+      "verdict": "unit_root"
+     },
+     {
+      "d": 1,
+      "adf_stat": -3.386255366494911,
+      "adf_p": 0.011436444880795715,
+      "kpss_stat": 0.23972282779845785,
+      "kpss_p": 0.1,
+      "verdict": "stationary"
+     }
+    ],
+    "reproduces": true,
+    "maxdiff": 2.136020450227427e-05,
+    "loglik": -225.82021070684874,
+    "d": 0,
+    "D": 0,
+    "lam": 0.0,
+    "seasonality": "f1 D, f2 D",
+    "phi": [
+     [
+      0.244387,
+      0.10707952185185986
+     ],
+     [
+      0.443921,
+      0.11024025580226893
+     ]
+    ],
+    "complex": null,
+    "other": [],
+    "interventions": [
+     {
+      "type": "step",
+      "date": "2008Q4",
+      "n": 3,
+      "omega": [
+       23.345279728515738,
+       -16.823047333867216,
+       23.25420228304763
+      ],
+      "delta": []
+     }
+    ],
+    "mean": {
+     "value": -6.767876,
+     "se": 3.964418
+    },
+    "sigma": 6.6668081039,
+    "q": {
+     "lag": 15,
+     "stat": 11.16,
+     "df": 13,
+     "p": 0.5974158531899212
+    },
+    "jb": 1.792995,
+    "jb_p": 0.40799616668582184,
+    "sf": {
+     "stat": 1.7837576619404558,
+     "c10": 1.0636,
+     "c5": 1.75,
+     "rejects": true,
+     "overfit": false
+    },
+    "dcd": {
+     "stat": 0.17998231991691682,
+     "theta": 0.4552522831242222,
+     "r10": false,
+     "r5": false
+    },
+    "params": [
+     {
+      "idx": 1,
+      "label": "ω0 [det. 1]",
+      "value": 14.182596,
+      "se": 0.809503
+     },
+     {
+      "idx": 2,
+      "label": "ω0 [det. 2]",
+      "value": -4.136198,
+      "se": 0.809669
+     },
+     {
+      "idx": 3,
+      "label": "ω0 [det. 3]",
+      "value": 4.915366,
+      "se": 1.006881
+     },
+     {
+      "idx": 4,
+      "label": "ω0 [det. 4]",
+      "value": 23.34528,
+      "se": 6.568725
+     },
+     {
+      "idx": 5,
+      "label": "ω1 [det. 4]",
+      "value": -16.823047,
+      "se": 8.248162
+     },
+     {
+      "idx": 6,
+      "label": "ω2 [det. 4]",
+      "value": 23.254202,
+      "se": 6.591797
+     },
+     {
+      "idx": 7,
+      "label": "φ1 [AR regular 1]",
+      "value": 0.244387,
+      "se": 0.10708
+     },
+     {
+      "idx": 8,
+      "label": "φ2 [AR regular 1]",
+      "value": 0.443921,
+      "se": 0.11024
+     },
+     {
+      "idx": 9,
+      "label": "μ",
+      "value": -6.767876,
+      "se": 3.964418
+     }
+    ]
+   }
+  },
+  "$x_t$|x": {
+   "main": {
+    "model": "EXT/X/X_m03_ar1_noseas.inp",
+    "adopted_pre": "EXT/X/X_m03_ar1_noseas.pre",
+    "under": {
+     "stat": 6.780850504013756,
+     "theta": 0.7948429966004324,
+     "r10": true,
+     "r5": true
+    },
+    "ur": [
+     {
+      "d": 0,
+      "adf_stat": -2.3138551378786243,
+      "adf_p": 0.16753834349143448,
+      "kpss_stat": 0.9339985881196216,
+      "kpss_p": 0.01,
+      "verdict": "unit_root"
+     },
+     {
+      "d": 1,
+      "adf_stat": -4.48384647855711,
+      "adf_p": 0.0002102865907935808,
+      "kpss_stat": 0.2451591599946625,
+      "kpss_p": 0.1,
+      "verdict": "stationary"
+     }
+    ],
+    "reproduces": true,
+    "maxdiff": 3.1077207806679e-05,
+    "loglik": -224.08825504845782,
+    "d": 1,
+    "D": 0,
+    "lam": 0.0,
+    "seasonality": "--",
+    "phi": [
+     [
+      0.147831,
+      0.12497568563537165
+     ]
+    ],
+    "complex": null,
+    "other": [],
+    "interventions": [
+     {
+      "type": "step",
+      "date": "2008Q4",
+      "n": 3,
+      "omega": [
+       -43.86560011390351,
+       22.52249950413961,
+       -14.604251988446366
+      ],
+      "delta": []
+     }
+    ],
+    "mean": {
+     "value": 2.667426,
+     "se": 1.000984
+    },
+    "sigma": 6.858559199,
+    "q": {
+     "lag": 15,
+     "stat": 6.94,
+     "df": 14,
+     "p": 0.9370000799903838
+    },
+    "jb": 1.305129,
+    "jb_p": 0.52070870555885,
+    "sf": {
+     "stat": 16.998625872559217,
+     "c10": 1.0636,
+     "c5": 1.75,
+     "rejects": true,
+     "overfit": false
+    },
+    "dcd": {
+     "stat": 2.618822350636947,
+     "theta": 0.895422332775741,
+     "r10": true,
+     "r5": true
+    },
+    "params": [
+     {
+      "idx": 1,
+      "label": "ω0 [det. 1]",
+      "value": -43.8656,
+      "se": 6.992507
+     },
+     {
+      "idx": 2,
+      "label": "ω1 [det. 1]",
+      "value": 22.5225,
+      "se": 6.997042
+     },
+     {
+      "idx": 3,
+      "label": "ω2 [det. 1]",
+      "value": -14.604252,
+      "se": 7.027006
+     },
+     {
+      "idx": 4,
+      "label": "φ1 [AR regular 1]",
+      "value": 0.147831,
+      "se": 0.124976
+     },
+     {
+      "idx": 5,
+      "label": "μ",
+      "value": 2.667426,
+      "se": 1.000984
+     }
+    ]
+   }
+  },
+  "$i_t$|m": {
+   "main": {
+    "model": "EXT/M/M_m03a_ar2.inp",
+    "adopted_pre": "EXT/M/M_m03a_ar2.pre",
+    "under": {
+     "stat": 4.635494635612815,
+     "theta": 0.28807491202802193,
+     "r10": true,
+     "r5": true
+    },
+    "ur": [
+     {
+      "d": 0,
+      "adf_stat": -2.488867091463642,
+      "adf_p": 0.11820663324593755,
+      "kpss_stat": 0.9164466825343608,
+      "kpss_p": 0.01,
+      "verdict": "unit_root"
+     },
+     {
+      "d": 1,
+      "adf_stat": -4.19537328946264,
+      "adf_p": 0.0006708837488719582,
+      "kpss_stat": 0.3473311305846337,
+      "kpss_p": 0.09985727129972684,
+      "verdict": "stationary"
+     }
+    ],
+    "reproduces": true,
+    "maxdiff": 2.3404779997932e-05,
+    "loglik": -201.4993381405095,
+    "d": 1,
+    "D": 0,
+    "lam": 0.0,
+    "seasonality": "f1 D, f2 D",
+    "phi": [
+     [
+      0.343094,
+      0.12260570948856997
+     ],
+     [
+      0.231923,
+      0.12588326735524344
+     ]
+    ],
+    "complex": null,
+    "other": [],
+    "interventions": [
+     {
+      "type": "step",
+      "date": "2008Q3",
+      "n": 4,
+      "omega": [
+       8.195821890087956,
+       17.166447583799535,
+       26.084060050443487,
+       14.321277403442224
+      ],
+      "delta": []
+     }
+    ],
+    "mean": {
+     "value": 2.099232,
+     "se": 1.383181
+    },
+    "sigma": 4.8843106513,
+    "q": {
+     "lag": 15,
+     "stat": 21.75,
+     "df": 13,
+     "p": 0.05935847035453426
+    },
+    "jb": 1.43246,
+    "jb_p": 0.4885907753965215,
+    "sf": {
+     "stat": 3.5819105654720147,
+     "c10": 1.0636,
+     "c5": 1.75,
+     "rejects": true,
+     "overfit": false
+    },
+    "dcd": {
+     "stat": 0.4073638912690285,
+     "theta": 0.9433739769315328,
+     "r10": false,
+     "r5": false
+    },
+    "params": [
+     {
+      "idx": 1,
+      "label": "ω0 [det. 1]",
+      "value": 2.17057,
+      "se": 0.489987
+     },
+     {
+      "idx": 2,
+      "label": "ω0 [det. 2]",
+      "value": -2.764842,
+      "se": 0.486498
+     },
+     {
+      "idx": 3,
+      "label": "ω0 [det. 3]",
+      "value": 1.506104,
+      "se": 0.276284
+     },
+     {
+      "idx": 4,
+      "label": "ω0 [det. 4]",
+      "value": 8.195822,
+      "se": 5.103054
+     },
+     {
+      "idx": 5,
+      "label": "ω1 [det. 4]",
+      "value": 17.166448,
+      "se": 5.350847
+     },
+     {
+      "idx": 6,
+      "label": "ω2 [det. 4]",
+      "value": 26.08406,
+      "se": 5.25828
+     },
+     {
+      "idx": 7,
+      "label": "ω3 [det. 4]",
+      "value": 14.321277,
+      "se": 5.124295
+     },
+     {
+      "idx": 8,
+      "label": "φ1 [AR regular 1]",
+      "value": 0.343094,
+      "se": 0.122606
+     },
+     {
+      "idx": 9,
+      "label": "φ2 [AR regular 1]",
+      "value": 0.231923,
+      "se": 0.125883
+     },
+     {
+      "idx": 10,
+      "label": "μ",
+      "value": 2.099232,
+      "se": 1.383181
+     }
+    ]
+   }
+  },
+  "$cr_t$|cac": {
+   "main": {
+    "model": "EXT/CAc/CAc_m03_ar1_noseas.inp",
+    "adopted_pre": "EXT/CAc/CAc_m03_ar1_noseas.pre",
+    "under": {
+     "stat": 6.44668669879627,
+     "theta": 0.8263562006252081,
+     "r10": true,
+     "r5": true
+    },
+    "ur": [
+     {
+      "d": 0,
+      "adf_stat": -2.4746108050709896,
+      "adf_p": 0.12177462430853508,
+      "kpss_stat": 0.9208067703709995,
+      "kpss_p": 0.01,
+      "verdict": "unit_root"
+     },
+     {
+      "d": 1,
+      "adf_stat": -4.1877890896584615,
+      "adf_p": 0.0006909716428502605,
+      "kpss_stat": 0.26753466063667203,
+      "kpss_p": 0.1,
+      "verdict": "stationary"
+     }
+    ],
+    "reproduces": true,
+    "maxdiff": 1.7807449674431264e-05,
+    "loglik": -217.53481425105053,
+    "d": 1,
+    "D": 0,
+    "lam": 0.0,
+    "seasonality": "--",
+    "phi": [
+     [
+      0.091118,
+      0.1258661193492184
+     ]
+    ],
+    "complex": null,
+    "other": [],
+    "interventions": [
+     {
+      "type": "step",
+      "date": "2008Q4",
+      "n": 3,
+      "omega": [
+       -38.97623553041117,
+       20.325435196767508,
+       -12.519672566633801
+      ],
+      "delta": []
+     }
+    ],
+    "mean": {
+     "value": 2.498707,
+     "se": 0.853011
+    },
+    "sigma": 6.2201095687,
+    "q": {
+     "lag": 15,
+     "stat": 8.42,
+     "df": 14,
+     "p": 0.8663183381303754
+    },
+    "jb": 0.886051,
+    "jb_p": 0.6420908335627777,
+    "sf": {
+     "stat": 18.673882774407787,
+     "c10": 1.0636,
+     "c5": 1.75,
+     "rejects": true,
+     "overfit": false
+    },
+    "dcd": {
+     "stat": 3.526137879793623,
+     "theta": 0.8858692444017721,
+     "r10": true,
+     "r5": true
+    },
+    "params": [
+     {
+      "idx": 1,
+      "label": "ω0 [det. 1]",
+      "value": -38.976236,
+      "se": 6.349992
+     },
+     {
+      "idx": 2,
+      "label": "ω1 [det. 1]",
+      "value": 20.325435,
+      "se": 6.301772
+     },
+     {
+      "idx": 3,
+      "label": "ω2 [det. 1]",
+      "value": -12.519673,
+      "se": 6.378109
+     },
+     {
+      "idx": 4,
+      "label": "φ1 [AR regular 1]",
+      "value": 0.091118,
+      "se": 0.125866
+     },
+     {
+      "idx": 5,
+      "label": "μ",
+      "value": 2.498707,
+      "se": 0.853011
+     }
+    ]
+   }
+  },
+  "$de_t$|cad": {
+   "main": {
+    "model": "EXT/CAd/CAd_m04_ar1x1.inp",
+    "adopted_pre": "EXT/CAd/CAd_m04_ar1x1.pre",
+    "under": {
+     "stat": 8.51685221702229,
+     "theta": 0.2336574069926532,
+     "r10": true,
+     "r5": true
+    },
+    "ur": [
+     {
+      "d": 0,
+      "adf_stat": -2.3683293279808155,
+      "adf_p": 0.1508754275164783,
+      "kpss_stat": 0.970450304060904,
+      "kpss_p": 0.01,
+      "verdict": "unit_root"
+     },
+     {
+      "d": 1,
+      "adf_stat": -3.8811755949396214,
+      "adf_p": 0.002177835982567415,
+      "kpss_stat": 0.2606447248318857,
+      "kpss_p": 0.1,
+      "verdict": "stationary"
+     }
+    ],
+    "reproduces": true,
+    "maxdiff": 2.9326961566877863e-05,
+    "loglik": -202.51153217837197,
+    "d": 1,
+    "D": 0,
+    "lam": 0.0,
+    "seasonality": "f1 D, f2 D",
+    "phi": [
+     [
+      0.14917800000000003,
+      0.11956679723410758
+     ],
+     [
+      0.331744212603,
+      0.12532890085383266
+     ]
+    ],
+    "complex": null,
+    "other": [],
+    "interventions": [
+     {
+      "type": "step",
+      "date": "2008Q3",
+      "n": 4,
+      "omega": [
+       11.000233073825015,
+       17.436663785264308,
+       22.36940905081239,
+       12.966776535100927
+      ],
+      "delta": []
+     }
+    ],
+    "mean": {
+     "value": 2.062087,
+     "se": 1.156809
+    },
+    "sigma": 4.9604673144,
+    "q": {
+     "lag": 15,
+     "stat": 14.11,
+     "df": 13,
+     "p": 0.36614310390831534
+    },
+    "jb": 0.739194,
+    "jb_p": 0.6910127526708731,
+    "sf": {
+     "stat": 4.226890005184487,
+     "c10": 1.0636,
+     "c5": 1.75,
+     "rejects": true,
+     "overfit": false
+    },
+    "dcd": {
+     "stat": 0.3794554287929941,
+     "theta": 0.9484074259096649,
+     "r10": false,
+     "r5": false
+    },
+    "params": [
+     {
+      "idx": 1,
+      "label": "ω0 [det. 1]",
+      "value": 2.088105,
+      "se": 0.474849
+     },
+     {
+      "idx": 2,
+      "label": "ω0 [det. 2]",
+      "value": -2.454826,
+      "se": 0.473342
+     },
+     {
+      "idx": 3,
+      "label": "ω0 [det. 3]",
+      "value": 1.730594,
+      "se": 0.375689
+     },
+     {
+      "idx": 4,
+      "label": "ω0 [det. 4]",
+      "value": 11.000233,
+      "se": 5.171363
+     },
+     {
+      "idx": 5,
+      "label": "ω1 [det. 4]",
+      "value": 17.436664,
+      "se": 5.306047
+     },
+     {
+      "idx": 6,
+      "label": "ω2 [det. 4]",
+      "value": 22.369409,
+      "se": 5.145311
+     },
+     {
+      "idx": 7,
+      "label": "ω3 [det. 4]",
+      "value": 12.966777,
+      "se": 5.314745
+     },
+     {
+      "idx": 8,
+      "label": "φ1 [AR regular 1]",
+      "value": 0.655371,
+      "se": 0.112263
+     },
+     {
+      "idx": 9,
+      "label": "φ1 [AR regular 2]",
+      "value": -0.506193,
+      "se": 0.130879
+     },
+     {
+      "idx": 10,
+      "label": "μ",
+      "value": 2.062087,
+      "se": 1.156809
+     }
+    ]
+   }
+  },
+  "$rc_t$|rc": {
+   "main": {
+    "model": "EXT/Rc/Rc_m00.inp",
+    "adopted_pre": "EXT/Rc/Rc_m00.pre",
+    "under": {
+     "stat": 157.69771796858822,
+     "theta": -0.16261273985617594,
+     "r10": true,
+     "r5": true
+    },
+    "ur": [
+     {
+      "d": 0,
+      "adf_stat": -3.0355485930493047,
+      "adf_p": 0.03170534635575438,
+      "kpss_stat": 0.34246378882976997,
+      "kpss_p": 0.1,
+      "verdict": "stationary"
+     },
+     {
+      "d": 1,
+      "adf_stat": -2.896318080844896,
+      "adf_p": 0.04577783291479569,
+      "kpss_stat": 0.26506280953925593,
+      "kpss_p": 0.1,
+      "verdict": "stationary"
+     }
+    ],
+    "reproduces": true,
+    "maxdiff": 4.0776137510967203e-07,
+    "loglik": -211.67311733699546,
+    "d": 1,
+    "D": 0,
+    "lam": 0.0,
+    "seasonality": "f1 D, f2 D",
+    "phi": [],
+    "complex": null,
+    "other": [],
+    "interventions": [],
+    "mean": {
+     "value": 1.169045,
+     "se": 0.696461
+    },
+    "sigma": 5.6994046713,
+    "q": {
+     "lag": 15,
+     "stat": 15.07,
+     "df": 15,
+     "p": 0.4463868211935307
+    },
+    "jb": 4.109281,
+    "jb_p": 0.12813889323028912,
+    "sf": {
+     "stat": 9.889405672854025,
+     "c10": 1.0636,
+     "c5": 1.75,
+     "rejects": true,
+     "overfit": true
+    },
+    "dcd": {
+     "stat": 2.395426596689731,
+     "theta": 0.876117657514517,
+     "r10": true,
+     "r5": true
+    },
+    "params": [
+     {
+      "idx": 1,
+      "label": "ω0 [det. 1]",
+      "value": 0.854835,
+      "se": 0.696481
+     },
+     {
+      "idx": 2,
+      "label": "ω0 [det. 2]",
+      "value": -2.084108,
+      "se": 0.696409
+     },
+     {
+      "idx": 3,
+      "label": "ω0 [det. 3]",
+      "value": 1.219354,
+      "se": 0.348265
+     },
+     {
+      "idx": 4,
+      "label": "μ",
+      "value": 1.169045,
+      "se": 0.696461
+     }
+    ]
+   }
+  },
+  "$rd_t$|rd": {
+   "main": {
+    "model": "EXT/Rd/Rd_m01_ar1.inp",
+    "adopted_pre": "EXT/Rd/Rd_m01_ar1.pre",
+    "under": {
+     "stat": 40.028784456012545,
+     "theta": 0.05344399384238843,
+     "r10": true,
+     "r5": true
+    },
+    "ur": [
+     {
+      "d": 0,
+      "adf_stat": -0.2692219367900524,
+      "adf_p": 0.9297517259530848,
+      "kpss_stat": 0.6853850846442682,
+      "kpss_p": 0.014874083214157438,
+      "verdict": "unit_root"
+     },
+     {
+      "d": 1,
+      "adf_stat": -3.4475968724532997,
+      "adf_p": 0.009439435301724594,
+      "kpss_stat": 0.21139366966100182,
+      "kpss_p": 0.1,
+      "verdict": "stationary"
+     }
+    ],
+    "reproduces": true,
+    "maxdiff": 9.757015932532198e-06,
+    "loglik": -258.7922779099371,
+    "d": 1,
+    "D": 0,
+    "lam": 0.0,
+    "seasonality": "f1 D, f2 D",
+    "phi": [
+     [
+      -0.69831,
+      0.08543085508421265
+     ]
+    ],
+    "complex": null,
+    "other": [],
+    "interventions": [],
+    "mean": {
+     "value": 1.462295,
+     "se": 0.829831
+    },
+    "sigma": 11.4574746404,
+    "q": {
+     "lag": 15,
+     "stat": 17.4,
+     "df": 14,
+     "p": 0.23548773763470018
+    },
+    "jb": 0.284359,
+    "jb_p": 0.8674655324470255,
+    "sf": {
+     "na": "Shin-Fuller no aplica: el AR no tiene raíz real positiva; en f=0 decide el DCD. Sus raíces reales son negativas (φ̂ = -0.6983): una raíz negativa no tiene nada que ver con `d`, y Φ̂₁ᵤ sobre ella no significaría nada."
+    },
+    "dcd": {
+     "stat": 0.755171215509904,
+     "theta": 0.9220080056550505,
+     "r10": false,
+     "r5": false
+    },
+    "params": [
+     {
+      "idx": 1,
+      "label": "ω0 [det. 1]",
+      "value": 2.938271,
+      "se": 1.153522
+     },
+     {
+      "idx": 2,
+      "label": "ω0 [det. 2]",
+      "value": -0.222526,
+      "se": 1.15383
+     },
+     {
+      "idx": 3,
+      "label": "ω0 [det. 3]",
+      "value": 4.471908,
+      "se": 2.244009
+     },
+     {
+      "idx": 4,
+      "label": "φ1 [AR regular 1]",
+      "value": -0.69831,
+      "se": 0.085431
+     },
+     {
+      "idx": 5,
+      "label": "μ",
+      "value": 1.462295,
+      "se": 0.829831
+     }
+    ]
+   }
+  }
+ }
+}

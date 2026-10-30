@@ -1,0 +1,551 @@
+{
+  "series": "BXE",
+  "analyst": "",
+  "created": "2026-10-07",
+  "carril": "",
+  "entries": [
+    {
+      "version": 1,
+      "name": "PC1",
+      "inp_path": "BXE/work/BXE_m00.inp",
+      "timestamp": "2026-10-07T13:24:10",
+      "spec": {
+        "lam": 0.0,
+        "d": 0,
+        "D": 0,
+        "mu": -4.205804349909006,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [],
+        "dominio": "multiplicative"
+      },
+      "stats": {
+        "loglik": -245.72381111866167,
+        "aic": 499.44762223732334,
+        "bic": 508.3256530580278,
+        "sigma_a": 8.976830999267644,
+        "q_pass": false,
+        "jb_pass": false,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 24,
+            "date": "Q4/2008",
+            "z": -3.137339588065196
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          6.224156294587502e-06,
+          4.348778849916357e-06,
+          1.3817043287511765e-05,
+          2.488911967579721e-05
+        ],
+        "jb_pvalue": 0.011368764445468263,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "ln y_t = μ + (−1)ᵗ + D_t(1 arm.) + [1-φ(B)]⁻¹·a_t",
+      "decision": "BXE: lam=0, d=0 (ACF estacionaria, KPSS no rechaza; X y M I(1) con tendencia común), B1 (hereda estacionalidad de M; requisito multivariante); m00 con mu",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/BXE_v1__30a4a2423293.png",
+      "out_path": "BXE/work/BXE_m00.out",
+      "hist_path": "figs/BXE_v1_hist__bb464b5da59e.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": null,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "inferido",
+      "nodo": "",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "e37003344482207bc982e0d6cd09295f6e888fcd95af9846ab10677c2cecb682",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 2,
+      "name": "PC2",
+      "inp_path": "BXE/work/BXE_m01_s0804x3.inp",
+      "timestamp": "2026-10-07T13:26:45",
+      "spec": {
+        "lam": 0.0,
+        "d": 0,
+        "D": 0,
+        "mu": -0.9741921900059108,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -232.49540435761406,
+        "aic": 478.9908087152281,
+        "bic": 494.52736265146086,
+        "sigma_a": 7.3898802543150826,
+        "q_pass": false,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.00012773745044691864,
+          0.0006417041304759286,
+          0.001532261062072604,
+          0.0018599160082167776
+        ],
+        "jb_pvalue": 0.9638909218078506,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "ln y_t = μ + (−1)ᵗ + D_t(1 arm.) + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Escalón Q4/2008×3 (identificado por el dato; ganancia esperada nula: shock común a X y M)",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/BXE_v2__1ef4470d675b.png",
+      "out_path": "BXE/work/BXE_m01_s0804x3.out",
+      "hist_path": "figs/BXE_v2_hist__0486a2f51fe6.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 1,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 2,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "BXE/work/BXE_m00.pre",
+      "base_pre_sha": "e37003344482207bc982e0d6cd09295f6e888fcd95af9846ab10677c2cecb682",
+      "pre_sha": "e02ca5fc9718735cc714be2b90fafae35c51551c42dc87b9807e28978b061025",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 3,
+      "name": "PC3",
+      "inp_path": "BXE/work/BXE_m02_ar1.inp",
+      "timestamp": "2026-10-07T13:27:50",
+      "spec": {
+        "lam": 0.0,
+        "d": 0,
+        "D": 0,
+        "mu": -1.4163236636672014,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -220.5098277188198,
+        "aic": 457.0196554376396,
+        "bic": 474.77571707904843,
+        "sigma_a": 6.178730853329446,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.43099805482951525,
+          0.3646077254608602,
+          0.35415556640105805,
+          0.5842555865471174
+        ],
+        "jb_pvalue": 0.8502051455848882,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "ln y_t = μ + (−1)ᵗ + D_t(1 arm.) + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "BXE m01 + AR(1)",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/BXE_v3__39b0d8e8f223.png",
+      "out_path": "BXE/work/BXE_m02_ar1.out",
+      "hist_path": "figs/BXE_v3_hist__2307e41dc509.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 2,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 3,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "BXE/work/BXE_m01_s0804x3.pre",
+      "base_pre_sha": "e02ca5fc9718735cc714be2b90fafae35c51551c42dc87b9807e28978b061025",
+      "pre_sha": "2496f73f4daa8fdc67d629a301229bf6d4e2913510366edfd64b09ac481d33c2",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 4,
+      "name": "PC4",
+      "inp_path": "BXE/work/BXE_m03_ar2.inp",
+      "timestamp": "2026-10-07T13:27:51",
+      "spec": {
+        "lam": 0.0,
+        "d": 0,
+        "D": 0,
+        "mu": -1.3635441694548502,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 2,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -219.5034702468795,
+        "aic": 457.006940493759,
+        "bic": 476.98250984034394,
+        "sigma_a": 6.0842777305846205,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.7899601685188475,
+          0.586333797334956,
+          0.4574309215204708,
+          0.6940593265104631
+        ],
+        "jb_pvalue": 0.8384834622576884,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "ln y_t = μ + (−1)ᵗ + D_t(1 arm.) + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Sobreajuste: BXE m01 + AR(2)",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/BXE_v4__b2789c08ccd6.png",
+      "out_path": "BXE/work/BXE_m03_ar2.out",
+      "hist_path": "figs/BXE_v4_hist__1bda5525fed5.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 2,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 4,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "BXE/work/BXE_m01_s0804x3.pre",
+      "base_pre_sha": "e02ca5fc9718735cc714be2b90fafae35c51551c42dc87b9807e28978b061025",
+      "pre_sha": "c9a0ab80549aa63bbd8581f30f81c21da24985dc4b5ddbb45ed1e0a414e6c963",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 5,
+      "name": "PC5",
+      "inp_path": "BXE/work/BXE_m04_ar1_noalt.inp",
+      "timestamp": "2026-10-07T13:29:39",
+      "spec": {
+        "lam": 0.0,
+        "d": 0,
+        "D": 0,
+        "mu": -1.258510925081361,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -221.8846809585114,
+        "aic": 457.7693619170228,
+        "bic": 473.30591585325556,
+        "sigma_a": 6.306676376404028,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.6428448091519641,
+          0.4976422281018894,
+          0.4988191852323688,
+          0.7098742280761288
+        ],
+        "jb_pvalue": 0.8188847023985115,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "ln y_t = μ + D_t(1 arm.) + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Poda de (-1)^t: MEG f=2 determinista, LR 2.75 p=0.097",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/BXE_v5__727c474d18a3.png",
+      "out_path": "BXE/work/BXE_m04_ar1_noalt.out",
+      "hist_path": "figs/BXE_v5_hist__fee8c23da86f.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 3,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 5,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "BXE/work/BXE_m02_ar1.pre",
+      "base_pre_sha": "2496f73f4daa8fdc67d629a301229bf6d4e2913510366edfd64b09ac481d33c2",
+      "pre_sha": "9e1d92ae7bd87b29c00ba23425e50902c88ef9fa6f6a49f6ad6eea46a39b5dd9",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 6,
+      "name": "PC6",
+      "inp_path": "models/EXT/BXE/BXE_m05_i0804x2",
+      "timestamp": "2026-10-10T11:50:28",
+      "spec": {
+        "lam": 0.0,
+        "d": 0,
+        "D": 0,
+        "mu": -3.3026134069229514,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "impulse",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -222.31588044191005,
+        "aic": 456.6317608838201,
+        "bic": 469.94880711487673,
+        "sigma_a": 6.345194226801984,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.757622119976021,
+          0.5940177117696464,
+          0.5979585447819431,
+          0.7837430217705428
+        ],
+        "jb_pvalue": 0.8550560690527336,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "ln y_t = μ + D_t(1 arm.) + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/BXE_v6__2eb6789a5c5f.png",
+      "out_path": "models/EXT/BXE/BXE_m05_i0804x2.out",
+      "hist_path": "figs/BXE_v6_hist__3da2e6af4add.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 5,
+      "status": "adopted",
+      "why_abandoned": "",
+      "why_adopted": "Revisión A7 (10-oct-2026): el escalón Q4/2008 ×3 de m04 tenía ganancia −3.19 no distinta de cero (Wald p 0.34). Se impone la restricción: impulso ×2 en Q4/2008 (−30.9, −25.0; efecto transitorio). LR 0.86 (1 gl, p 0.35), BIC 473.3 → 470.0, diagnosis ✓, Treadway ✓. MEG f2 sobre la línea base con (−1)ᵗ: determinista; d=0 confirmado (SF 6.8, DCD θ̂=1). Pendiente: reestimar VECM_AUG con este .pre.",
+      "iteracion": 6,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "models/EXT/BXE/BXE_m04_ar1_noalt.pre",
+      "base_pre_sha": "9e1d92ae7bd87b29c00ba23425e50902c88ef9fa6f6a49f6ad6eea46a39b5dd9",
+      "pre_sha": "8cd6542d24734388751314d0ed7d560f99ac3ac86e3c739832f931792a1bb611",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @d048cb7 · fue 0.1.17.dev0 (motor C)"
+    }
+  ]
+}

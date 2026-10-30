@@ -1,0 +1,260 @@
+{
+  "series": "GY",
+  "analyst": "",
+  "created": "2026-10-05",
+  "carril": "",
+  "entries": [
+    {
+      "version": 1,
+      "name": "PC1",
+      "inp_path": "GY/work/GY_m00.inp",
+      "timestamp": "2026-10-05T23:14:30",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.0,
+        "estimate_mu": false,
+        "alter": true,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": []
+      },
+      "stats": {
+        "loglik": -234.60127807341058,
+        "aic": 475.20255614682117,
+        "bic": 481.81663400499406,
+        "sigma_a": 8.025091573957168,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.010165858877835388,
+          0.08190664234189604,
+          0.207198968112577,
+          0.3709454006623131
+        ],
+        "jb_pvalue": 0.7677418931715765,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = (−1)ᵗ + D_t(1 arm.) + [1-φ(B)]⁻¹·a_t",
+      "decision": "B1: D=0 con armónicos (estacionalidad determinista); lam=0, d=1",
+      "rationale": "Objetivo multivariante (cointegración con WTI): mismo tratamiento estacional en el sistema; MEG validará después. ACF con picos lentos en 4,8,12 sugiere posible estocástica.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GY_v1__10966dddeacb.png",
+      "out_path": "GY/work/GY_m00.out",
+      "hist_path": "figs/GY_v1_hist__04e6738ca2b3.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": null,
+      "status": "exploring",
+      "why_abandoned": "",
+      "iteracion": 1,
+      "parent_origen": "inferido",
+      "nodo": "",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "dd99ceef09c34151d39c9692e1ea5cfd27cec87e513bc8aa8730254492c71568",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @a33b893+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 2,
+      "name": "PC2",
+      "inp_path": "GY/work/GY_m01_ar1.inp",
+      "timestamp": "2026-10-05T23:16:39",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.0,
+        "estimate_mu": false,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": []
+      },
+      "stats": {
+        "loglik": -230.22919681551065,
+        "aic": 468.4583936310213,
+        "bic": 477.27716410858517,
+        "sigma_a": 7.510802345308673,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.8261784182488157,
+          0.9858465413214133,
+          0.9870432663316476,
+          0.9957723335094539
+        ],
+        "jb_pvalue": 0.6085888149370442,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = (−1)ᵗ + D_t(1 arm.) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Empate AR(1)/MA(1): estimar candidato AR(1)",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GY_v2__0cccb47120be.png",
+      "out_path": "GY/work/GY_m01_ar1.out",
+      "hist_path": "figs/GY_v2_hist__e99f5a713083.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 1,
+      "status": "exploring",
+      "why_abandoned": "",
+      "iteracion": 2,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "GY/work/GY_m00.pre",
+      "base_pre_sha": "dd99ceef09c34151d39c9692e1ea5cfd27cec87e513bc8aa8730254492c71568",
+      "pre_sha": "8d613c9014e6e48e2335724e6efd0c70498ce8b65b94c2f5c61a9c69bd081f3b",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @a33b893+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 3,
+      "name": "PC3",
+      "inp_path": "GY/work/GY_m02_ma1.inp",
+      "timestamp": "2026-10-05T23:16:40",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.0,
+        "estimate_mu": false,
+        "alter": true,
+        "ar_free": [],
+        "ma_free": [
+          [
+            true
+          ]
+        ],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 0,
+        "q": 1,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": []
+      },
+      "stats": {
+        "loglik": -230.9382927918403,
+        "aic": 469.8765855836806,
+        "bic": 478.69535606124447,
+        "sigma_a": 7.59286569588879,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.42368902404923536,
+          0.8556111053121278,
+          0.9382131006987771,
+          0.9794958059492527
+        ],
+        "jb_pvalue": 0.5247257118510134,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = (−1)ᵗ + D_t(1 arm.) + [1-θ(B)]·a_t",
+      "decision": "Empate AR(1)/MA(1): estimar candidato MA(1)",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GY_v3__7956064103f6.png",
+      "out_path": "GY/work/GY_m02_ma1.out",
+      "hist_path": "figs/GY_v3_hist__b2e5f8d0b860.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 1,
+      "status": "exploring",
+      "why_abandoned": "",
+      "iteracion": 3,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "GY/work/GY_m00.pre",
+      "base_pre_sha": "dd99ceef09c34151d39c9692e1ea5cfd27cec87e513bc8aa8730254492c71568",
+      "pre_sha": "a55fa04b5b7cc695392bd7d6d4fcce7f42efa18d7d0b39ff9b81ca6aea3f4569",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @a33b893+sucio · fue 0.1.17.dev0 (motor C)"
+    }
+  ]
+}

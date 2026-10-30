@@ -1,0 +1,2 @@
+# BXE (I(0)) enters the level of GAP
+GAP <- BXE 0 0 0

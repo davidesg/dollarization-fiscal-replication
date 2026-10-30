@@ -1,0 +1,1084 @@
+{
+  "series": "GDPDEC",
+  "analyst": "",
+  "created": "2026-10-09",
+  "carril": "guiado",
+  "entries": [
+    {
+      "version": 1,
+      "name": "dominio",
+      "inp_path": "",
+      "timestamp": "2026-10-09T16:16:46",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "dominio = price_index",
+      "rationale": "declarado por el analista",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "dominio",
+        "decidido": "price_index",
+        "evidencia": "[2026-10-09] Corrección de las expectativas: la serie es el implícito del BCE EN BRUTO (NSA; Dem_Corr_bru/Dem_Cad_bru, CNT 127), no desestacionalizada. La estacionalidad hay que contrastarla (en el autónomo, HAC p 0.29).",
+        "alternativas": "",
+        "expectativas": "Deflactor implícito del PIB de Ecuador (BCE, CNT 127, desestacionalizado por construcción del consolidado). Índice de precios: λ=0, I(1) con deriva (la inflación), posible I(2) por desinflación lenta como el IPC_EC. Sin estacionalidad. Incluye el petróleo exportado: se espera el ciclo del crudo de 2008 (desplome en 2008Q4) y la caída de 2014–16."
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "",
+      "coincide": null,
+      "parent": null,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "dominio",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 2,
+      "name": "lambda",
+      "inp_path": "",
+      "timestamp": "2026-10-09T16:16:46",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "lambda = 0",
+      "rationale": "Dominio price_index: λ=0 siempre (base convencional; ∇ln = inflación del deflactor). La dispersión alta de 2005–09 es el episodio del crudo, no escala. Coherente con la brecha y el VECM. Confirmado por el analista.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "lambda",
+        "decidido": "0",
+        "evidencia": "gap=-0.127; corr(nivel)=0.237; corr(log)=0.364; estadístico λ=1; regla de dominio `price_index`",
+        "alternativas": "",
+        "propuesta_valor": 0.0
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "0",
+      "coincide": true,
+      "parent": 1,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "lambda",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 3,
+      "name": "d",
+      "inp_path": "",
+      "timestamp": "2026-10-09T16:22:44",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "d = 1",
+      "rationale": "Tendencia clara (recta 83 % del nivel), ACF lenta, PACF ≈1 en lag 1: d=0 descartado (ADF sin potencia por la curvatura). En d=1 el KPSS rechaza (p 0.033): media de ∇ que cambia (boom 2003–14, meseta 2015–19) y 2008 sin tratar; d=2 se contrasta en formales sobre el modelo estimado. Confirmado por el analista.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "d",
+        "decidido": "1",
+        "evidencia": "d=0: ADF p=0.013, KPSS p=0.010; d=1: ADF p=0.000, KPSS p=0.033",
+        "alternativas": "",
+        "propuesta_valor": 1
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "1",
+      "coincide": true,
+      "parent": 2,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "d",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 4,
+      "name": "estacionalidad",
+      "inp_path": "",
+      "timestamp": "2026-10-09T16:23:11",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "estacionalidad = D=0 (sin estacionalidad)",
+      "rationale": "se toma la propuesta de la herramienta",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "estacionalidad",
+        "decidido": "D=0 (sin estacionalidad)",
+        "evidencia": "F-HAC=1.28, p=0.2901",
+        "alternativas": "",
+        "propuesta_valor": "A"
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "sin estacionalidad (D=0)",
+      "coincide": true,
+      "parent": 3,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "estacionalidad",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 5,
+      "name": "m00",
+      "inp_path": "models/DEFL/GDPDEC_G/GDPDEC_m00.inp",
+      "timestamp": "2026-10-09T16:24:01",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.966709,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": []
+      },
+      "stats": {
+        "loglik": -162.23068745184344,
+        "aic": 326.4613749036869,
+        "bic": 328.66606752307786,
+        "sigma_a": 2.7248544424050425,
+        "q_pass": true,
+        "jb_pass": false,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 23,
+            "date": "Q4/2008",
+            "z": -4.56191107506625
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.1564897535608153,
+          0.14812286749184622,
+          0.27856513445993714,
+          0.3800198719616178
+        ],
+        "jb_pvalue": 6.935134874156428e-20,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + a_t",
+      "decision": "",
+      "rationale": "D=0 (HAC F 1.28, p 0.29, serie en bruto sin estacionalidad detectable). Modelo base ∇ln y = μ + a para calibrar distorsiones antes de identificar. Confirmado por el analista.",
+      "problems_found": "[diagnosis] el Jarque-Bera rechaza la normalidad (p=0.0000); anómalos por encima del umbral calibrado (3.17): Q4/2008 (z=-4.56)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GDPDEC_v5__52474e6729fb.png",
+      "out_path": "models/DEFL/GDPDEC_G/GDPDEC_m00.out",
+      "hist_path": "figs/GDPDEC_v5_hist__d4b1875c8305.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 4,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "inferido",
+      "nodo": "estacionalidad",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "c0604d2b67c06b4a41608a192c9bdfdef78a4cb550674b1d6ae8d929418b1f76",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 6,
+      "name": "m01_s0804",
+      "inp_path": "models/DEFL/GDPDEC_G/GDPDEC_m01_s0804.inp",
+      "timestamp": "2026-10-09T16:25:04",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 1.1550501361453842,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -149.5408281464843,
+        "aic": 303.0816562929686,
+        "bic": 307.4910415317505,
+        "sigma_a": 2.254693685704404,
+        "q_pass": false,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.027966242582672773,
+          0.02376494207019375,
+          0.0037808355126094373,
+          0.0016493655596968582
+        ],
+        "jb_pvalue": 0.7575147072615207,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(1 itvs) + a_t",
+      "decision": "",
+      "rationale": "Intervención mínima: un escalón en 2008Q4 (único dato sobre el umbral, z −4.56), la misma que en la brecha GAPGDPD guiada. Decisión del analista.",
+      "problems_found": "[diagnosis] la Q rechaza el ruido blanco en el retardo que decide (15, p=0.0016); la Q rechaza también en 4 (p=0.0280), 8 (p=0.0238), 12 (p=0.0038)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GDPDEC_v6__6b26b5f8bd22.png",
+      "out_path": "models/DEFL/GDPDEC_G/GDPDEC_m01_s0804.out",
+      "hist_path": "figs/GDPDEC_v6_hist__c65c90d23725.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 5,
+      "status": "dead-end",
+      "why_abandoned": "Un solo escalón en 2008Q4 se queda corto: sin ARMA el vecino 2009Q1 queda en −1.92σ (p 0.055) y con AR(2) (v13) falla Treadway (−2.02σ, p 0.043). LR ×2 frente a ×1 con AR(2): 7.46, p 0.006. El desplome tiene dos tramos, como el WTI (2008Q4 y 2009Q1).",
+      "why_adopted": "",
+      "iteracion": 2,
+      "parent_origen": "declarado",
+      "nodo": "estacionalidad",
+      "base_pre_path": "models/DEFL/GDPDEC_G/GDPDEC_m00.pre",
+      "base_pre_sha": "c0604d2b67c06b4a41608a192c9bdfdef78a4cb550674b1d6ae8d929418b1f76",
+      "pre_sha": "0d678222d2e1e5ac58dbd847dc64227095ff29ae443920ab7f5a0932a42e5929",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 7,
+      "name": "m02_s0804x2",
+      "inp_path": "models/DEFL/GDPDEC_G/GDPDEC_m02_s0804x2.inp",
+      "timestamp": "2026-10-09T16:26:15",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 1.2217081490591426,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -147.61150517829623,
+        "aic": 301.22301035659245,
+        "bic": 307.83708821476534,
+        "sigma_a": 2.190693719812322,
+        "q_pass": false,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.0018080160869274886,
+          0.0004862860379428735,
+          0.00012525329387935713,
+          8.445233798060059e-05
+        ],
+        "jb_pvalue": 0.588338651662162,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(1 itvs) + a_t",
+      "decision": "",
+      "rationale": "Con un escalón, el vecino 2009Q1 queda en −1.92σ (p ω extra 0.055, contraste exacto sin ARMA): el analista añade un segundo escalón (2008Q4×2) porque está muy cerca y el crudo siguió cayendo en 2009Q1.",
+      "problems_found": "[diagnosis] la Q rechaza el ruido blanco en el retardo que decide (15, p=0.0001); la Q rechaza también en 4 (p=0.0018), 8 (p=0.0005), 12 (p=0.0001)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GDPDEC_v7__5b51e64b353a.png",
+      "out_path": "models/DEFL/GDPDEC_G/GDPDEC_m02_s0804x2.out",
+      "hist_path": "figs/GDPDEC_v7_hist__34c0e22b38ca.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 5,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 3,
+      "parent_origen": "declarado",
+      "nodo": "estacionalidad",
+      "base_pre_path": "models/DEFL/GDPDEC_G/GDPDEC_m00.pre",
+      "base_pre_sha": "c0604d2b67c06b4a41608a192c9bdfdef78a4cb550674b1d6ae8d929418b1f76",
+      "pre_sha": "c8531015c7086fa6ab2f7d6e26dd26f1f6ba9ea550ed2d532fd066556b1d941a",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 8,
+      "name": "estacionalidad",
+      "inp_path": "",
+      "timestamp": "2026-10-09T16:26:53",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "estacionalidad = D=0 (B1, armónicos deterministas)",
+      "rationale": "Identificar el ARMA sobre los residuos de 2008Q4×2 (ω₁ t 1.99, p 0.0505); la elección ×1 frente a ×2 se decide con el ARMA puesto.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "estacionalidad",
+        "decidido": "D=0 (B1, armónicos deterministas)",
+        "evidencia": "",
+        "alternativas": ""
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 7,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 4,
+      "parent_origen": "",
+      "nodo": "estacionalidad",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 9,
+      "name": "ordenes",
+      "inp_path": "",
+      "timestamp": "2026-10-09T16:26:55",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "ordenes = ARMA(2,0)",
+      "rationale": "Guiado: AR(2) completo + escalón 2008Q4×2 (ω₀ −16.2 t −8.0, ω₁ +5.4 t 2.85; efecto permanente −21.7 %, Wald p 0.000; LR ×2 vs ×1 7.46, p 0.006). Treadway ✓ (z en fechas +0.48/+0.43; vecinos −1.36/+1.10). Diagnosis limpia (Q15 p 0.073, Q4 p 0.056 con barra en 4 en el borde; JB p 0.99). AR(2) = (1−0.685B)(1+0.584B): persistencia + alternancia de periodo 2 (estacional estocástica estacionaria; la serie va en bruto), sin ciclo. Armónicos rechazados (LR 2.84, 3 gl, p 0.42). Formales: SF 3.97 (d=1 basta al 1 %), DCD subdif LR 9.56 (∇ genuina), DCD sobredif θ̂ 0.852, LR 2.61 > 1.94 (crítico subestimado por el escalón). d=1 por coherencia con la brecha, el IPC y el marco I(1) del VECM. p del VECM = 3.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "ordenes",
+        "decidido": "ARMA(2,0)",
+        "evidencia": "ARMA(0,2)×(0,1)_4 sim=0.864; ARMA(2,0)×(0,1)_4 sim=0.862; ARMA(0,0)×(0,1)_4 sim=0.790 — sobre residuos de `GDPDEC_m02_s0804x2.pre`",
+        "alternativas": "",
+        "propuesta_valor": [
+          0,
+          2,
+          0,
+          1
+        ],
+        "empate": [
+          [
+            0,
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "ARMA(0,2)×(0,1)_4",
+      "coincide": false,
+      "parent": 8,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 4,
+      "parent_origen": "",
+      "nodo": "ordenes",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 10,
+      "name": "m03_x2_h2_ar2",
+      "inp_path": "models/DEFL/GDPDEC_G/GDPDEC_m03_x2_h2_ar2.inp",
+      "timestamp": "2026-10-09T16:28:25",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 1.2415260256894403,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 2,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -142.1050687422918,
+        "aic": 294.2101374845836,
+        "bic": 305.23360058153844,
+        "sigma_a": 2.012172202600461,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.05548131286271052,
+          0.13440106388567652,
+          0.0671268590969002,
+          0.07303130023572768
+        ],
+        "jb_pvalue": 0.9859517773050614,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "",
+      "rationale": "El analista propone armónicos: la serie va EN BRUTO y con 2008Q4×2 aparece una barra en el retardo 4 (ACF 0.33, PACF 0.27). Estacionalidad determinista B1 (f=1 cos/sin, f=2 Nyquist) + AR(2) completo sobre 2008Q4×2.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GDPDEC_v10__a9da93af1309.png",
+      "out_path": "models/DEFL/GDPDEC_G/GDPDEC_m03_x2_h2_ar2.out",
+      "hist_path": "figs/GDPDEC_v10_hist__497a16231e17.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 7,
+      "status": "dead-end",
+      "why_abandoned": "Registro fallido: la cadena por base_pre_path ignora n_harmonics y estimó el mismo modelo que v11 sin armónicos (ficheros borrados). Los armónicos se estimaron a mano en v12.",
+      "why_adopted": "",
+      "iteracion": 4,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/DEFL/GDPDEC_G/GDPDEC_m02_s0804x2.pre",
+      "base_pre_sha": "c8531015c7086fa6ab2f7d6e26dd26f1f6ba9ea550ed2d532fd066556b1d941a",
+      "pre_sha": "72f994ec49c89b1604ce3f044d94ee248b066dfbe5f86fc4b52bae44cd8f3323",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 11,
+      "name": "m04_x2_ar2",
+      "inp_path": "models/DEFL/GDPDEC_G/GDPDEC_m04_x2_ar2.inp",
+      "timestamp": "2026-10-09T16:28:30",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 1.2415260256894403,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 2,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -142.1050687422918,
+        "aic": 294.2101374845836,
+        "bic": 305.23360058153844,
+        "sigma_a": 2.012172202600461,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.05548131286271052,
+          0.13440106388567652,
+          0.0671268590969002,
+          0.07303130023572768
+        ],
+        "jb_pvalue": 0.9859517773050614,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "[2026-10-10] Revisión 10-oct: formales SF 3.97 (d basta) frente a DCD sobre-dif. θ̂ 0.852, LR 2.61 fuera de la banda; sub-dif LR 9.56. Se mantiene d=1 por SF (criterio PE: cambio de deriva de la inflación del deflactor + escalón permanente de 2008 que resuena en f=0).",
+      "rationale": "Referencia anidada para el LR de los armónicos: AR(2) completo + 2008Q4×2, sin armónicos.",
+      "problems_found": "[2026-10-09] d=2 queda ABIERTO. Par en f=0 discrepa fuera de la banda (θ̂ 0.852, a 0.148 de la frontera): SF 3.97 frente a DCD LR 2.61 > 1.94 (ley desnuda; el escalón ×2 resuena en f=0). KPSS en d=1 p 0.033. Candidatos d=2 estimados: m07 ∇²+AR(2)+MA(1) adecuado, AIC/BIC 291.1/302.1 (−3.1 frente a B) pero φ₂ t 1.4 y θ 0.85 a 1.4 e.t. de 1; m08 ∇²+MA(1) AIC/BIC 290.4/297.0 pero Q(15) p 0.039 (inadecuado). Pendiente: bootstrap del DCD con intervenciones (piloto en el TODO de art); este caso es donde la decisión depende del crítico.",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GDPDEC_v11__c3557b7b13ad.png",
+      "out_path": "models/DEFL/GDPDEC_G/GDPDEC_m04_x2_ar2.out",
+      "hist_path": "figs/GDPDEC_v11_hist__2bf81f5579f7.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 7,
+      "status": "adopted",
+      "why_abandoned": "",
+      "why_adopted": "Guiado: AR(2) completo + escalón 2008Q4×2 (ω₀ −16.2 t −8.0, ω₁ +5.4 t 2.85; efecto permanente −21.7 %, Wald p 0.000; LR ×2 vs ×1 7.46, p 0.006). Treadway ✓ (z en fechas +0.48/+0.43; vecinos −1.36/+1.10). Diagnosis limpia (Q15 p 0.073, Q4 p 0.056 con barra en 4 en el borde; JB p 0.99). AR(2) = (1−0.685B)(1+0.584B): persistencia + alternancia de periodo 2 (estacional estocástica estacionaria; la serie va en bruto), sin ciclo. Armónicos rechazados (LR 2.84, 3 gl, p 0.42). Formales: SF 3.97 (d=1 basta al 1 %), DCD subdif LR 9.56 (∇ genuina), DCD sobredif θ̂ 0.852, LR 2.61 > 1.94 (crítico subestimado por el escalón). d=1 por coherencia con la brecha, el IPC y el marco I(1) del VECM. p del VECM = 3.",
+      "iteracion": 5,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/DEFL/GDPDEC_G/GDPDEC_m02_s0804x2.pre",
+      "base_pre_sha": "c8531015c7086fa6ab2f7d6e26dd26f1f6ba9ea550ed2d532fd066556b1d941a",
+      "pre_sha": "72f994ec49c89b1604ce3f044d94ee248b066dfbe5f86fc4b52bae44cd8f3323",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 12,
+      "name": "m05_x2_h2_ar2",
+      "inp_path": "models/DEFL/GDPDEC_G/GDPDEC_m05_x2_h2_ar2.inp",
+      "timestamp": "2026-10-09T16:29:08",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 1.2585297671422913,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 2,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -140.6876128799731,
+        "aic": 297.3752257599462,
+        "bic": 315.01276671507395,
+        "sigma_a": 1.9699862314899317,
+        "q_pass": false,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.08790092386034454,
+          0.1441021367506785,
+          0.04342377824216248,
+          0.04030091967504479
+        ],
+        "jb_pvalue": 0.7424025726542363,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "",
+      "rationale": "Propuesta del analista: armónicos deterministas (serie en bruto; barra en 4 con 2008Q4×2). Especificación a mano (la cadena por base_pre no añade armónicos): 2008Q4×2 + cos/sin f=1 + alterna f=2 + AR(2) completo. Anida m04 (sin armónicos) para el LR conjunto, 3 gl.",
+      "problems_found": "[diagnosis] la Q rechaza el ruido blanco en el retardo que decide (15, p=0.0403); la Q rechaza también en 12 (p=0.0434)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GDPDEC_v12__84d42016ceb2.png",
+      "out_path": "models/DEFL/GDPDEC_G/GDPDEC_m05_x2_h2_ar2.out",
+      "hist_path": "figs/GDPDEC_v12_hist__a11140c495b9.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 11,
+      "status": "dead-end",
+      "why_abandoned": "Armónicos deterministas (cos/sin f=1 + alterna f=2) no significativos: LR frente a v11 2.84, 3 gl, p 0.42 (t −0.9, −1.5, 0.2); empeoran la Q (Q15 p 0.040) y el BIC (315.0 frente a 305.2); la barra en 4 no desaparece (0.24). La alternancia semestral es estocástica y estacionaria: la recoge el factor (1+0.584B) del AR(2).",
+      "why_adopted": "",
+      "iteracion": 6,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/DEFL/GDPDEC_G/GDPDEC_m03h_seed.pre",
+      "base_pre_sha": "df9c4e96aa9ab1b9895b2b0df0258bd2cc20f8bec0696951f14708500fe12eca",
+      "pre_sha": "89180328d324b3274247915db28f1545974e889d87595585a2e93ac4d4d63cf0",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 13,
+      "name": "m06_x1_ar2",
+      "inp_path": "models/DEFL/GDPDEC_G/GDPDEC_m06_x1_ar2.inp",
+      "timestamp": "2026-10-09T16:29:23",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 1.1736631465451743,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 2,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -145.839385898028,
+        "aic": 299.678771796056,
+        "bic": 308.4975422736199,
+        "sigma_a": 2.129153570680586,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.21471963875240951,
+          0.630433833303498,
+          0.11538172014974946,
+          0.10492670805412152
+        ],
+        "jb_pvalue": 0.9985136591840105,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "",
+      "rationale": "Comparación acordada ×1 frente a ×2 con el ARMA puesto: AR(2) completo + un escalón en 2008Q4 (el modelo de la brecha).",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GDPDEC_v13__520a0647e0ae.png",
+      "out_path": "models/DEFL/GDPDEC_G/GDPDEC_m06_x1_ar2.out",
+      "hist_path": "figs/GDPDEC_v13_hist__9b6d9b0c09d1.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 6,
+      "status": "dead-end",
+      "why_abandoned": "Arrastrado por el callejón de v6: Un solo escalón en 2008Q4 se queda corto: sin ARMA el vecino 2009Q1 queda en −1.92σ (p 0.055) y con AR(2) (v13) falla Treadway (−2.02σ, p 0.043). LR ×2 frente a ×1 con AR(2): 7.46, p 0.006. El desplome tiene dos tramos, como el WTI (2008Q4 y 2009Q1).",
+      "why_adopted": "",
+      "iteracion": 7,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/DEFL/GDPDEC_G/GDPDEC_m01_s0804.pre",
+      "base_pre_sha": "0d678222d2e1e5ac58dbd847dc64227095ff29ae443920ab7f5a0932a42e5929",
+      "pre_sha": "e9895711d56af9b6aa8a3c6c24cbba1b898f80f60dc86a93ab86437d02f849d0",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 14,
+      "name": "m07_d2_ar2ma1",
+      "inp_path": "models/DEFL/GDPDEC_G/GDPDEC_m07_d2_ar2ma1.inp",
+      "timestamp": "2026-10-09T16:32:47",
+      "spec": {
+        "lam": 0.0,
+        "d": 2,
+        "D": 0,
+        "mu": 0.0,
+        "estimate_mu": false,
+        "alter": false,
+        "ar_free": [
+          [
+            true,
+            true
+          ]
+        ],
+        "ma_free": [
+          [
+            true
+          ]
+        ],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 2,
+        "q": 1,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -140.56712338402127,
+        "aic": 291.13424676804254,
+        "bic": 302.0825204781747,
+        "sigma_a": 2.017240700051739,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.2007933286759238,
+          0.10520930750046065,
+          0.18204950709627177
+        ],
+        "jb_pvalue": 0.7843432893102511,
+        "npar": 3,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇^2[ln y_t] = I_t(1 itvs) + [1-φ(B)]⁻¹·[1-θ(B)]·a_t",
+      "decision": "",
+      "rationale": "Candidato rival d=2 del DCD de sobrediferenciación (θ̂ 0.852, LR 2.61 > 1.94 fuera de la banda, frente a SF 3.97): ∇² + AR(2) + MA(1), sin media, mismo escalón 2008Q4×2. Anida m04 en θ=1. Decidido por el analista.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GDPDEC_v14__bc6b8cb6e8a4.png",
+      "out_path": "models/DEFL/GDPDEC_G/GDPDEC_m07_d2_ar2ma1.out",
+      "hist_path": "figs/GDPDEC_v14_hist__355a13b3349d.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 11,
+      "status": "dead-end",
+      "why_abandoned": "Candidato d=2 del DCD: adecuado y AIC/BIC −3.1 frente a v11, pero φ₂ no significativo (t 1.4; AR(2) conjunto LR 3.28, p 0.19) y θ 0.85 a 1.4 e.t. de 1 (aproxima la frontera en que se reduce a d=1). Frente a SF 3.97 y un crítico del DCD no medido con escalones, no basta: d=1 por coherencia; d=2 anotado en v11.",
+      "why_adopted": "",
+      "iteracion": 8,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/DEFL/GDPDEC_G/GDPDEC_m04_x2_ar2.pre",
+      "base_pre_sha": "72f994ec49c89b1604ce3f044d94ee248b066dfbe5f86fc4b52bae44cd8f3323",
+      "pre_sha": "a1ed6a62a5f3fba399026a45018ba985072805b84cf1a1bfcd23839e948ce446",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 15,
+      "name": "m08_d2_ma1",
+      "inp_path": "models/DEFL/GDPDEC_G/GDPDEC_m08_d2_ma1.inp",
+      "timestamp": "2026-10-09T16:34:05",
+      "spec": {
+        "lam": 0.0,
+        "d": 2,
+        "D": 0,
+        "mu": 0.0,
+        "estimate_mu": false,
+        "alter": false,
+        "ar_free": [],
+        "ma_free": [
+          [
+            true
+          ]
+        ],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 0,
+        "q": 1,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -142.20681203864228,
+        "aic": 290.41362407728457,
+        "bic": 296.98258830336385,
+        "sigma_a": 2.0682694595150553,
+        "q_pass": false,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.05475543129276361,
+          0.11156766202706059,
+          0.02424155929375904,
+          0.03875362785005709
+        ],
+        "jb_pvalue": 0.8685630010764833,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇^2[ln y_t] = I_t(1 itvs) + [1-θ(B)]·a_t",
+      "decision": "",
+      "rationale": "En d=2 el AR(2) pierde significación (φ₂ t 1.4): candidato más limpio ∇² + MA(1) (IMA(1,1) para la inflación), mismo escalón 2008Q4×2. Decidido por el analista.",
+      "problems_found": "[diagnosis] la Q rechaza el ruido blanco en el retardo que decide (15, p=0.0388); la Q rechaza también en 12 (p=0.0242)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GDPDEC_v15__80fd72044467.png",
+      "out_path": "models/DEFL/GDPDEC_G/GDPDEC_m08_d2_ma1.out",
+      "hist_path": "figs/GDPDEC_v15_hist__f611a82031d3.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 14,
+      "status": "dead-end",
+      "why_abandoned": "d=2 parsimonioso (IMA(1,1) para la inflación, θ 0.83): mejor AIC/BIC (290.4/297.0) pero inadecuado: Q(15) p 0.039, Q(12) p 0.024, barras en 7 y 12.",
+      "why_adopted": "",
+      "iteracion": 9,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/DEFL/GDPDEC_G/GDPDEC_m07_d2_ar2ma1.pre",
+      "base_pre_sha": "a1ed6a62a5f3fba399026a45018ba985072805b84cf1a1bfcd23839e948ce446",
+      "pre_sha": "a2ff67841db0ae2efc267ed2d0a81bfe0031e26e2173c2ac5aa9fbaa52ff3e75",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    }
+  ]
+}

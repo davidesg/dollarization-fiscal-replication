@@ -1,0 +1,733 @@
+{
+  "series": "GDPDEC",
+  "analyst": "",
+  "created": "2026-10-09",
+  "carril": "guiado",
+  "entries": [
+    {
+      "version": 1,
+      "name": "lambda",
+      "inp_path": "",
+      "timestamp": "2026-10-09T12:42:41",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "lambda = 0",
+      "rationale": "Autónomo: λ=0 por dominio (índice de precios), como PCEEC y el IPC.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "lambda",
+        "decidido": "0",
+        "evidencia": "",
+        "alternativas": ""
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "",
+      "coincide": null,
+      "parent": null,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "lambda",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 2,
+      "name": "dominio",
+      "inp_path": "",
+      "timestamp": "2026-10-09T12:42:41",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "dominio = price_index",
+      "rationale": "declarado por el analista",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "dominio",
+        "decidido": "price_index",
+        "evidencia": "",
+        "alternativas": "",
+        "expectativas": "Deflactor implícito del PIB de Ecuador (BCE CNT 127, en bruto), media 2011=100 x PPA PIB 2011. Log, I(1) con deriva; estacionalidad moderada (±0.5 % NSA-SA); el PIB incluye el petróleo (exportaciones), así que el deflactor sigue al precio del crudo: caídas 2009 y 2015–16."
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 1,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "dominio",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 3,
+      "name": "d",
+      "inp_path": "",
+      "timestamp": "2026-10-09T12:42:41",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "d = 1",
+      "rationale": "Autónomo: d=1, tendencia clara (R² 83 %), ACF lenta; ADF sin potencia ante la curvatura. d=2 a formal_tests.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "d",
+        "decidido": "1",
+        "evidencia": "d=0: ADF p=0.013, KPSS p=0.010; d=1: ADF p=0.000, KPSS p=0.033",
+        "alternativas": "",
+        "propuesta_valor": 1
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "1",
+      "coincide": true,
+      "parent": 2,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "d",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 4,
+      "name": "estacionalidad",
+      "inp_path": "",
+      "timestamp": "2026-10-09T12:42:49",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "estacionalidad = D=0 (sin estacionalidad)",
+      "rationale": "se toma la propuesta de la herramienta",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "estacionalidad",
+        "decidido": "D=0 (sin estacionalidad)",
+        "evidencia": "F-HAC=1.28, p=0.2901",
+        "alternativas": "",
+        "propuesta_valor": "A"
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "sin estacionalidad (D=0)",
+      "coincide": true,
+      "parent": 3,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "estacionalidad",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 5,
+      "name": "m00",
+      "inp_path": "models/DEFL/GDPDEC/GDPDEC_m00.inp",
+      "timestamp": "2026-10-09T12:43:01",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.966709,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": []
+      },
+      "stats": {
+        "loglik": -162.23068745184344,
+        "aic": 326.4613749036869,
+        "bic": 328.66606752307786,
+        "sigma_a": 2.7248544424050425,
+        "q_pass": true,
+        "jb_pass": false,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 23,
+            "date": "Q4/2008",
+            "z": -4.56191107506625
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.1564897535608153,
+          0.14812286749184622,
+          0.27856513445993714,
+          0.3800198719616178
+        ],
+        "jb_pvalue": 6.935134874156428e-20,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + a_t",
+      "decision": "Autónomo: D=0 sin armónicos (HAC F=1.28 p=0.29). Base ∇ln con μ para calibrar 2008Q4 (desplome del crudo en el deflactor del PIB)",
+      "rationale": "",
+      "problems_found": "[diagnosis] el Jarque-Bera rechaza la normalidad (p=0.0000); anómalos por encima del umbral calibrado (3.17): Q4/2008 (z=-4.56)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GDPDEC_v5__52474e6729fb.png",
+      "out_path": "models/DEFL/GDPDEC/GDPDEC_m00.out",
+      "hist_path": "figs/GDPDEC_v5_hist__d4b1875c8305.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 4,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "inferido",
+      "nodo": "estacionalidad",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "c0604d2b67c06b4a41608a192c9bdfdef78a4cb550674b1d6ae8d929418b1f76",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 6,
+      "name": "m01_s0804x3",
+      "inp_path": "models/DEFL/GDPDEC/GDPDEC_m01_s0804x3.inp",
+      "timestamp": "2026-10-09T12:43:24",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 1.162967420804444,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -146.08129040455964,
+        "aic": 300.1625808091193,
+        "bic": 308.98135128668315,
+        "sigma_a": 2.141227439001053,
+        "q_pass": false,
+        "jb_pass": true,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 21,
+            "date": "Q2/2008",
+            "z": 3.0655345534678884
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.007678481070548027,
+          0.006951740123166794,
+          0.0009586436670599996,
+          0.0009464255296334212
+        ],
+        "jb_pvalue": 0.3972428701987288,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(1 itvs) + a_t",
+      "decision": "Autónomo: escalón Q4/2008×3 (desplome y recuperación parcial del crudo); intervenir por adecuación (JB 88, z −4.6, 31 % de la varianza) y por el suceso, aunque no cambie los órdenes",
+      "rationale": "",
+      "problems_found": "[diagnosis] la Q rechaza el ruido blanco en el retardo que decide (15, p=0.0009); la Q rechaza también en 4 (p=0.0077), 8 (p=0.0070), 12 (p=0.0010)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GDPDEC_v6__f0ae79365de9.png",
+      "out_path": "models/DEFL/GDPDEC/GDPDEC_m01_s0804x3.out",
+      "hist_path": "figs/GDPDEC_v6_hist__c16830715ab7.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 5,
+      "status": "dead-end",
+      "why_abandoned": "Q4/2008×3 dejaba Q2/2008 en z +3.07 (subida del crudo): el suceso empieza antes; reformulado como Q2/2008×5 (AIC 293.8 frente a 300.2).",
+      "why_adopted": "",
+      "iteracion": 2,
+      "parent_origen": "declarado",
+      "nodo": "estacionalidad",
+      "base_pre_path": "models/DEFL/GDPDEC/GDPDEC_m00.inp",
+      "base_pre_sha": "c0604d2b67c06b4a41608a192c9bdfdef78a4cb550674b1d6ae8d929418b1f76",
+      "pre_sha": "913589cce75496d8771fc6a4bf646fa9d2fa80a3aafb5fd268be8dd8118f291f",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 7,
+      "name": "m02_s0802x5",
+      "inp_path": "models/DEFL/GDPDEC/GDPDEC_m02_s0802x5.inp",
+      "timestamp": "2026-10-09T12:43:37",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 1.0647612784943508,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q2/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -140.91385389773748,
+        "aic": 293.82770779547496,
+        "bic": 307.05586351182075,
+        "sigma_a": 1.9822911381594222,
+        "q_pass": false,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.03227903676619981,
+          0.015639009054633335,
+          0.0029654085401393804,
+          0.003454384078414807
+        ],
+        "jb_pvalue": 0.7853047533267645,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(1 itvs) + a_t",
+      "decision": "Autónomo: m01 deja Q2/2008 en z +3.07 (subida del crudo): el suceso empieza antes. Reformulo como ciclo completo del petróleo Q2/2008×5 (arranque como PU y PCEUSA)",
+      "rationale": "",
+      "problems_found": "[diagnosis] la Q rechaza el ruido blanco en el retardo que decide (15, p=0.0035); la Q rechaza también en 4 (p=0.0323), 8 (p=0.0156), 12 (p=0.0030)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GDPDEC_v7__8b662c6da0a1.png",
+      "out_path": "models/DEFL/GDPDEC/GDPDEC_m02_s0802x5.out",
+      "hist_path": "figs/GDPDEC_v7_hist__7f9509c22c4e.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 6,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 3,
+      "parent_origen": "declarado",
+      "nodo": "estacionalidad",
+      "base_pre_path": "models/DEFL/GDPDEC/GDPDEC_m01_s0804x3.pre",
+      "base_pre_sha": "913589cce75496d8771fc6a4bf646fa9d2fa80a3aafb5fd268be8dd8118f291f",
+      "pre_sha": "63c2a44f545ffbf371a95d4ac7e3d81d85ffe875d4321fdd03f285edea24ff2e",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 8,
+      "name": "estacionalidad",
+      "inp_path": "",
+      "timestamp": "2026-10-09T12:43:47",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "estacionalidad = D=0 (B1, armónicos deterministas)",
+      "rationale": "Autónomo: ciclo del crudo Q2/2008×5 (AIC 293.8 frente a 300.2 de Q4/2008×3, que dejaba Q2/2008 en z +3.1); identificar ARMA sobre residuos limpios",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "estacionalidad",
+        "decidido": "D=0 (B1, armónicos deterministas)",
+        "evidencia": "",
+        "alternativas": ""
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 7,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 4,
+      "parent_origen": "",
+      "nodo": "estacionalidad",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 9,
+      "name": "ordenes",
+      "inp_path": "",
+      "timestamp": "2026-10-09T12:43:48",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "ordenes = ARMA(1,1)",
+      "rationale": "Autónomo: ARMA(1,1) + ciclo del crudo Q2/2008×5 (ganancia −6.6): único candidato adecuado (Q(15) p 0.08, JB p 0.57); el AR(2) empata en AIC/BIC (290.9/308.5 frente a 291.1/308.7) pero falla Q(15) p 0.049. φ=0.95, θ=0.83: casi cancelación, la deriva de la inflación del deflactor (precio del crudo); d=2 queda abierto (SF 4.33 frente a DCD LR 3.67 sobre el AR(2)). Sólo componente: el sistema F2 es bivariante con la razón.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "ordenes",
+        "decidido": "ARMA(1,1)",
+        "evidencia": "ARMA(2,0) sim=0.919; ARMA(1,1) sim=0.885; ARMA(2,1) sim=0.911 — sobre residuos de `GDPDEC_m02_s0802x5.pre`",
+        "alternativas": "",
+        "propuesta_valor": [
+          2,
+          0,
+          0,
+          0
+        ],
+        "empate": [
+          [
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            0,
+            0
+          ]
+        ]
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "ARMA(2,0)",
+      "coincide": true,
+      "parent": 8,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 4,
+      "parent_origen": "",
+      "nodo": "ordenes",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 10,
+      "name": "m03_ar2",
+      "inp_path": "models/DEFL/GDPDEC/GDPDEC_m03_ar2.inp",
+      "timestamp": "2026-10-09T12:44:03",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 1.1414507538128178,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 2,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q2/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -137.43057249990096,
+        "aic": 290.8611449998019,
+        "bic": 308.49868595492967,
+        "sigma_a": 1.8781484818696,
+        "q_pass": false,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.09995233059130615,
+          0.3595728205258515,
+          0.054104930890610525,
+          0.04939958874746242
+        ],
+        "jb_pvalue": 0.726519704479548,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Autónomo: empate AR(2)/ARMA(1,1); estimo los dos",
+      "rationale": "",
+      "problems_found": "[diagnosis] la Q rechaza el ruido blanco en el retardo que decide (15, p=0.0494)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GDPDEC_v10__93d78d1fbc30.png",
+      "out_path": "models/DEFL/GDPDEC/GDPDEC_m03_ar2.out",
+      "hist_path": "figs/GDPDEC_v10_hist__41dc8dd18175.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 7,
+      "status": "dead-end",
+      "why_abandoned": "AR(2): falla Q(15) p 0.049 (barras 9 y 12); empata con el ARMA(1,1) en AIC/BIC, que sí pasa.",
+      "why_adopted": "",
+      "iteracion": 4,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/DEFL/GDPDEC/GDPDEC_m02_s0802x5.pre",
+      "base_pre_sha": "63c2a44f545ffbf371a95d4ac7e3d81d85ffe875d4321fdd03f285edea24ff2e",
+      "pre_sha": "78005dd8bae7632571cb3a6dcb598cfb3a8dec092c720f6a86723b7ef5401af7",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4 · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 11,
+      "name": "m04_arma11",
+      "inp_path": "models/DEFL/GDPDEC/GDPDEC_m04_arma11.inp",
+      "timestamp": "2026-10-09T12:44:08",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 1.049752471154992,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [
+          [
+            true
+          ]
+        ],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 1,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q2/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -137.55210443522924,
+        "aic": 291.1042088704585,
+        "bic": 308.7417498255862,
+        "sigma_a": 1.8804553600693001,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.015165306173649418,
+          0.08863342003084496,
+          0.04118050621973923,
+          0.07983103131598779
+        ],
+        "jb_pvalue": 0.5726699954678351,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(1 itvs) + [1-φ(B)]⁻¹·[1-θ(B)]·a_t",
+      "decision": "Autónomo: rival ARMA(1,1) del empate",
+      "rationale": "",
+      "problems_found": "[diagnosis] salvedad de la Q: pasa en 15 pero rechaza en 4 (p=0.0152), 12 (p=0.0412)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GDPDEC_v11__2b2f6dd2e461.png",
+      "out_path": "models/DEFL/GDPDEC/GDPDEC_m04_arma11.out",
+      "hist_path": "figs/GDPDEC_v11_hist__a66cd33660e1.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 7,
+      "status": "adopted",
+      "why_abandoned": "",
+      "why_adopted": "Autónomo: ARMA(1,1) + ciclo del crudo Q2/2008×5 (ganancia −6.6): único candidato adecuado (Q(15) p 0.08, JB p 0.57); el AR(2) empata en AIC/BIC (290.9/308.5 frente a 291.1/308.7) pero falla Q(15) p 0.049. φ=0.95, θ=0.83: casi cancelación, la deriva de la inflación del deflactor (precio del crudo); d=2 queda abierto (SF 4.33 frente a DCD LR 3.67 sobre el AR(2)). Sólo componente: el sistema F2 es bivariante con la razón.",
+      "iteracion": 5,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/DEFL/GDPDEC/GDPDEC_m02_s0802x5.pre",
+      "base_pre_sha": "63c2a44f545ffbf371a95d4ac7e3d81d85ffe875d4321fdd03f285edea24ff2e",
+      "pre_sha": "12a8e94e2faeff83a4387cfd4124b2e2a6a8c7c7f1a557691bb0986498632886",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4 · fue 0.1.17.dev0 (motor C)"
+    }
+  ]
+}

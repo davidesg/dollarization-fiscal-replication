@@ -1,0 +1,783 @@
+{
+  "series": "TAU",
+  "analyst": "",
+  "created": "2026-10-28",
+  "carril": "guiado",
+  "entries": [
+    {
+      "version": 1,
+      "name": "m02_ar2",
+      "inp_path": "models/MACRO/TAU_BCE/TAUbce_m02_ar2",
+      "timestamp": "2026-10-28T13:33:24",
+      "spec": {
+        "lam": 0.0,
+        "d": 0,
+        "D": 0,
+        "mu": -6.767889386559036,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 2,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -225.82018888164794,
+        "aic": 469.6403777632959,
+        "bic": 489.61594710988084,
+        "sigma_a": 6.666805942873037,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.3910867668963457,
+          0.5461642095433619,
+          0.8157454677301683,
+          0.5974509971412125
+        ],
+        "jb_pvalue": 0.40799565325807985,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "ln y_t = μ + (−1)ᵗ + D_t(1 arm.) + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Misma especificación que TAU_m02_ar2 sobre datos verificables del BCE.",
+      "rationale": "Revisión de datos 28-oct-2026: TAU = G/REV con los ingresos reconstruidos desde los ficheros del BCE (ver REV_BCE). Se reestima la especificación adoptada en TAU/TAU_m02_ar2 (d=0, armónicos, escalón petróleo 2008Q4×3, AR(2), μ).",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/TAU_v1__a0c3ee9d3403.png",
+      "out_path": "models/MACRO/TAU_BCE/TAUbce_m02_ar2.out",
+      "hist_path": "figs/TAU_v1_hist__7e77b63ec9fb.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": null,
+      "status": "adopted",
+      "why_abandoned": "",
+      "why_adopted": "Decisión del analista (28-oct-2026): con los ingresos verificables del BCE se mantiene la especificación de TAU_m02_ar2 (d=0, armónicos, escalón petróleo 2008Q4×3, AR(2), μ). Diagnosis limpia (Q15 p 0.60, JB p 0.41). La media se toma la de esta estimación: μ −6.77 (3.96), antes −8.0; σ 6.21 → 6.66. Efecto permanente del escalón +16.9.",
+      "iteracion": 1,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "models/MACRO/TAU/TAU_m02_ar2.pre",
+      "base_pre_sha": "11b6c33df441a47a7287bec7d4c91d15e1cd06011ecffff041db1113939be0df",
+      "pre_sha": "606f807f601f247628de67bf0a72510a904f5d841063a87952fe16d7ca9ae88f",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    },
+    {
+      "version": 2,
+      "name": "dominio",
+      "inp_path": "",
+      "timestamp": "2026-10-28T13:45:20",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "dominio = ratio",
+      "rationale": "declarado por el analista",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "dominio",
+        "decidido": "ratio",
+        "evidencia": "",
+        "alternativas": "",
+        "expectativas": "TAU = G/REV, cobertura del gasto del SPNF por sus ingresos (100·ln TAU ≈ déficit en % de los ingresos), trimestral sin desestacionalizar, datos verificables del BCE. Se espera: estacionaria (I(0)) si gasto e ingresos cointegran 1 a 1, con la media rota en 2008 (de superávit a déficit estructural: caída de los ingresos petroleros y expansión del gasto); estacionalidad por el calendario tributario (ingresos) y por el gasto de fin de año; picos de déficit en 2009 y 2015-2016 (caídas del petróleo)."
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 1,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 2,
+      "parent_origen": "",
+      "nodo": "dominio",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    },
+    {
+      "version": 3,
+      "name": "lambda",
+      "inp_path": "",
+      "timestamp": "2026-10-28T13:45:20",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "lambda = 0",
+      "rationale": "Analista: λ=0. Razón G/REV; la escala log reduce la dependencia media-std (+0.58 → +0.25); ln TAU = g − re, la forma en que entra en el VEC fiscal.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "lambda",
+        "decidido": "0",
+        "evidencia": "gap=+0.330; corr(nivel)=0.584; corr(log)=0.254; estadístico λ=0",
+        "alternativas": "",
+        "propuesta_valor": 0.0
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "0",
+      "coincide": true,
+      "parent": 2,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 2,
+      "parent_origen": "",
+      "nodo": "lambda",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    },
+    {
+      "version": 4,
+      "name": "d",
+      "inp_path": "",
+      "timestamp": "2026-10-28T13:46:08",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "d = 0",
+      "rationale": "Analista: d=0 (contra la propuesta ADF/KPSS d=1). Sin tendencia visible; ACF dominada por retardos estacionales, no por decaimiento lento; ADF/KPSS sesgados por la estacionalidad sin tratar y por el cambio de media de 2008 (Perron). Orden a confirmar con Shin-Fuller/DCD sobre el modelo estimado. Coherente con g y re cointegrados (1,−1).",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "d",
+        "decidido": "0",
+        "evidencia": "d=0: ADF p=0.591, KPSS p=0.010; d=1: ADF p=0.011, KPSS p=0.100",
+        "alternativas": "",
+        "propuesta_valor": 1
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "1",
+      "coincide": false,
+      "parent": 3,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 2,
+      "parent_origen": "",
+      "nodo": "d",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    },
+    {
+      "version": 5,
+      "name": "estacionalidad",
+      "inp_path": "",
+      "timestamp": "2026-10-28T13:47:13",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "estacionalidad = D=0 (B1, armónicos deterministas)",
+      "rationale": "se toma la propuesta de la herramienta",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "estacionalidad",
+        "decidido": "D=0 (B1, armónicos deterministas)",
+        "evidencia": "F-HAC=69.03, p=0.0000",
+        "alternativas": "",
+        "propuesta_valor": "B1"
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "estacional (B1: D=0 + armónicos)",
+      "coincide": true,
+      "parent": 4,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 2,
+      "parent_origen": "",
+      "nodo": "estacionalidad",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    },
+    {
+      "version": 6,
+      "name": "g00",
+      "inp_path": "models/MACRO/TAU_BCE/TAUbce_g00.inp",
+      "timestamp": "2026-10-28T13:47:25",
+      "spec": {
+        "lam": 0.0,
+        "d": 0,
+        "D": 0,
+        "mu": 4.822254413784312,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [],
+        "dominio": "ratio"
+      },
+      "stats": {
+        "loglik": -270.60050016341853,
+        "aic": 549.2010003268371,
+        "bic": 558.0790311475415,
+        "sigma_a": 12.94203559592245,
+        "q_pass": false,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "jb_pvalue": 0.5530296818184173,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "ln y_t = μ + (−1)ᵗ + D_t(1 arm.) + a_t",
+      "decision": "B1: ln TAU, d=0, armónicos f=1,2 y media; sin ARMA ni intervenciones.",
+      "rationale": "Analista: d=0 y tratar la estacionalidad; B1 obligatoria (objetivo multivariante, VEC fiscal).",
+      "problems_found": "[diagnosis] la Q rechaza el ruido blanco en el retardo que decide (15, p=0.0000); la Q rechaza también en 4 (p=0.0000), 8 (p=0.0000), 12 (p=0.0000)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/TAU_v6__de88471ed3c0.png",
+      "out_path": "models/MACRO/TAU_BCE/TAUbce_g00.out",
+      "hist_path": "figs/TAU_v6_hist__b736f5835976.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 5,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 2,
+      "parent_origen": "inferido",
+      "nodo": "estacionalidad",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "5efb74ec22af9c5f047f003a790526f8eda129771e4cf7f53c08dc22bc50d576",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    },
+    {
+      "version": 7,
+      "name": "ordenes",
+      "inp_path": "",
+      "timestamp": "2026-10-28T13:47:59",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "ordenes = ARMA(2,0)",
+      "rationale": "Recorrido guiado con datos verificables del BCE (28-oct-2026). ln TAU, d=0 (contra ADF/KPSS sin tratar, sesgados por la estacionalidad y la ruptura de 2008; confirmado por el par en f=0: Shin-Fuller Φ 1.78 > 1.75 al 5 %, DCD sobre-dif. θ̂ 0.46 LR 0.18), armónicos f=1,2 (HSM: deterministas), AR(2) (raíces 0.80 y −0.56), escalón petróleo 2008T4×3 contrastado con información extramuestral (ganancia +16.9 [7.3, 26.5], Wald p 0.0005; LR 28.9, 3 gl; AIC 492.6 → 469.6). Registro de la CFDD en 2008T1 no intervenido: se cancela en el cociente (g03, g04 abandonadas). Media de esta estimación −6.77 (3.96): superávit ≈ 7 % de los ingresos antes de 2008T4, déficit ≈ 10 % después. Diagnosis limpia (Q15 p 0.60, JB p 0.41).",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "ordenes",
+        "decidido": "ARMA(2,0)",
+        "evidencia": "ARMA(2,0) sim=0.960; ARMA(1,1) sim=0.946; ARMA(2,0)×(0,1)_4 sim=0.965 — sobre residuos de `TAUbce_g00.pre`",
+        "alternativas": "",
+        "propuesta_valor": [
+          2,
+          0,
+          0,
+          0
+        ],
+        "empate": [
+          [
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "ARMA(2,0)",
+      "coincide": true,
+      "parent": 6,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 3,
+      "parent_origen": "",
+      "nodo": "ordenes",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    },
+    {
+      "version": 8,
+      "name": "g01_ar2",
+      "inp_path": "models/MACRO/TAU_BCE/TAUbce_g01_ar2.inp",
+      "timestamp": "2026-10-28T13:48:43",
+      "spec": {
+        "lam": 0.0,
+        "d": 0,
+        "D": 0,
+        "mu": 4.308263970870377,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 2,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": []
+      },
+      "stats": {
+        "loglik": -240.29178395735983,
+        "aic": 492.58356791471965,
+        "bic": 505.9006141457763,
+        "sigma_a": 8.225523651844217,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.5791200961470192,
+          0.36468006173895806,
+          0.6678958271915836,
+          0.47381486338525347
+        ],
+        "jb_pvalue": 0.8377387084775167,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "ln y_t = μ + (−1)ᵗ + D_t(1 arm.) + [1-φ(B)]⁻¹·a_t",
+      "decision": "AR(2) sobre g00 (propuesta del nodo de órdenes).",
+      "rationale": "Analista: AR(2). PACF corta en 2, ACF decae; empate interpretativo (0.06 σ); es la especificación del modelo anterior.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/TAU_v8__a976816ab0cf.png",
+      "out_path": "models/MACRO/TAU_BCE/TAUbce_g01_ar2.out",
+      "hist_path": "figs/TAU_v8_hist__3467d48cef15.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 6,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 3,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/MACRO/TAU_BCE/TAUbce_g00.pre",
+      "base_pre_sha": "5efb74ec22af9c5f047f003a790526f8eda129771e4cf7f53c08dc22bc50d576",
+      "pre_sha": "1dd1e98a75637f007a73ed7b96b10feae1f40b3854317a4affa0c5fe67ae1f70",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    },
+    {
+      "version": 9,
+      "name": "g02_ar2_s0804x3",
+      "inp_path": "models/MACRO/TAU_BCE/TAUbce_g02_ar2_s0804x3.inp",
+      "timestamp": "2026-10-28T13:49:44",
+      "spec": {
+        "lam": 0.0,
+        "d": 0,
+        "D": 0,
+        "mu": -6.767875898554375,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 2,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -225.82021070684874,
+        "aic": 469.6404214136975,
+        "bic": 489.61599076028244,
+        "sigma_a": 6.666808103927139,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.39108631878690614,
+          0.5461661629751737,
+          0.8157461953482064,
+          0.5974513654340098
+        ],
+        "jb_pvalue": 0.40799617529941035,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "ln y_t = μ + (−1)ᵗ + D_t(1 arm.) + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Contraste del escalón del petróleo 2008T4×3 en TAU con información extramuestral.",
+      "rationale": "El dato no exige intervenir (sin |z|>3, la calibración no cambia órdenes) pero el suceso es conocido; el analista pide contrastarlo. La fecha declarada fija la configuración Q4/2008×3.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/TAU_v9__fb5217b166c2.png",
+      "out_path": "models/MACRO/TAU_BCE/TAUbce_g02_ar2_s0804x3.out",
+      "hist_path": "figs/TAU_v9_hist__f11d1b065d6c.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 8,
+      "status": "adopted",
+      "why_abandoned": "",
+      "why_adopted": "Recorrido guiado con datos verificables del BCE (28-oct-2026). ln TAU, d=0 (contra ADF/KPSS sin tratar, sesgados por la estacionalidad y la ruptura de 2008; confirmado por el par en f=0: Shin-Fuller Φ 1.78 > 1.75 al 5 %, DCD sobre-dif. θ̂ 0.46 LR 0.18), armónicos f=1,2 (HSM: deterministas), AR(2) (raíces 0.80 y −0.56), escalón petróleo 2008T4×3 contrastado con información extramuestral (ganancia +16.9 [7.3, 26.5], Wald p 0.0005; LR 28.9, 3 gl; AIC 492.6 → 469.6). Registro de la CFDD en 2008T1 no intervenido: se cancela en el cociente (g03, g04 abandonadas). Media de esta estimación −6.77 (3.96): superávit ≈ 7 % de los ingresos antes de 2008T4, déficit ≈ 10 % después. Diagnosis limpia (Q15 p 0.60, JB p 0.41).",
+      "iteracion": 4,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/MACRO/TAU_BCE/TAUbce_g01_ar2.inp",
+      "base_pre_sha": "1dd1e98a75637f007a73ed7b96b10feae1f40b3854317a4affa0c5fe67ae1f70",
+      "pre_sha": "04401273f4b7b3f884047c8e8e2da807b18cf218987496dd3cb0c27cb3f74476",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    },
+    {
+      "version": 10,
+      "name": "g03_s0801x2",
+      "inp_path": "models/MACRO/TAU_BCE/TAUbce_g03_s0801x2.inp",
+      "timestamp": "2026-10-28T13:51:29",
+      "spec": {
+        "lam": 0.0,
+        "d": 0,
+        "D": 0,
+        "mu": -7.80688414034152,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 2,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          },
+          {
+            "type": "step",
+            "date": "Q1/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -222.73151323081976,
+        "aic": 467.4630264616395,
+        "bic": 491.8776112185767,
+        "sigma_a": 6.36682146885761,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 9,
+            "date": "Q1/2005",
+            "z": 3.0641839970370017
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.30325900309906373,
+          0.34330498641940654,
+          0.5113529008169027,
+          0.49731608060817356
+        ],
+        "jb_pvalue": 0.20939288316239713,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "ln y_t = μ + (−1)ᵗ + D_t(1 arm.) + I_t(2 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Contraste del registro de la CFDD en TAU: escalón 2008T1×2 (ingresos en T1, gasto en T2).",
+      "rationale": "El analista pregunta por el escalón de 2008T1; la configuración automática Q1/2008×4 empeora el AIC (478.5 vs 469.6) y se solapa con el escalón del petróleo; se construye la forma del mecanismo (2 escalones).",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/TAU_v10__30ede3b790c5.png",
+      "out_path": "models/MACRO/TAU_BCE/TAUbce_g03_s0801x2.out",
+      "hist_path": "figs/TAU_v10_hist__845b268cca3b.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 9,
+      "status": "dead-end",
+      "why_abandoned": "Forma de dos escalones 2008T1×2 (ingresos en T1, gasto en T2): ganancia permanente +6.5 no significativa (Wald p 0.25), reducible a un impulso transitorio (desfase de un trimestre entre ingresos y gasto). El analista decide no intervenir el registro de la CFDD en TAU: se cancela en el cociente.",
+      "why_adopted": "",
+      "iteracion": 5,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/MACRO/TAU_BCE/TAUbce_g02_ar2_s0804x3.inp",
+      "base_pre_sha": "04401273f4b7b3f884047c8e8e2da807b18cf218987496dd3cb0c27cb3f74476",
+      "pre_sha": "86039565ffeefefe7acc68057dd30faea2d037eb2a902723372bf1fd88af3546",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    },
+    {
+      "version": 11,
+      "name": "g04_s0801",
+      "inp_path": "models/MACRO/TAU_BCE/TAUbce_g04_s0801.inp",
+      "timestamp": "2026-10-28T13:51:43",
+      "spec": {
+        "lam": 0.0,
+        "d": 0,
+        "D": 0,
+        "mu": -6.750819282367034,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 2,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          },
+          {
+            "type": "step",
+            "date": "Q1/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -225.82013171950467,
+        "aic": 471.64026343900935,
+        "bic": 493.8353404907704,
+        "sigma_a": 6.6668029004371885,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.39197309118695567,
+          0.5464964357800945,
+          0.8160896197016305,
+          0.5977953814893802
+        ],
+        "jb_pvalue": 0.40852041105722214,
+        "npar": 2,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "ln y_t = μ + (−1)ᵗ + D_t(1 arm.) + I_t(2 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Registro de la CFDD en TAU: un solo escalón 2008T1 (sobre g02).",
+      "rationale": "Analista: solamente un escalón en 2008T1 (en lugar de la forma de dos escalones de g03).",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/TAU_v11__b4513e8625b8.png",
+      "out_path": "models/MACRO/TAU_BCE/TAUbce_g04_s0801.out",
+      "hist_path": "figs/TAU_v11_hist__d471e3daa920.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 9,
+      "status": "dead-end",
+      "why_abandoned": "Un solo escalón 2008T1 (registro de la CFDD): ω −0.07 (5.3), t −0.01, misma verosimilitud que g02, AIC peor. El registro en bruto entra a la vez en gasto e ingresos y se cancela en el cociente TAU = G/REV.",
+      "why_adopted": "",
+      "iteracion": 6,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/MACRO/TAU_BCE/TAUbce_g02_ar2_s0804x3.inp",
+      "base_pre_sha": "04401273f4b7b3f884047c8e8e2da807b18cf218987496dd3cb0c27cb3f74476",
+      "pre_sha": "3e73a4837611229225b9d7b10e2d4825982aca9065fff43dafc0215a3bd8fd99",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3 @4768d1d+sucio · fue 0.1.18 (motor C)"
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+ "biv_rank": {
+  "path": "build/drvec/biv_rank/biv_rank.out",
+  "series": [
+   "GY",
+   "GAP"
+  ],
+  "deterministic": "case 2 -- E[nabla Y2] = 0, E[W] free",
+  "logL": null,
+  "npar": null,
+  "rank": [
+   {
+    "r": 0,
+    "lr": 19.2729
+   }
+  ],
+  "boot": [
+   {
+    "r": 0,
+    "lr": 19.2729,
+    "c10": 11.92,
+    "c5": 14.73,
+    "c1": 19.11,
+    "p": 0.009,
+    "reps": 999
+   }
+  ],
+  "params": {},
+  "alpha": null,
+  "beta": null,
+  "beta_fixed": false,
+  "weakex_wald": {},
+  "lr_restr": null,
+  "Q": null,
+  "JB": null,
+  "args": [
+   "VECM_GAP_GY",
+   "GY_M1.pre GAP.pre 4 0 0 -case 2 -lrtest -bootstrap 999"
+  ]
+ },
+ "tri_rank": {
+  "path": "build/drvec/tri_rank/tri_rank.out",
+  "series": [
+   "GY",
+   "PU",
+   "PE"
+  ],
+  "deterministic": "case 3 -- E[nabla Y2] free, E[W] free (drifts as in the .pre files)",
+  "logL": null,
+  "npar": null,
+  "rank": [
+   {
+    "r": 0,
+    "lr": 18.7366
+   },
+   {
+    "r": 1,
+    "lr": 5.6364
+   }
+  ],
+  "boot": [
+   {
+    "r": 0,
+    "lr": 18.7366,
+    "c10": 16.63,
+    "c5": 18.67,
+    "c1": 24.04,
+    "p": 0.05,
+    "reps": 499
+   },
+   {
+    "r": 1,
+    "lr": 5.6364,
+    "c10": 0.5,
+    "c5": 4.25,
+    "c1": 7.68,
+    "p": 0.0346,
+    "reps": 491
+   }
+  ],
+  "params": {},
+  "alpha": null,
+  "beta": null,
+  "beta_fixed": false,
+  "weakex_wald": {},
+  "lr_restr": null,
+  "Q": null,
+  "JB": null,
+  "args": [
+   "VECM_TRI",
+   "GY.pre PU.pre PE.pre 2 0 0 -case pre -lrtest -bootstrap 499"
+  ]
+ },
+ "wti_rank": {
+  "path": "build/drvec/wti_rank/wti_rank.out",
+  "series": [
+   "WTI",
+   "GY"
+  ],
+  "deterministic": "case 2 -- E[nabla Y2] = 0, E[W] free",
+  "logL": null,
+  "npar": null,
+  "rank": [
+   {
+    "r": 0,
+    "lr": 11.0069
+   }
+  ],
+  "boot": [
+   {
+    "r": 0,
+    "lr": 11.0069,
+    "c10": 12.06,
+    "c5": 14.47,
+    "c1": 20.46,
+    "p": 0.14,
+    "reps": 499
+   }
+  ],
+  "params": {},
+  "alpha": null,
+  "beta": null,
+  "beta_fixed": false,
+  "weakex_wald": {},
+  "lr_restr": null,
+  "Q": null,
+  "JB": null,
+  "args": [
+   "VECM_WTI",
+   "WTI.pre GY.pre 2 0 0 -case 2 -lrtest -bootstrap 499"
+  ]
+ },
+ "fisc_rank": {
+  "path": "build/drvec/fisc_rank/fisc_rank.out",
+  "series": [
+   "REV",
+   "G"
+  ],
+  "deterministic": "case 3 -- E[nabla Y2] free, E[W] free",
+  "logL": null,
+  "npar": null,
+  "rank": [
+   {
+    "r": 0,
+    "lr": 22.5127
+   }
+  ],
+  "boot": [
+   {
+    "r": 0,
+    "lr": 22.5127,
+    "c10": 10.37,
+    "c5": 12.35,
+    "c1": 19.72,
+    "p": 0.004,
+    "reps": 499
+   }
+  ],
+  "params": {},
+  "alpha": null,
+  "beta": null,
+  "beta_fixed": false,
+  "weakex_wald": {},
+  "lr_restr": null,
+  "Q": null,
+  "JB": null,
+  "args": [
+   "VECM_FISC",
+   "REVnoBCE.pre G.pre 2 0 0 -case pre -lrtest -bootstrap 499"
+  ]
+ }
+}

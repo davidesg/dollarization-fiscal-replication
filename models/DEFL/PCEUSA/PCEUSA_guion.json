@@ -1,0 +1,895 @@
+{
+  "series": "PCEUSA",
+  "analyst": "",
+  "created": "2026-10-09",
+  "carril": "guiado",
+  "entries": [
+    {
+      "version": 1,
+      "name": "dominio",
+      "inp_path": "",
+      "timestamp": "2026-10-09T12:03:15",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "dominio = price_index",
+      "rationale": "declarado por el analista",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "dominio",
+        "decidido": "price_index",
+        "evidencia": "",
+        "alternativas": "",
+        "expectativas": "Deflactor implícito del PCE de EE. UU. (BEA, FRED DPCERD3Q086SBEA), desestacionalizado en origen (única versión oficial), media 2011 = 100. Log, I(1) con deriva (~0.5 % trimestral); caída en 2008Q4–2009 (petróleo); sin estacionalidad (ya ajustada)."
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "",
+      "coincide": null,
+      "parent": null,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "dominio",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 2,
+      "name": "lambda",
+      "inp_path": "",
+      "timestamp": "2026-10-09T12:03:15",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "lambda = 0",
+      "rationale": "Usuario confirma λ=0: índice de precios (dominio).",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "lambda",
+        "decidido": "0",
+        "evidencia": "gap=-0.158; corr(nivel)=0.467; corr(log)=0.625; estadístico λ=1; regla de dominio `price_index`",
+        "alternativas": "",
+        "propuesta_valor": 0.0
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "0",
+      "coincide": true,
+      "parent": 1,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "lambda",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 3,
+      "name": "d",
+      "inp_path": "",
+      "timestamp": "2026-10-09T12:05:11",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "d = 1",
+      "rationale": "Usuario confirma d=1: tendencia, ACF lenta; ADF y KPSS coinciden en d=1.",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "d",
+        "decidido": "1",
+        "evidencia": "d=0: ADF p=0.213, KPSS p=0.010; d=1: ADF p=0.000, KPSS p=0.088",
+        "alternativas": "",
+        "propuesta_valor": 1
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "1",
+      "coincide": true,
+      "parent": 2,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "d",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 4,
+      "name": "estacionalidad",
+      "inp_path": "",
+      "timestamp": "2026-10-09T12:06:12",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "estacionalidad = D=0 (sin estacionalidad)",
+      "rationale": "se toma la propuesta de la herramienta",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "estacionalidad",
+        "decidido": "D=0 (sin estacionalidad)",
+        "evidencia": "F-HAC=0.48, p=0.6997",
+        "alternativas": "",
+        "propuesta_valor": "A"
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "sin estacionalidad (D=0)",
+      "coincide": true,
+      "parent": 3,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "",
+      "nodo": "estacionalidad",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 5,
+      "name": "m00",
+      "inp_path": "models/DEFL/PCEUSA/PCEUSA_m00.inp",
+      "timestamp": "2026-10-09T12:06:59",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.44045,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": []
+      },
+      "stats": {
+        "loglik": -36.82563576708035,
+        "aic": 75.6512715341607,
+        "bic": 77.85596415355167,
+        "sigma_a": 0.41924400477262913,
+        "q_pass": true,
+        "jb_pass": false,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 23,
+            "date": "Q4/2008",
+            "z": -4.890979318434885
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.1383582681056108,
+          0.3210292567568195,
+          0.6059261324401606,
+          0.7228182023088678
+        ],
+        "jb_pvalue": 8.437397508886589e-42,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + a_t",
+      "decision": "Usuario confirma D=0 sin armónicos (HAC F=0.48 p=0.70). Modelo base ∇ln con μ para calibrar el episodio de 2008",
+      "rationale": "",
+      "problems_found": "[diagnosis] el Jarque-Bera rechaza la normalidad (p=0.0000); anómalos por encima del umbral calibrado (3.17): Q4/2008 (z=-4.89)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/PCEUSA_v5__1f09dbe29bbb.png",
+      "out_path": "models/DEFL/PCEUSA/PCEUSA_m00.out",
+      "hist_path": "figs/PCEUSA_v5_hist__fdf91b8fda15.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 4,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "inferido",
+      "nodo": "estacionalidad",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "e15c07dffdbc1fcac95a56d138f5159cad90a0664d6285c94ea2fc24645de753",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 6,
+      "name": "m01_s0802x4",
+      "inp_path": "models/DEFL/PCEUSA/PCEUSA_m01_s0802x4.inp",
+      "timestamp": "2026-10-09T12:08:27",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.4724780867968704,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q2/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -11.85798918206629,
+        "aic": 33.71597836413258,
+        "bic": 44.73944146108741,
+        "sigma_a": 0.2888194230678636,
+        "q_pass": false,
+        "jb_pass": true,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 48,
+            "date": "Q1/2015",
+            "z": -3.191457630319073
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.0032277595892865607,
+          0.00022895403444855855,
+          0.0006936799044563458,
+          0.00129111159687334
+        ],
+        "jb_pvalue": 0.15363589817606502,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(1 itvs) + a_t",
+      "decision": "Escalón Q2/2008×4 (episodio del petróleo 2008: subida Q2–Q3, desplome Q4, recuperación Q1/2009); mejor configuración del dato (empate con Q3/2008×3, ΔAIC 0.86), sin vecino; misma forma que el IPC de EE. UU. (PU). Elegido por el analista; reformulable.",
+      "rationale": "",
+      "problems_found": "[diagnosis] la Q rechaza el ruido blanco en el retardo que decide (15, p=0.0013); la Q rechaza también en 4 (p=0.0032), 8 (p=0.0002), 12 (p=0.0007); anómalos por encima del umbral calibrado (3.17): Q1/2015 (z=-3.19)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/PCEUSA_v6__71443091764f.png",
+      "out_path": "models/DEFL/PCEUSA/PCEUSA_m01_s0802x4.out",
+      "hist_path": "figs/PCEUSA_v6_hist__f678afa0dddc.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 5,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 2,
+      "parent_origen": "declarado",
+      "nodo": "estacionalidad",
+      "base_pre_path": "models/DEFL/PCEUSA/PCEUSA_m00.inp",
+      "base_pre_sha": "e15c07dffdbc1fcac95a56d138f5159cad90a0664d6285c94ea2fc24645de753",
+      "pre_sha": "62d7b5873f3501e9b71c46e9853f1ce1cf5a5d60c0476e7aacf767fb7df17f79",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 7,
+      "name": "estacionalidad",
+      "inp_path": "",
+      "timestamp": "2026-10-09T12:08:34",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "estacionalidad = D=0 (B1, armónicos deterministas)",
+      "rationale": "Identificación ARMA sobre residuos limpios tras el escalón Q2/2008×4",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "estacionalidad",
+        "decidido": "D=0 (B1, armónicos deterministas)",
+        "evidencia": "",
+        "alternativas": ""
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 6,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 3,
+      "parent_origen": "",
+      "nodo": "estacionalidad",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 8,
+      "name": "ordenes",
+      "inp_path": "",
+      "timestamp": "2026-10-09T12:08:36",
+      "spec": {},
+      "stats": null,
+      "equation": "",
+      "decision": "ordenes = ARMA(3,0)",
+      "rationale": "se toma la propuesta de la herramienta",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": null,
+      "out_path": null,
+      "hist_path": null,
+      "kind": "node",
+      "node": {
+        "nodo": "ordenes",
+        "decidido": "ARMA(3,0)",
+        "evidencia": "ARMA(3,0) sim=0.904; ARMA(0,1) sim=0.820; ARMA(1,0) sim=0.831 — sobre residuos de `PCEUSA_m01_s0802x4.pre`",
+        "alternativas": "",
+        "propuesta_valor": [
+          3,
+          0,
+          0,
+          0
+        ],
+        "empate": []
+      },
+      "decided_by": "analista+LLM",
+      "propuesta": "ARMA(3,0)",
+      "coincide": true,
+      "parent": 7,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 3,
+      "parent_origen": "",
+      "nodo": "ordenes",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 9,
+      "name": "m02_ar3",
+      "inp_path": "models/DEFL/PCEUSA/PCEUSA_m02_ar3.inp",
+      "timestamp": "2026-10-09T12:09:38",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.4726611696945445,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            true,
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 3,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q2/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -4.3083225169369825,
+        "aic": 24.616645033873965,
+        "bic": 42.25418598900169,
+        "sigma_a": 0.257098634906011,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.3275608386929154,
+          0.6463215028610312,
+          0.6820688918363466
+        ],
+        "jb_pvalue": 0.3759488433204494,
+        "npar": 3,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "AR(3) completo sobre m01 (escalón Q2/2008×4), sin intervenir 2015Q1: la calibración muestra que no cambia ningún retardo\n[2026-10-09] Modelo final de PCEUSA (cerrado por el analista 9-oct-2026). Contrastes formales: Shin-Fuller Φ=2.48 (d=1 basta al 5 % y al 10 %); DCD sobrediferenciación θ̂=0.89, LR 0.88; subdiferenciación LR 7.7: par en f=0 completo. Escalón Q2/2008×4: ω₀ y ω₁ (t≈1.7) podables (m06, LR 4.24 p≈0.12), se mantienen por coherencia con PU.",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/PCEUSA_v9__f045d99059a5.png",
+      "out_path": "models/DEFL/PCEUSA/PCEUSA_m02_ar3.out",
+      "hist_path": "figs/PCEUSA_v9_hist__003c7b2f457a.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 6,
+      "status": "adopted",
+      "why_abandoned": "",
+      "why_adopted": "AR(3) completo (sin subconjuntos, criterio del analista) con escalón Q2/2008×4: diagnosis limpia; frente a AR(1) LR 7.5, 2 gl, p≈0.02 y el AR(1) deja barras en 3 y 6; AR(4) y ARMA(3,1) no significativos. Factores: real 0.76 (persistencia de la inflación) y complejo d=0.67, periodo 3.3.",
+      "iteracion": 3,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/DEFL/PCEUSA/PCEUSA_m01_s0802x4.pre",
+      "base_pre_sha": "62d7b5873f3501e9b71c46e9853f1ce1cf5a5d60c0476e7aacf767fb7df17f79",
+      "pre_sha": "7ac93c0df950b21230d690b2c967bc7776d6dcfad954ea1ca29f4859c75264f6",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 10,
+      "name": "m03_ar1",
+      "inp_path": "models/DEFL/PCEUSA/PCEUSA_m03_ar1.inp",
+      "timestamp": "2026-10-09T12:10:26",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.470985925853386,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q2/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -8.063794435182963,
+        "aic": 28.127588870365926,
+        "bic": 41.35574458671172,
+        "sigma_a": 0.2726797187873168,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.07879492871391869,
+          0.022208308289321188,
+          0.06474740633259468,
+          0.07533653795124207
+        ],
+        "jb_pvalue": 0.6355185573308035,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Rival parsimonioso AR(1) sobre m01 (como el IPC de EE. UU.)",
+      "rationale": "",
+      "problems_found": "[diagnosis] salvedad de la Q: pasa en 15 pero rechaza en 8 (p=0.0222)",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/PCEUSA_v10__f4354b241b0e.png",
+      "out_path": "models/DEFL/PCEUSA/PCEUSA_m03_ar1.out",
+      "hist_path": "figs/PCEUSA_v10_hist__ee700c0b7b3f.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 6,
+      "status": "dead-end",
+      "why_abandoned": "AR(1): Q(8) p 0.02, barras en 3 y 6; frente a AR(3) LR 7.5, 2 gl, p≈0.02.",
+      "why_adopted": "",
+      "iteracion": 4,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/DEFL/PCEUSA/PCEUSA_m01_s0802x4.pre",
+      "base_pre_sha": "62d7b5873f3501e9b71c46e9853f1ce1cf5a5d60c0476e7aacf767fb7df17f79",
+      "pre_sha": "a8bebb8b615cae6d2f4fb1b829bc2a47d5dd264a7ccdc67c1c3560171769bdd7",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 11,
+      "name": "m04_ar4",
+      "inp_path": "models/DEFL/PCEUSA/PCEUSA_m04_ar4.inp",
+      "timestamp": "2026-10-09T12:10:29",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.4724304308439687,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            true,
+            true,
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 4,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q2/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -4.183934996802833,
+        "aic": 26.367869993605666,
+        "bic": 46.21010356812436,
+        "sigma_a": 0.25658957237006286,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.19748591792781234,
+          0.5059631604007695,
+          0.5588334858230404
+        ],
+        "jb_pvalue": 0.46333842269139436,
+        "npar": 4,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Sobreparametrización de m02: AR(4)",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/PCEUSA_v11__5bc13d597fe4.png",
+      "out_path": "models/DEFL/PCEUSA/PCEUSA_m04_ar4.out",
+      "hist_path": "figs/PCEUSA_v11_hist__83e78abe650a.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 9,
+      "status": "dead-end",
+      "why_abandoned": "Sobreparametrización de m02: φ₄=−0.06 (t −0.50), AIC/BIC peores.",
+      "why_adopted": "",
+      "iteracion": 5,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/DEFL/PCEUSA/PCEUSA_m02_ar3.pre",
+      "base_pre_sha": "7ac93c0df950b21230d690b2c967bc7776d6dcfad954ea1ca29f4859c75264f6",
+      "pre_sha": "c0467356b99e7e7570dde9534ae8ce7fc6bccd50ceb8552aa3b0ab07e37e78d0",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 12,
+      "name": "m05_arma31",
+      "inp_path": "models/DEFL/PCEUSA/PCEUSA_m05_arma31.inp",
+      "timestamp": "2026-10-09T12:10:32",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.47242741629943613,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            true,
+            true,
+            true
+          ]
+        ],
+        "ma_free": [
+          [
+            true
+          ]
+        ],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 3,
+        "q": 1,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q2/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -4.1159271234070545,
+        "aic": 26.23185424681411,
+        "bic": 46.0740878213328,
+        "sigma_a": 0.2563067792490818,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.19752994883786024,
+          0.5039882507300042,
+          0.5552929753788529
+        ],
+        "jb_pvalue": 0.45227648762619954,
+        "npar": 4,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(1 itvs) + [1-φ(B)]⁻¹·[1-θ(B)]·a_t",
+      "decision": "Sobreparametrización de m02: ARMA(3,1)",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/PCEUSA_v12__e922d52ee567.png",
+      "out_path": "models/DEFL/PCEUSA/PCEUSA_m05_arma31.out",
+      "hist_path": "figs/PCEUSA_v12_hist__b9b921adb261.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 9,
+      "status": "dead-end",
+      "why_abandoned": "Sobreparametrización de m02: θ₁=−0.25 (t −0.70), corr AR–MA 0.93, AIC/BIC peores.",
+      "why_adopted": "",
+      "iteracion": 6,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/DEFL/PCEUSA/PCEUSA_m02_ar3.pre",
+      "base_pre_sha": "7ac93c0df950b21230d690b2c967bc7776d6dcfad954ea1ca29f4859c75264f6",
+      "pre_sha": "bf357b1ccbd5aceea38b096a1a3259c850d33e73a36994236e44c897c9de1527",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 13,
+      "name": "m06_ar3_s0804x2",
+      "inp_path": "models/DEFL/PCEUSA/PCEUSA_m06_ar3_s0804x2.inp",
+      "timestamp": "2026-10-09T12:14:34",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.4855451111754414,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            true,
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 3,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 0,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -6.427779405499251,
+        "aic": 24.855558810998502,
+        "bic": 38.0837145273443,
+        "sigma_a": 0.2653391051377872,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.39658145413319845,
+          0.4430687490229023,
+          0.5057158823947594
+        ],
+        "jb_pvalue": 0.5323550202215434,
+        "npar": 3,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Pregunta del analista: ¿se sostienen los dos escalones iniciales (Q2–Q3/2008, t≈1.7)? Poda → escalón Q4/2008×2 con el AR(3) de m02",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/PCEUSA_v13__ce1967e32773.png",
+      "out_path": "models/DEFL/PCEUSA/PCEUSA_m06_ar3_s0804x2.out",
+      "hist_path": "figs/PCEUSA_v13_hist__10fa554a484d.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 9,
+      "status": "dead-end",
+      "why_abandoned": "Poda de los dos escalones iniciales (Q2–Q3/2008, t≈1.7): admisible por el dato (LR 4.24, 2 gl, p≈0.12; AIC 24.86 vs 24.62, BIC 38.08 vs 42.25), pero cambia la lectura del suceso (ganancia −3.73 desde el pico frente a −2.67 con la subida del petróleo incluida). El analista mantiene Q2/2008×4 por coherencia con el IPC de EE. UU. (PU, mismo arranque, ganancia −2.37, allí ω₀ t 2.45).",
+      "why_adopted": "",
+      "iteracion": 7,
+      "parent_origen": "declarado",
+      "nodo": "ordenes",
+      "base_pre_path": "models/DEFL/PCEUSA/PCEUSA_m02_ar3.pre",
+      "base_pre_sha": "7ac93c0df950b21230d690b2c967bc7776d6dcfad954ea1ca29f4859c75264f6",
+      "pre_sha": "39e4330fbde5860ea50039d3732d119086bacb9e32d564650310e089906697d1",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @9510aa4+sucio · fue 0.1.17.dev0 (motor C)"
+    }
+  ]
+}

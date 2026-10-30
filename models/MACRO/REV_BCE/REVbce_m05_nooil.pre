@@ -1,0 +1,119 @@
+************************************************
+*        Input file for program DRVUS          *
+* Copyright (C) 1996 Jos? Alberto Mauricio     *
+************************************************
+
+** Frequency of time series: either 1(A), 4(Q) or 12(M):
+ 4
+** Number of observations and starting date of time series:
+ 68  1 2003 REV
+** Number of deterministic variables (including seasonal components):
+4
+**
+cos 1
+sin 1
+alter
+step 1 2008
+**
+0 0 0 0 
+**
+-3.136285  1
+**
+-2.803686  1
+**
+2.286153  1
+**
+28.849961  1
+**
+0 0 0 0 
+**Number and orders of regular AR operators:
+1 1
+**
+-0.1398 1
+** Number and orders of annual AR operators:
+0
+** Number and orders of regular MA operators:
+0
+** Number and orders of anual MA operators:
+0
+** Number and frequencies of regular AR(2) operators with fixed frequency:
+0
+** Number and frequencies of regular MA(2) operators with fixed frequency:
+0
+** Mean parameter (mu):
+2.122193 1
+** Box-Cox lambda, regular differences and complete annual differences:
+0.00 1 0
+** Individual factors of the annual difference (from freq 0.0): 
+ 0 0 0
+** ACF/PACF bands (0 Automatic) and reescaling factor: 
+ 0.00 100.00
+** Time series (stochastic and non-standard deterministic variables): 
+1605.6009550000 
+1729.4723700000 
+1821.8473410000 
+1753.3222020000 
+1842.5485680000 
+2046.8497330000 
+2167.8269270000 
+2119.2513440000 
+2012.5914060000 
+2428.0777040000 
+2379.0575410000 
+2326.0169230000 
+2541.9464590000 
+3098.6391440000 
+2454.6739690000 
+3167.4590670000 
+2728.7545590000 
+3300.9456380000 
+3814.8133890000 
+3786.0789820000 
+4921.1935710000 
+5883.9972160000 
+6255.6627770000 
+5047.5214950000 
+3446.1650440000 
+4781.9353020000 
+4821.4999400000 
+5328.8126610000 
+5808.6626890000 
+5874.6577460000 
+5480.6559100000 
+6014.4254720000 
+6990.7419570000 
+8210.9994580000 
+7891.7308000000 
+8096.3008020000 
+8727.6524970000 
+9380.0250400000 
+8712.0070790000 
+8515.5407780000 
+8815.1185320000 
+9654.8602310000 
+9316.0289840000 
+9513.6466820000 
+9459.0459060000 
+10484.1485330000 
+9263.8502740000 
+9692.9985910000 
+8983.3969100000 
+10026.3741580000 
+9283.4267840000 
+7899.0238100000 
+7711.2325600000 
+8255.9119470000 
+8317.3043030000 
+8785.4832830000 
+8739.9400590000 
+9203.8320870000 
+9000.4365770000 
+9345.7601420000 
+9452.2730140000 
+10529.8142320000 
+10166.7084610000 
+10852.3502260000 
+9487.2671980000 
+10609.7193780000 
+9850.4614570000 
+9110.0697010000 

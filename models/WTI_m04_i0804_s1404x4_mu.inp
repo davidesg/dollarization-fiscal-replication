@@ -1,0 +1,118 @@
+************************************************
+* Input file for program FUE                   *
+* DOCTYPE ATSW-interface SYSTEM                *
+************************************************
+
+** Frequency of time series: either 1(A), 4(Q) or 12(M):
+ 4
+** Number of observations and starting date of time series:
+ 68  1 2003 WTI
+** Number of deterministic variables (including seasonal components):
+2
+**
+step 4 2008
+step 4 2014
+**
+2 3
+**
+-70.374131  1
+30.653261  1
+-32.643489  1
+**
+-29.007123  1
+41.026062  1
+-17.540764  1
+22.013724  1
+**
+0 0
+** Number and orders of regular AR operators:
+1 1
+**
+0.000000  0
+** Number and orders of annual AR operators:
+0
+** Number and orders of regular MA operators:
+0
+** Number and orders of anual MA operators:
+0
+** Number and frequencies of regular AR(2) operators with fixed frequency:
+0
+** Number and frequencies of regular MA(2) operators with fixed frequency:
+0
+** Mean parameter (mu):
+0.764787 1
+** Box-Cox lambda, m. Regular differences and complete annual differences:
+ 0.00  1  0
+** Individual factors of the annual difference (starting at freq 0.0):
+0 0 0
+** ACF/PACF bands (0 Automatic) and reescaling factor:
+ 0 100.00
+** Time series (stochastic and non-standard deterministic variables):
+34.12 
+29.03666666666667 
+30.21333333333333 
+31.19 
+35.25666666666667 
+38.33000000000001 
+43.85999999999999 
+48.30666666666667 
+49.70666666666667 
+53.04333333333333 
+63.08000000000001 
+60.03333333333333 
+63.34666666666667 
+70.52999999999999 
+70.44333333333333 
+60.09333333333333 
+58.13 
+64.97 
+75.5 
+90.85 
+97.95333333333332 
+123.9633333333333 
+117.9833333333333 
+58.37 
+42.96 
+59.54333333333333 
+68.20333333333333 
+76.06666666666666 
+78.62666666666667 
+77.89 
+76.16666666666667 
+85.02666666666667 
+93.98 
+102.5533333333333 
+89.71 
+94.06333333333332 
+102.8933333333333 
+93.48 
+92.27 
+88.16000000000001 
+94.35333333333334 
+94.22333333333331 
+105.8233333333333 
+97.34333333333332 
+98.74666666666668 
+103.3466666666667 
+97.78000000000002 
+73.16000000000001 
+48.54 
+57.84666666666667 
+46.41666666666666 
+41.95 
+33.18333333333333 
+45.40666666666667 
+44.85 
+49.13666666666666 
+51.76666666666667 
+48.24 
+48.16333333333333 
+55.36666666666667 
+62.88666666666666 
+68.03333333333335 
+69.75666666666667 
+59.07666666666668 
+54.82666666666668 
+59.78333333333333 
+56.37 
+56.95666666666667 

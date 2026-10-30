@@ -1,0 +1,461 @@
+{
+  "series": "GAP",
+  "analyst": "",
+  "created": "2026-10-07",
+  "carril": "",
+  "entries": [
+    {
+      "version": 1,
+      "name": "PC1",
+      "inp_path": "GAP/work/GAP_m00.inp",
+      "timestamp": "2026-10-07T12:41:07",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.2442397364901553,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            false
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [],
+        "dominio": "price_index"
+      },
+      "stats": {
+        "loglik": -80.91137062527832,
+        "aic": 169.82274125055665,
+        "bic": 178.64151172812052,
+        "sigma_a": 0.8095262041468823,
+        "q_pass": false,
+        "jb_pass": true,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 23,
+            "date": "Q4/2008",
+            "z": 3.203170780083306
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          1.2936085103110173e-06,
+          2.4924964418970852e-05,
+          0.0003250637622470576,
+          0.0011321363213560032
+        ],
+        "jb_pvalue": 0.16036363868285777,
+        "npar": 0,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + [1-φ(B)]⁻¹·a_t",
+      "decision": "GAP: lam=0 (dominio; ln GAP = ln PE - ln PU), d=1 provisional, B1 (requisito multivariante); m00 con mu",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GAP_v1__6261d2ae772e.png",
+      "out_path": "GAP/work/GAP_m00.out",
+      "hist_path": "figs/GAP_v1_hist__ba79268dd943.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": null,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 1,
+      "parent_origen": "inferido",
+      "nodo": "",
+      "base_pre_path": "",
+      "base_pre_sha": "",
+      "pre_sha": "8f492502b7990ff97fa75722434f1d5f407ab7cb579bc4a25cc99911bc89c9b1",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 2,
+      "name": "PC2",
+      "inp_path": "GAP/work/GAP_m01_ar1.inp",
+      "timestamp": "2026-10-07T12:42:44",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.2511980203771433,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": []
+      },
+      "stats": {
+        "loglik": -72.29740401882856,
+        "aic": 154.59480803765712,
+        "bic": 165.61827113461194,
+        "sigma_a": 0.7104002149531518,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 1,
+        "extreme": [
+          {
+            "obs": 23,
+            "date": "Q4/2008",
+            "z": 3.1353193633919076
+          }
+        ],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.12595586420224048,
+          0.30742095036447736,
+          0.5107152674531379,
+          0.5182396637926547
+        ],
+        "jb_pvalue": 0.21695983151435505,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + [1-φ(B)]⁻¹·a_t",
+      "decision": "AR(1) sobre m00 sin intervenir 2008 (como FUE R.2)",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GAP_v2__f170ee003fee.png",
+      "out_path": "GAP/work/GAP_m01_ar1.out",
+      "hist_path": "figs/GAP_v2_hist__0a7322c9c0c4.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 1,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 2,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "GAP/work/GAP_m00.pre",
+      "base_pre_sha": "8f492502b7990ff97fa75722434f1d5f407ab7cb579bc4a25cc99911bc89c9b1",
+      "pre_sha": "5fb89792c38f0094fe1a96a637d86340ac013d265a0d34d3f3f425976a5f2057",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 3,
+      "name": "PC3",
+      "inp_path": "GAP/work/GAP_m02_s0804.inp",
+      "timestamp": "2026-10-07T12:49:23",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.22453397003472347,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 1,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -68.22207744655958,
+        "aic": 148.44415489311916,
+        "bic": 161.67231060946494,
+        "sigma_a": 0.6686677788090687,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          4,
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.0299331761432452,
+          0.034078215643609244,
+          0.07107028486494127,
+          0.11363329369021802
+        ],
+        "jb_pvalue": 0.7816651745076947,
+        "npar": 1,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "Evaluar escalón simple 2008T4 sobre m01 (AR(1)+mu)",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GAP_v3__366f1c30f6a9.png",
+      "out_path": "GAP/work/GAP_m02_s0804.out",
+      "hist_path": "figs/GAP_v3_hist__38187ef50ec8.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 2,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 3,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "GAP/work/GAP_m01_ar1.pre",
+      "base_pre_sha": "5fb89792c38f0094fe1a96a637d86340ac013d265a0d34d3f3f425976a5f2057",
+      "pre_sha": "448ffc7ec871e7f47b5c8e5aca9da2f41d2020b083b51f79ef71e5879d6af47b",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 4,
+      "name": "PC4",
+      "inp_path": "GAP/work/GAP_m03_ar3.inp",
+      "timestamp": "2026-10-07T12:51:17",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.21100322171094943,
+        "estimate_mu": true,
+        "alter": true,
+        "ar_free": [
+          [
+            true,
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 3,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -63.974332814076924,
+        "aic": 143.94866562815383,
+        "bic": 161.58620658328158,
+        "sigma_a": 0.6256535800072418,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.6724435055826714,
+          0.7108071976471143,
+          0.7567737376577626
+        ],
+        "jb_pvalue": 0.34418002116878055,
+        "npar": 3,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + (−1)ᵗ + D_t(1 arm.) + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "AR(3) completo sobre m02 (r(3)=0.33 tras escalón 2008T4); sin operadores restringidos",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GAP_v4__0e7a438ae11e.png",
+      "out_path": "GAP/work/GAP_m03_ar3.out",
+      "hist_path": "figs/GAP_v4_hist__7361d80b70f8.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 3,
+      "status": "exploring",
+      "why_abandoned": "",
+      "why_adopted": "",
+      "iteracion": 4,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "GAP/work/GAP_m02_s0804.pre",
+      "base_pre_sha": "448ffc7ec871e7f47b5c8e5aca9da2f41d2020b083b51f79ef71e5879d6af47b",
+      "pre_sha": "6dbbe3a91324267b84b00351e8e4249f2d028055a092a8b8d2270d2735e5c694",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d · fue 0.1.17.dev0 (motor C)"
+    },
+    {
+      "version": 5,
+      "name": "PC5",
+      "inp_path": "GAP/work/GAP_m04_ar3_noalt.inp",
+      "timestamp": "2026-10-07T12:55:05",
+      "spec": {
+        "lam": 0.0,
+        "d": 1,
+        "D": 0,
+        "mu": 0.21148056487316041,
+        "estimate_mu": true,
+        "alter": false,
+        "ar_free": [
+          [
+            true,
+            true,
+            true
+          ]
+        ],
+        "ma_free": [],
+        "ar_s_free": [],
+        "ma_s_free": [],
+        "ifadf": [
+          0,
+          0,
+          0
+        ],
+        "p": 3,
+        "q": 0,
+        "P": 0,
+        "Q": 0,
+        "n_harmonics": 1,
+        "interventions": [
+          {
+            "type": "step",
+            "date": "Q4/2008"
+          }
+        ]
+      },
+      "stats": {
+        "loglik": -64.02643734985787,
+        "aic": 142.05287469971574,
+        "bic": 157.4857230354525,
+        "sigma_a": 0.6261482531159592,
+        "q_pass": true,
+        "jb_pass": true,
+        "n_extreme": 0,
+        "extreme": [],
+        "q_lags": [
+          8,
+          12,
+          15
+        ],
+        "q_pvalues": [
+          0.6577548820412972,
+          0.6976610043288753,
+          0.7505488937199958
+        ],
+        "jb_pvalue": 0.37506223901486235,
+        "npar": 3,
+        "nobs": 68,
+        "refactor": 100.0
+      },
+      "equation": "∇[ln y_t] = μ + D_t(1 arm.) + I_t(1 itvs) + [1-φ(B)]⁻¹·a_t",
+      "decision": "m03 sin (-1)^t: MEG f=2 determinista, LR simplificación 0.10 p=0.75. d=1 (SF rechaza al 10%, DCD confirma)",
+      "rationale": "",
+      "problems_found": "",
+      "next_version": "",
+      "figure_b64": null,
+      "figure_path": "figs/GAP_v5__5bf781145f95.png",
+      "out_path": "GAP/work/GAP_m04_ar3_noalt.out",
+      "hist_path": "figs/GAP_v5_hist__9585d6e2c3ed.png",
+      "kind": "model",
+      "node": null,
+      "decided_by": "",
+      "propuesta": "",
+      "coincide": null,
+      "parent": 4,
+      "status": "adopted",
+      "why_abandoned": "",
+      "why_adopted": "GAP m04 (decisión del analista, 7-oct-2026; revisado 10-oct sin cambios, TODO A4; revision_empirica §4.11): ∇ ln(PE/PU) con armónicos f=1, escalón 2008T4 +2.28, AR(3) completo (0.40, −0.09, 0.36; raíces 0.82 y 0.66∠±108.6°), μ 0.21 %/trim. mantenido por su lectura económica. Sin (−1)ᵗ: MEG f=2 determinista sobre m03 (LR 1.20) → poda correcta. El analista no pide sobreajuste a AR(4): residuos limpios. d=1: SF rechaza al 10 % (Φ 1.37) y DCD⁺ θ̂ 0.99; DCD⁻ LR 8.1. Es la entrada GAP.pre de VECM_GAP_GY (modelo central) y la fila PE/PU de tab:uni.",
+      "iteracion": 5,
+      "parent_origen": "declarado",
+      "nodo": "",
+      "base_pre_path": "GAP/work/GAP_m03_ar3.pre",
+      "base_pre_sha": "6dbbe3a91324267b84b00351e8e4249f2d028055a092a8b8d2270d2735e5c694",
+      "pre_sha": "98ad510f8626629f601620fa2414f033b8b5aa43fc60ce7ef57f981c56e78f68",
+      "re_registro_de": null,
+      "instrumento": "art 0.2.3.dev0 @088933d · fue 0.1.17.dev0 (motor C)"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+BUILD DATA
+  ok    master/15-05-2024_Data_vf.xlsx                sha256 8515880459547efd
+  ok    bce_cnt/tou_127_202401.xlsx                   sha256 1d2097758dee8b8b
+  ok    bce_spnf/OperSPNF_Historico.xlsx              sha256 839e2c5deaf1f742
+  ok    bce_spnf/OperSPNF_DOLARES.xlsx                sha256 b9ceabfbe1399850
+  ok    fred/WTISPLC_2026-05-26.xlsx                  sha256 2a84d6231eb2f158
+  ok    fred/DPCERD3Q086SBEA_2026-10-09.csv           sha256 1b122e338e9125df
+  ok    fred/GDPDEF_2026-10-09.csv                    sha256 6ee7315cb9cb9ca8
+  ok    worldbank/ECU_PA.NUS.PRVT.PP.json             sha256 a1c7e56740de2b74
+  ok    worldbank/ECU_PA.NUS.PPP.json                 sha256 40d66dee5a1e3af0
+  ok    inec/SERIE_HISTORICA_IPC_12_2019.xls          sha256 3a66d8eddbad8d25
+  ok    bls/CUUR0000SA0_1999_2008_2026-10-28.json     sha256 099c1363c8eb6340
+  ok    bls/CUUR0000SA0_2009_2018_2026-10-28.json     sha256 87aa28c6b20b6060
+  ok    bls/CUUR0000SA0_2019_2024_2026-10-28.json     sha256 6729b813fafdf589
+  ok    bce_bop/boletin69_1_BdPNormalizada.xls        sha256 48e18350419671fb
+  ok    bce_bop/boletin87_1_BP_Normalizada.xlsx       sha256 f625c48e380502da
+
+CROSS-CHECKS
+  ok    nominal GDP: master v_10 = BCE CNT 127 P.I.B. (max rel. diff 6.2e-08)
+  ok    SPNF expenditure 2003-01..2011-12: master v_3 = BCE OperSPNF_Historico.xlsx (monthly, max abs. diff USD 0.0050 m)
+  ok    SPNF revenue 2003-01..2011-12: master v_4 = BCE OperSPNF_Historico.xlsx (monthly, max abs. diff USD 0.0082 m)
+  WARN  SPNF expenditure 2013-01..2019-12: master v_3 = BCE OperSPNF_DOLARES.xlsx (monthly, max abs. diff USD 11.3547 m)
+  WARN  SPNF expenditure 2012 (annual, published only as a year): diff USD 0.1499 m
+  WARN  SPNF revenue 2013-01..2019-12: master v_4 = BCE OperSPNF_DOLARES.xlsx (monthly, max abs. diff USD 924.4880 m)
+  WARN  SPNF revenue 2012 (annual, published only as a year): diff USD 1805.8586 m
+  ok    CPI Ecuador: master v_1 = INEC series 1999-10..2019-12 (max rel. diff 4.9e-15)
+  ok    CPI-U: master v_2 = BLS CUUR0000SA0 1999-10..2024-02 (max abs. diff 0.0e+00)
+  ok    balance of payments 2003Q1..2015Q4: master = BCE bulletin 69 (BPM5), X, M, income and current transfers (max abs. diff USD 8.2e-12 m)
+  ok    balance of payments 2016Q1..2019Q4: master = BCE bulletin 87 (BPM6), X, M, income and current transfers (max abs. diff USD 9.1e-12 m)
+  note  BPM5 vs BPM6 over 2016Q1-2019Q3 (USD m, max abs.): X 286, M 269, inc_cr 2, inc_db 79, tr_cr 147, tr_db 0 -- the master splices the manuals in 2016
+
+SERIES
+  PPP alignment: b = 2011, PLI_b = 0.5478 (World Bank PA.NUS.PRVT.PP)
+    ICP 2005: CPI-extrapolated level 0.4842 vs measured PPP 0.4842 (+0.0 log points)
+    ICP 2017: CPI-extrapolated level 0.5971 vs measured PPP 0.5752 (+3.7 log points)
+    ICP 2021: CPI-extrapolated level 0.5394 vs measured PPP 0.4853 (+10.6 log points)
+  ok    SPNF revenue rebuilt from the BCE files 2003M1-2019M12 (2012 = BCE annual total 35335.2, monthly profile of v_4, factor 0.9514)
+  ok    quarterly: 25 series x 68 quarters, complete
+  ok    monthly: 3 series x 78 months, complete
+
+AGAINST THE MODEL FILES (models/**/*.inp)
+  ok    BXE      max rel. diff 4.4e-16 over every .inp that uses it
+  ok    CAc      max rel. diff 1.1e-16 over every .inp that uses it
+  ok    CAd      max rel. diff 2.2e-16 over every .inp that uses it
+  ok    G        max rel. diff 2.2e-16 over every .inp that uses it
+  ok    GAP      max rel. diff 6.7e-16 over every .inp that uses it
+  ok    GAPGDPD  max rel. diff 5.6e-16 over every .inp that uses it
+  ok    GAPPCE   max rel. diff 6.7e-16 over every .inp that uses it
+  ok    GDPDEC   max rel. diff 2.2e-16 over every .inp that uses it
+  ok    GDPDUSA  max rel. diff 4.4e-16 over every .inp that uses it
+  ok    GY       max rel. diff 2.1e-15 over every .inp that uses it
+  ok    IPCEC    max rel. diff 2.2e-16 over every .inp that uses it
+  ok    IPCUSA   max rel. diff 2.2e-16 over every .inp that uses it
+  ok    IT       max rel. diff 4.4e-16 over every .inp that uses it
+  ok    M        max rel. diff 0.0e+00 over every .inp that uses it
+  ok    PCEEC    max rel. diff 2.2e-16 over every .inp that uses it
+  ok    PCEUSA   max rel. diff 6.7e-16 over every .inp that uses it
+  ok    PE       max rel. diff 2.2e-16 over every .inp that uses it
+  ok    PU       max rel. diff 4.4e-16 over every .inp that uses it
+  ok    REV      max rel. diff 2.7e-10 over every .inp that uses it
+  ok    RIPC     max rel. diff 2.2e-16 over every .inp that uses it
+  ok    Rc       max rel. diff 2.2e-16 over every .inp that uses it
+  ok    Rd       max rel. diff 2.2e-16 over every .inp that uses it
+  ok    SE       max rel. diff 4.4e-16 over every .inp that uses it
+  ok    TAU      max rel. diff 2.2e-16 over every .inp that uses it
+  ok    WTI      max rel. diff 4.4e-16 over every .inp that uses it
+  ok    X        max rel. diff 0.0e+00 over every .inp that uses it
+  ok    YN       max rel. diff 2.2e-16 over every .inp that uses it
+  ok    YR       max rel. diff 2.2e-16 over every .inp that uses it
+  note  1 model file(s) carry the data rounded to 6 decimals (|diff| <= 5e-7): models/MACRO/TAU_BCE/TAUbce_m02_ar2.inp
+
+  -> data/quarterly.csv, data/monthly.csv, data/metadata.csv
